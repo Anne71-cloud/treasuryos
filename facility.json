@@ -1,0 +1,86 @@
+{
+  "id": "RCF-2025",
+  "type": "Revolving credit facility (crédit renouvelable), syndicated",
+  "borrower": "LUM-FR",
+  "commitment_eur": 25000000,
+  "lenders": [
+    {
+      "bank": "BNPP",
+      "share_pct": 40,
+      "role": "Agent"
+    },
+    {
+      "bank": "SOGE",
+      "share_pct": 35,
+      "role": "Lender"
+    },
+    {
+      "bank": "HSBC",
+      "share_pct": 25,
+      "role": "Lender"
+    }
+  ],
+  "signed": "2025-06-30",
+  "maturity": "2030-06-30",
+  "margin_pct": 1.4,
+  "reference_rate": "EURIBOR 3M (synthetic 2.05%)",
+  "reference_rate_pct": 2.05,
+  "commitment_fee_pct_of_margin": 35,
+  "drawn_history": [
+    {
+      "date": "2026-08-07",
+      "drawn_eur": 8000000
+    },
+    {
+      "date": "2026-09-30",
+      "drawn_eur": 6000000,
+      "note": "EUR 2m repaid"
+    }
+  ],
+  "covenants": [
+    {
+      "name": "Leverage (net debt / EBITDA)",
+      "fr": "Levier (dette nette / EBITDA)",
+      "test": "max",
+      "limit": 3.0
+    },
+    {
+      "name": "Interest cover (EBITDA / net interest)",
+      "fr": "Couverture des intérêts (EBITDA / frais financiers nets)",
+      "test": "min",
+      "limit": 4.0
+    },
+    {
+      "name": "Minimum liquidity (cash + undrawn RCF), EUR m",
+      "fr": "Liquidité minimale (trésorerie + RCF non tiré), M EUR",
+      "test": "min",
+      "limit": 15.0
+    }
+  ],
+  "financials_ltm": [
+    {
+      "period": "2025-12-31",
+      "ebitda": 18.6,
+      "net_debt": 21.4,
+      "net_interest": 2.9
+    },
+    {
+      "period": "2026-03-31",
+      "ebitda": 19.2,
+      "net_debt": 20.1,
+      "net_interest": 2.8
+    },
+    {
+      "period": "2026-06-30",
+      "ebitda": 19.9,
+      "net_debt": 17.8,
+      "net_interest": 2.7
+    },
+    {
+      "period": "2026-09-30",
+      "ebitda": 20.4,
+      "net_debt": 15.9,
+      "net_interest": 2.6
+    }
+  ]
+}

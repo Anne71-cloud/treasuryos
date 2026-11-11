@@ -1,0 +1,296 @@
+[
+ {
+  "d": "iso",
+  "en": "ISO 20022",
+  "fr": "ISO 20022 (norme de messagerie financière)",
+  "den": "The international standard for financial messages in XML. It covers payments (pain), cash management statements (camt) and interbank messages (pacs).",
+  "dfr": "Norme internationale des messages financiers au format XML. Elle couvre les paiements (pain), les relevés de gestion de trésorerie (camt) et les messages interbancaires (pacs)."
+ },
+ {
+  "d": "iso",
+  "en": "End-of-day statement (camt.053)",
+  "fr": "Relevé de compte de fin de journée (camt.053)",
+  "den": "The bank's statement for the previous day: opening balance, every booked line and closing balance. Replaces MT940 and, in France, the CFONB 120 format.",
+  "dfr": "Le relevé de la veille envoyé par la banque : solde d'ouverture, chaque opération comptabilisée et solde de clôture. Remplace le MT940 et, en France, le format CFONB 120."
+ },
+ {
+  "d": "iso",
+  "en": "Intraday report (camt.052)",
+  "fr": "Relevé intrajournalier (camt.052)",
+  "den": "Movements reported during the day, before the end-of-day statement. Used to manage cash before cut-off times.",
+  "dfr": "Mouvements remontés en cours de journée, avant le relevé de fin de journée. Sert à piloter la trésorerie avant les heures limites."
+ },
+ {
+  "d": "iso",
+  "en": "Debit or credit notification (camt.054)",
+  "fr": "Avis de débit ou de crédit (camt.054)",
+  "den": "A message for single debits or credits, often used to reconcile customer receipts in detail.",
+  "dfr": "Message pour un débit ou un crédit individuel, souvent utilisé pour le lettrage détaillé des encaissements clients."
+ },
+ {
+  "d": "iso",
+  "en": "Credit transfer initiation (pain.001)",
+  "fr": "Fichier d'ordres de virement (pain.001)",
+  "den": "The file a company sends to its bank to pay suppliers or salaries. Replaces the French AFB 160 format.",
+  "dfr": "Le fichier qu'une entreprise envoie à sa banque pour payer fournisseurs ou salaires. Remplace le format français AFB 160."
+ },
+ {
+  "d": "iso",
+  "en": "Payment status report (pain.002)",
+  "fr": "Compte rendu de traitement (pain.002)",
+  "den": "The bank's answer to a pain.001: accepted, rejected, and why.",
+  "dfr": "La réponse de la banque à un pain.001 : accepté, rejeté, et pourquoi."
+ },
+ {
+  "d": "iso",
+  "en": "Direct debit initiation (pain.008)",
+  "fr": "Fichier de prélèvements (pain.008)",
+  "den": "The file a creditor sends to collect SEPA direct debits from its customers.",
+  "dfr": "Le fichier qu'un créancier envoie pour encaisser des prélèvements SEPA auprès de ses clients."
+ },
+ {
+  "d": "iso",
+  "en": "Bank transaction code (Domain, Family, Sub-family)",
+  "fr": "Code opération (domaine, famille, sous-famille)",
+  "den": "The code on every line, for example PMNT-RCDT-ESCT for a SEPA transfer received. It drives automatic categorisation.",
+  "dfr": "Le code porté par chaque ligne, par exemple PMNT-RCDT-ESCT pour un virement SEPA reçu. Il permet la catégorisation automatique."
+ },
+ {
+  "d": "iso",
+  "en": "End-to-end reference",
+  "fr": "Référence de bout en bout (EndToEndId)",
+  "den": "A reference set by the payer that travels unchanged to the beneficiary. Key for automatic matching.",
+  "dfr": "Référence fixée par le donneur d'ordre et transmise sans modification jusqu'au bénéficiaire. Essentielle pour le rapprochement automatique."
+ },
+ {
+  "d": "iso",
+  "en": "Opening and closing booked balance",
+  "fr": "Solde comptable d'ouverture et de clôture (OPBD, CLBD)",
+  "den": "The balance at the start and end of the statement day, based on booked lines.",
+  "dfr": "Le solde en début et en fin de journée de relevé, calculé sur les opérations comptabilisées."
+ },
+ {
+  "d": "iso",
+  "en": "Booking date vs value date",
+  "fr": "Date d'opération (de comptabilisation) et date de valeur",
+  "den": "When the bank records a line versus when the money counts for balance and interest.",
+  "dfr": "Le jour où la banque enregistre l'opération, et le jour où l'argent compte pour le solde et les intérêts."
+ },
+ {
+  "d": "iso",
+  "en": "Bank reconciliation",
+  "fr": "Rapprochement bancaire",
+  "den": "Checking that bank statements and the company's books agree, line by line.",
+  "dfr": "Vérifier, ligne par ligne, que les relevés bancaires et la comptabilité de l'entreprise concordent."
+ },
+ {
+  "d": "iso",
+  "en": "MT940 and CFONB 120",
+  "fr": "MT940 et CFONB 120 (AFB 120)",
+  "den": "The older text statement formats: SWIFT MT940 internationally, CFONB 120 in France. Still widely used alongside camt.053.",
+  "dfr": "Les anciens formats texte de relevés : MT940 (SWIFT) à l'international, CFONB 120 en France. Encore très utilisés à côté du camt.053."
+ },
+ {
+  "d": "iso",
+  "en": "EBICS (T and TS)",
+  "fr": "EBICS (T et TS)",
+  "den": "The secure bank-to-company file channel used in France and Germany. EBICS TS adds an electronic signature to payment files.",
+  "dfr": "Le canal sécurisé d'échange de fichiers banque-entreprise utilisé en France et en Allemagne. EBICS TS ajoute la signature électronique des ordres."
+ },
+ {
+  "d": "iso",
+  "en": "SWIFT for corporates",
+  "fr": "SWIFT pour les entreprises (SWIFTNet FileAct)",
+  "den": "A single connection to many banks worldwide, often used by groups with banks in several countries.",
+  "dfr": "Une connexion unique vers de nombreuses banques dans le monde, souvent utilisée par les groupes multi-pays."
+ },
+ {
+  "d": "sepa",
+  "en": "SEPA (Single Euro Payments Area)",
+  "fr": "SEPA (espace unique de paiement en euros)",
+  "den": "The area where euro transfers and direct debits follow the same rules, formats and timelines: the EU countries plus several neighbours such as the UK, Switzerland and Norway.",
+  "dfr": "L'espace où virements et prélèvements en euros suivent les mêmes règles, formats et délais : les pays de l'UE et plusieurs voisins comme le Royaume-Uni, la Suisse et la Norvège."
+ },
+ {
+  "d": "sepa",
+  "en": "SEPA credit transfer (SCT)",
+  "fr": "Virement SEPA (SCT)",
+  "den": "A euro transfer credited at the latest on the next business day.",
+  "dfr": "Un virement en euros crédité au plus tard le jour ouvré suivant."
+ },
+ {
+  "d": "sepa",
+  "en": "SEPA instant credit transfer (SCT Inst)",
+  "fr": "Virement SEPA instantané (SCT Inst)",
+  "den": "A euro transfer credited within seconds, 24/7. Under the EU Instant Payments Regulation it must cost no more than a standard transfer.",
+  "dfr": "Un virement en euros crédité en quelques secondes, 24 h/24. Le règlement européen sur les paiements instantanés impose un prix au plus égal à celui d'un virement classique."
+ },
+ {
+  "d": "sepa",
+  "en": "Verification of Payee (VoP)",
+  "fr": "Vérification du bénéficiaire (VoP)",
+  "den": "The check that the beneficiary's name matches the IBAN before a euro transfer is sent. Mandatory in the euro area since October 2025.",
+  "dfr": "Le contrôle de concordance entre le nom du bénéficiaire et l'IBAN avant l'envoi d'un virement en euros. Obligatoire dans la zone euro depuis octobre 2025."
+ },
+ {
+  "d": "sepa",
+  "en": "SEPA direct debit (Core and B2B)",
+  "fr": "Prélèvement SEPA (Core et interentreprises B2B)",
+  "den": "The creditor collects money from the debtor's account under a signed mandate. B2B is between companies and cannot be refunded once paid.",
+  "dfr": "Le créancier encaisse sur le compte du débiteur grâce à un mandat signé. Le B2B est réservé aux entreprises et non remboursable une fois payé."
+ },
+ {
+  "d": "sepa",
+  "en": "Mandate and unique mandate reference",
+  "fr": "Mandat et référence unique de mandat (RUM)",
+  "den": "The debtor's signed authorisation, identified by its reference.",
+  "dfr": "L'autorisation signée du débiteur, identifiée par sa référence unique."
+ },
+ {
+  "d": "sepa",
+  "en": "Creditor identifier",
+  "fr": "Identifiant créancier SEPA (ICS)",
+  "den": "The number that identifies a company collecting SEPA direct debits.",
+  "dfr": "Le numéro qui identifie une entreprise émettrice de prélèvements SEPA."
+ },
+ {
+  "d": "sepa",
+  "en": "Debtor and creditor",
+  "fr": "Débiteur (donneur d'ordre) et créancier (bénéficiaire)",
+  "den": "Who pays and who receives in a SEPA message.",
+  "dfr": "Qui paie et qui reçoit dans un message SEPA."
+ },
+ {
+  "d": "sepa",
+  "en": "R-transactions (reject, return, refund)",
+  "fr": "Opérations R (rejet, retour, remboursement)",
+  "den": "Payments that fail or are sent back, each with a reason code. A treasurer monitors them closely.",
+  "dfr": "Paiements qui échouent ou sont renvoyés, chacun avec un code motif. Le trésorier les suit de près."
+ },
+ {
+  "d": "sepa",
+  "en": "Requested execution date",
+  "fr": "Date d'exécution demandée",
+  "den": "The day the payer asks the bank to debit its account.",
+  "dfr": "Le jour où le donneur d'ordre demande à sa banque de débiter son compte."
+ },
+ {
+  "d": "sepa",
+  "en": "Shared charges (SLEV)",
+  "fr": "Frais partagés (SLEV)",
+  "den": "In SEPA, each party pays its own bank's fees.",
+  "dfr": "En SEPA, chaque partie paie les frais de sa propre banque."
+ },
+ {
+  "d": "sepa",
+  "en": "IBAN and BIC",
+  "fr": "IBAN et BIC",
+  "den": "The international account number with its check digits, and the bank's identifier code.",
+  "dfr": "Le numéro de compte international avec sa clé de contrôle, et le code d'identification de la banque."
+ },
+ {
+  "d": "pool",
+  "en": "Cash pooling",
+  "fr": "Centralisation de trésorerie (cash pooling)",
+  "den": "Bringing the group's cash together in one place so surpluses fund shortfalls instead of borrowing from banks.",
+  "dfr": "Regrouper la trésorerie du groupe en un seul point pour que les excédents financent les besoins plutôt que d'emprunter auprès des banques."
+ },
+ {
+  "d": "pool",
+  "en": "Physical vs notional pooling",
+  "fr": "Centralisation physique et notionnelle (fusion d'échelles d'intérêts)",
+  "den": "Physical pooling moves the money. Notional pooling leaves it in place and calculates interest on the combined balance.",
+  "dfr": "La centralisation physique déplace les fonds. La notionnelle les laisse en place et calcule les intérêts sur le solde cumulé."
+ },
+ {
+  "d": "pool",
+  "en": "Header account",
+  "fr": "Compte centralisateur (compte pivot)",
+  "den": "The account, usually at the parent company, that receives every surplus and funds every shortfall. Here: FR-BNPP-EUR.",
+  "dfr": "Le compte, en général de la société mère, qui reçoit tous les excédents et couvre tous les besoins. Ici : FR-BNPP-EUR."
+ },
+ {
+  "d": "pool",
+  "en": "Participant accounts",
+  "fr": "Comptes participants (comptes satellites)",
+  "den": "The subsidiaries' accounts that are swept into the header account.",
+  "dfr": "Les comptes des filiales qui sont équilibrés vers le compte centralisateur."
+ },
+ {
+  "d": "pool",
+  "en": "Zero balancing (ZBA)",
+  "fr": "Équilibrage à zéro (nivellement)",
+  "den": "Each evening the bank brings every participant account back to zero against the header account.",
+  "dfr": "Chaque soir, la banque ramène chaque compte participant à zéro contre le compte centralisateur."
+ },
+ {
+  "d": "pool",
+  "en": "Sweep up and sweep down",
+  "fr": "Remontée et descente de trésorerie",
+  "den": "A surplus moving up to the header account, and funding moving down to a participant.",
+  "dfr": "Un excédent qui remonte vers le compte centralisateur, et un financement qui descend vers un compte participant."
+ },
+ {
+  "d": "pool",
+  "en": "Target balancing",
+  "fr": "Équilibrage à solde cible",
+  "den": "Like zero balancing, but each account keeps a set amount instead of zero.",
+  "dfr": "Comme l'équilibrage à zéro, mais chaque compte conserve un montant fixé au lieu de zéro."
+ },
+ {
+  "d": "pool",
+  "en": "Cash pooling agreement",
+  "fr": "Convention de trésorerie",
+  "den": "The legal agreement between group companies that sets the pool's rules, interest rates and limits.",
+  "dfr": "Le contrat entre sociétés du groupe qui fixe les règles de la centralisation, les taux d'intérêt et les limites."
+ },
+ {
+  "d": "pool",
+  "en": "Intercompany loans and current accounts",
+  "fr": "Prêts et emprunts intragroupe, comptes courants intragroupe",
+  "den": "What each subsidiary is owed by or owes to the group because of the sweeps. Interest is charged at an arm's length rate.",
+  "dfr": "Ce que chaque filiale prête ou doit au groupe du fait des remontées et descentes. Les intérêts sont calculés à un taux de pleine concurrence."
+ },
+ {
+  "d": "pool",
+  "en": "Arm's length rate (transfer pricing)",
+  "fr": "Taux de pleine concurrence (prix de transfert)",
+  "den": "The rate unrelated companies would agree on. Required by tax authorities for intercompany interest.",
+  "dfr": "Le taux que retiendraient des sociétés indépendantes. Exigé par l'administration fiscale pour les intérêts intragroupe."
+ },
+ {
+  "d": "pool",
+  "en": "Banking monopoly exception",
+  "fr": "Exception au monopole bancaire (art. L511-7 du Code monétaire et financier)",
+  "den": "French law lets group companies lend cash to each other without being a bank, which makes cash pooling legal.",
+  "dfr": "La loi française autorise les sociétés d'un même groupe à se prêter de la trésorerie sans être un établissement de crédit, ce qui rend la centralisation possible."
+ },
+ {
+  "d": "pool",
+  "en": "Liquidity buffer",
+  "fr": "Coussin (matelas) de liquidité",
+  "den": "The minimum cash the group keeps available at all times, set by the treasury policy.",
+  "dfr": "La trésorerie minimale que le groupe garde disponible en permanence, fixée par la politique de trésorerie."
+ },
+ {
+  "d": "pool",
+  "en": "Intercompany netting",
+  "fr": "Compensation intragroupe (netting)",
+  "den": "Offsetting what group companies owe each other so only the net amount is paid.",
+  "dfr": "Compenser les dettes et créances entre sociétés du groupe pour ne payer que le solde net."
+ },
+ {
+  "d": "pool",
+  "en": "Payment factory and in-house bank",
+  "fr": "Centrale de paiements et banque interne",
+  "den": "One team or entity that pays on behalf of all subsidiaries, and acts as their bank inside the group.",
+  "dfr": "Une équipe ou une entité qui paie pour toutes les filiales et joue le rôle de banque au sein du groupe."
+ },
+ {
+  "d": "pool",
+  "en": "Exchange controls",
+  "fr": "Réglementation des changes",
+  "den": "Rules that restrict moving a currency abroad. Morocco's dirham is a good example, so Lumen Maroc stays outside the pool.",
+  "dfr": "Règles qui limitent la sortie d'une devise. Le dirham marocain en est un bon exemple : Lumen Maroc reste donc hors de la centralisation."
+ }
+]

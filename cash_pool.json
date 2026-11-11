@@ -1,0 +1,134 @@
+{
+ "note": "Synthetic rates and policy for the fictional Groupe Lumen.",
+ "pool": {
+  "id": "EUR-ZBA",
+  "type": "Physical zero-balancing cash pool, EUR, at BNP Paribas",
+  "bank": "BNPP",
+  "header": "FR-BNPP-EUR",
+  "agreement": "Convention de trésorerie Groupe Lumen, signed 30 June 2025, reviewed every year",
+  "participants": [
+   {
+    "account": "FR-SOGE-EUR",
+    "entity": "LUM-FR",
+    "intercompany": false,
+    "opening_position_eur": 0
+   },
+   {
+    "account": "DE-BNPP-EUR",
+    "entity": "LUM-DE",
+    "intercompany": true,
+    "opening_position_eur": 2300000
+   }
+  ],
+  "outside": [
+   {
+    "account": "FR-HSBC-USD",
+    "reason": "ccy",
+    "en": "USD account. The pool is EUR only; USD is kept as a working balance for USD receipts and payments.",
+    "fr": "Compte en USD. La centralisation est en EUR uniquement ; l'USD est conservé comme solde de fonctionnement pour les flux en dollars."
+   },
+   {
+    "account": "UK-HSBC-GBP",
+    "reason": "ccy",
+    "en": "GBP account at another bank. Could join a multi-currency or notional pool later.",
+    "fr": "Compte en GBP dans une autre banque. Pourrait rejoindre plus tard une centralisation multidevise ou notionnelle."
+   },
+   {
+    "account": "MA-SOGE-MAD",
+    "reason": "fx_control",
+    "en": "Moroccan dirham. Exchange controls do not allow daily cross-border sweeps.",
+    "fr": "Dirham marocain. La réglementation des changes interdit les remontées quotidiennes à l'étranger."
+   }
+  ],
+  "agreement_fr": "Convention de trésorerie Groupe Lumen, signée le 30 juin 2025, revue chaque année"
+ },
+ "interest": {
+  "reference": "€STR (synthetic)",
+  "reference_rate_pct": 1.9,
+  "credit_margin_pct": 0.15,
+  "debit_margin_pct": 1.25,
+  "basis_days": 360,
+  "en": "A subsidiary that lends cash to the pool earns €STR + 0.15%. A subsidiary that borrows from the pool pays €STR + 1.25%. Calendar days, ACT/360, paid monthly.",
+  "fr": "Une filiale qui prête au pool perçoit €STR + 0,15 %. Une filiale qui emprunte au pool paie €STR + 1,25 %. Jours calendaires, base exact/360, réglés mensuellement."
+ },
+ "policy": {
+  "min_group_cash_eur": 6000000,
+  "max_share_per_bank_pct": 50,
+  "min_liquid_within_week_pct": 50,
+  "max_tenor_months": 3,
+  "allowed": [
+   "Term deposits at relationship banks rated A- or better",
+   "Money market funds (short-term, daily liquidity)",
+   "Interest-bearing accounts"
+  ],
+  "allowed_fr": [
+   "Comptes à terme auprès des banques partenaires notées A- ou mieux",
+   "OPCVM monétaires court terme à liquidité quotidienne",
+   "Comptes rémunérés"
+  ],
+  "target_balances": {
+   "FR-HSBC-USD": 500000,
+   "UK-HSBC-GBP": 600000,
+   "MA-SOGE-MAD": 4000000
+  }
+ },
+ "instruments": [
+  {
+   "id": "TD3M-BNPP",
+   "en": "Term deposit, 3 months",
+   "fr": "Compte à terme, 3 mois",
+   "bank": "BNPP",
+   "ccy": "EUR",
+   "rate_pct": 2.1,
+   "days": 92,
+   "liquidity_en": "At maturity",
+   "liquidity_fr": "À l'échéance",
+   "liquid_week": false,
+   "share": 0.4
+  },
+  {
+   "id": "MMF-EUR",
+   "en": "Money market fund (short-term VNAV)",
+   "fr": "OPCVM monétaire court terme (VNAV)",
+   "bank": null,
+   "ccy": "EUR",
+   "rate_pct": 1.86,
+   "days": 92,
+   "liquidity_en": "Daily (T+0)",
+   "liquidity_fr": "Quotidienne (J+0)",
+   "liquid_week": true,
+   "share": 0.35
+  },
+  {
+   "id": "TD1M-SOGE",
+   "en": "Term deposit, 1 month, rolled",
+   "fr": "Compte à terme, 1 mois, renouvelé",
+   "bank": "SOGE",
+   "ccy": "EUR",
+   "rate_pct": 1.95,
+   "days": 92,
+   "liquidity_en": "Monthly",
+   "liquidity_fr": "Mensuelle",
+   "liquid_week": false,
+   "share": 0.1
+  },
+  {
+   "id": "IBA-SOGE",
+   "en": "Interest-bearing account",
+   "fr": "Compte rémunéré",
+   "bank": "SOGE",
+   "ccy": "EUR",
+   "rate_pct": 1.6,
+   "days": 92,
+   "liquidity_en": "Same day",
+   "liquidity_fr": "Immédiate",
+   "liquid_week": true,
+   "share": 0.15
+  }
+ ],
+ "other_ccy_rates": {
+  "GBP_MMF_pct": 3.7,
+  "MAD_TD1M_pct": 2.5,
+  "fx_spread_pct": 0.3
+ }
+}

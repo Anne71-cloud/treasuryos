@@ -1,0 +1,107 @@
+[
+  {
+    "priority": 5,
+    "if_btc": "CAMT-ACCB-ZABA",
+    "category": "POOL",
+    "why": "Zero-balancing sweep code"
+  },
+  {
+    "priority": 10,
+    "if_btc": "ACMT-MDOP-CHRG",
+    "category": "FEES",
+    "why": "Bank charge code"
+  },
+  {
+    "priority": 11,
+    "if_btc": "ACMT-MDOP-INTR",
+    "category": "INTR",
+    "why": "Interest code"
+  },
+  {
+    "priority": 12,
+    "if_btc": "FORX-SPOT-SPOT",
+    "category": "FX",
+    "why": "Spot FX code"
+  },
+  {
+    "priority": 13,
+    "if_btc": "LDAS-CSLN-PPAY",
+    "category": "FIN",
+    "why": "Loan principal code"
+  },
+  {
+    "priority": 20,
+    "if_text": "RCF",
+    "category": "FIN",
+    "why": "Mentions the revolving facility"
+  },
+  {
+    "priority": 21,
+    "if_text": "INTERCO",
+    "category": "ICO",
+    "why": "Group company as counterparty"
+  },
+  {
+    "priority": 30,
+    "if_text": "URSSAF|SOZIALVERS|CNSS|AGIRC|RETRAITE|PREVOYANCE",
+    "category": "SOCL",
+    "why": "Social charge collector"
+  },
+  {
+    "priority": 31,
+    "if_text": "SALAIRE|GEHALT|SALARY|PAYROLL|\\bPAIE\\b",
+    "category": "PAYR",
+    "why": "Payroll wording"
+  },
+  {
+    "priority": 32,
+    "if_btc": "PMNT-ICDT-SALA",
+    "category": "PAYR",
+    "why": "Salary payment code"
+  },
+  {
+    "priority": 33,
+    "if_text": "TVA|UMSATZSTEUER|VAT RETURN|HMRC VAT",
+    "category": "TAXV",
+    "why": "VAT authority"
+  },
+  {
+    "priority": 34,
+    "if_text": "DGFIP|IMPOT|FINANZAMT|HMRC PAYE|DGI ",
+    "category": "TAXC",
+    "why": "Tax authority"
+  },
+  {
+    "priority": 35,
+    "if_text": "LOYER|MIETE|RENT ",
+    "category": "RENT",
+    "why": "Rent wording"
+  },
+  {
+    "priority": 36,
+    "if_text": "CAPEX|MACHINE|EQUIPEMENT|INVESTISSEMENT",
+    "category": "CAPX",
+    "why": "Capex wording"
+  },
+  {
+    "priority": 50,
+    "if_sign": "+",
+    "if_text": "FACT|INV|RECHNUNG|FACTURE",
+    "category": "CUST",
+    "why": "Incoming payment quoting an invoice"
+  },
+  {
+    "priority": 51,
+    "if_sign": "-",
+    "if_btc_family": "ICDT",
+    "category": "SUPP",
+    "why": "Outgoing transfer, default supplier"
+  },
+  {
+    "priority": 52,
+    "if_sign": "-",
+    "if_btc_family": "IDDT",
+    "category": "SUPP",
+    "why": "Direct debit, default supplier"
+  }
+]

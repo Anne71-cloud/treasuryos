@@ -1,0 +1,325 @@
+[
+ {
+  "entity": "LUM-FR",
+  "ccy": "EUR",
+  "cat": "PAYR",
+  "en": "Salaries",
+  "fr": "Salaires",
+  "day": 27,
+  "roll": "prev",
+  "amount": -1900000,
+  "months_factor": {
+   "12": 1.5
+  }
+ },
+ {
+  "entity": "LUM-FR",
+  "ccy": "EUR",
+  "cat": "SOCL",
+  "en": "URSSAF social charges",
+  "fr": "Cotisations URSSAF",
+  "day": 15,
+  "amount": -1200000,
+  "months_factor": {
+   "1": 1.5
+  }
+ },
+ {
+  "entity": "LUM-FR",
+  "ccy": "EUR",
+  "cat": "SOCL",
+  "en": "Pension contributions (AGIRC-ARRCO)",
+  "fr": "Retraite complémentaire (AGIRC-ARRCO)",
+  "day": 15,
+  "amount": -220000
+ },
+ {
+  "entity": "LUM-FR",
+  "ccy": "EUR",
+  "cat": "TAXV",
+  "en": "VAT return (CA3)",
+  "fr": "TVA (déclaration CA3)",
+  "day": 24,
+  "amount": -900000
+ },
+ {
+  "entity": "LUM-FR",
+  "ccy": "EUR",
+  "cat": "RENT",
+  "en": "Paris office rent",
+  "fr": "Loyer bureaux Paris",
+  "day": 1,
+  "amount": -86500
+ },
+ {
+  "entity": "LUM-FR",
+  "ccy": "EUR",
+  "cat": "SUPP",
+  "en": "Energy and telecom direct debits",
+  "fr": "Prélèvements énergie et télécoms",
+  "day": 8,
+  "amount": -50500
+ },
+ {
+  "entity": "LUM-FR",
+  "ccy": "EUR",
+  "cat": "ICO",
+  "en": "Payment to Lumen Maroc for products",
+  "fr": "Règlement Lumen Maroc (produits)",
+  "day": 12,
+  "amount": -1150000
+ },
+ {
+  "entity": "LUM-FR",
+  "ccy": "EUR",
+  "cat": "ICO",
+  "en": "Management fee from Lumen Deutschland",
+  "fr": "Management fees Lumen Deutschland",
+  "day": 5,
+  "amount": 120000
+ },
+ {
+  "entity": "LUM-FR",
+  "ccy": "EUR",
+  "cat": "ICO",
+  "en": "Brand royalty from Lumen UK",
+  "fr": "Redevance de marque Lumen UK",
+  "day": 20,
+  "amount": 65000
+ },
+ {
+  "entity": "LUM-FR",
+  "ccy": "EUR",
+  "cat": "FEES",
+  "en": "Bank fees",
+  "fr": "Frais bancaires",
+  "day": 1,
+  "amount": -1400
+ },
+ {
+  "entity": "LUM-FR",
+  "ccy": "EUR",
+  "cat": "TAXC",
+  "en": "Corporate tax instalment",
+  "fr": "Acompte d'impôt sur les sociétés",
+  "dates": [
+   "2026-12-15",
+   "2027-03-16",
+   "2027-06-15",
+   "2027-09-15"
+  ],
+  "amount": -1180000
+ },
+ {
+  "entity": "LUM-FR",
+  "ccy": "EUR",
+  "cat": "INTR",
+  "en": "RCF interest (EURIBOR 3M + 1.40% on EUR 6m)",
+  "fr": "Intérêts RCF (Euribor 3M + 1,40 % sur 6 M EUR)",
+  "dates": [
+   "2026-12-31",
+   "2027-03-31",
+   "2027-06-30",
+   "2027-09-30"
+  ],
+  "amount": -52900
+ },
+ {
+  "entity": "LUM-FR",
+  "ccy": "EUR",
+  "cat": "FEES",
+  "en": "RCF commitment fee",
+  "fr": "Commission de non-utilisation RCF",
+  "dates": [
+   "2026-12-31",
+   "2027-03-31",
+   "2027-06-30",
+   "2027-09-30"
+  ],
+  "amount": -23800
+ },
+ {
+  "entity": "LUM-DE",
+  "ccy": "EUR",
+  "cat": "PAYR",
+  "en": "Salaries (Gehalt)",
+  "fr": "Salaires",
+  "day": 28,
+  "roll": "prev",
+  "amount": -750000,
+  "months_factor": {
+   "11": 1.6
+  }
+ },
+ {
+  "entity": "LUM-DE",
+  "ccy": "EUR",
+  "cat": "SOCL",
+  "en": "Social security (Sozialversicherung)",
+  "fr": "Charges sociales",
+  "day": 26,
+  "roll": "prev",
+  "amount": -345000
+ },
+ {
+  "entity": "LUM-DE",
+  "ccy": "EUR",
+  "cat": "TAXV",
+  "en": "VAT (Umsatzsteuer)",
+  "fr": "TVA",
+  "day": 10,
+  "amount": -290000
+ },
+ {
+  "entity": "LUM-DE",
+  "ccy": "EUR",
+  "cat": "RENT",
+  "en": "Office rent",
+  "fr": "Loyer",
+  "day": 1,
+  "amount": -41200
+ },
+ {
+  "entity": "LUM-DE",
+  "ccy": "EUR",
+  "cat": "ICO",
+  "en": "Management fee to Lumen SA",
+  "fr": "Management fees à Lumen SA",
+  "day": 5,
+  "amount": -120000
+ },
+ {
+  "entity": "LUM-DE",
+  "ccy": "EUR",
+  "cat": "FEES",
+  "en": "Bank fees",
+  "fr": "Frais bancaires",
+  "day": 1,
+  "amount": -130
+ },
+ {
+  "entity": "LUM-UK",
+  "ccy": "GBP",
+  "cat": "PAYR",
+  "en": "Salaries",
+  "fr": "Salaires",
+  "day": 25,
+  "roll": "prev",
+  "amount": -420000
+ },
+ {
+  "entity": "LUM-UK",
+  "ccy": "GBP",
+  "cat": "TAXC",
+  "en": "HMRC PAYE",
+  "fr": "HMRC PAYE (prélèvement à la source)",
+  "day": 22,
+  "amount": -182000
+ },
+ {
+  "entity": "LUM-UK",
+  "ccy": "GBP",
+  "cat": "TAXV",
+  "en": "Quarterly VAT return",
+  "fr": "TVA trimestrielle",
+  "dates": [
+   "2027-01-07",
+   "2027-04-07",
+   "2027-07-07",
+   "2027-10-07"
+  ],
+  "amount": -250000
+ },
+ {
+  "entity": "LUM-UK",
+  "ccy": "GBP",
+  "cat": "RENT",
+  "en": "Office rent",
+  "fr": "Loyer",
+  "day": 1,
+  "amount": -23750
+ },
+ {
+  "entity": "LUM-UK",
+  "ccy": "GBP",
+  "cat": "ICO",
+  "en": "Brand royalty to Lumen SA (EUR 65,000)",
+  "fr": "Redevance de marque à Lumen SA (65 000 EUR)",
+  "day": 20,
+  "amount": -56303.0
+ },
+ {
+  "entity": "LUM-UK",
+  "ccy": "GBP",
+  "cat": "FEES",
+  "en": "Bank fees",
+  "fr": "Frais bancaires",
+  "day": 1,
+  "amount": -120
+ },
+ {
+  "entity": "LUM-MA",
+  "ccy": "MAD",
+  "cat": "PAYR",
+  "en": "Salaries (paie)",
+  "fr": "Paie",
+  "day": "last",
+  "amount": -3220000
+ },
+ {
+  "entity": "LUM-MA",
+  "ccy": "MAD",
+  "cat": "SOCL",
+  "en": "CNSS contributions",
+  "fr": "Cotisations CNSS",
+  "day": 10,
+  "amount": -900000
+ },
+ {
+  "entity": "LUM-MA",
+  "ccy": "MAD",
+  "cat": "TAXV",
+  "en": "VAT (DGI)",
+  "fr": "TVA (DGI)",
+  "day": 24,
+  "amount": -1200000
+ },
+ {
+  "entity": "LUM-MA",
+  "ccy": "MAD",
+  "cat": "RENT",
+  "en": "Plant rent",
+  "fr": "Loyer usine",
+  "day": 1,
+  "amount": -310000
+ },
+ {
+  "entity": "LUM-MA",
+  "ccy": "MAD",
+  "cat": "ICO",
+  "en": "Receipt from Lumen SA for products",
+  "fr": "Encaissement Lumen SA (produits)",
+  "day": 13,
+  "amount": 12043375.0
+ },
+ {
+  "entity": "LUM-MA",
+  "ccy": "MAD",
+  "cat": "CAPX",
+  "en": "Assembly line 3, final instalment",
+  "fr": "Ligne d'assemblage 3, solde",
+  "dates": [
+   "2027-01-20"
+  ],
+  "amount": -1200000
+ },
+ {
+  "entity": "LUM-MA",
+  "ccy": "MAD",
+  "cat": "FEES",
+  "en": "Bank fees",
+  "fr": "Frais bancaires",
+  "day": 1,
+  "amount": -700
+ }
+]

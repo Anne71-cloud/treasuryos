@@ -1,0 +1,38 @@
+[
+  {
+    "file": "camt053_FR-BNPP-EUR.xml",
+    "format": "camt.053.001.08",
+    "account_id": "FR-BNPP-EUR",
+    "bank": "BNPP"
+  },
+  {
+    "file": "camt053_FR-SOGE-EUR.xml",
+    "format": "camt.053.001.08",
+    "account_id": "FR-SOGE-EUR",
+    "bank": "SOGE"
+  },
+  {
+    "file": "mt940_FR-HSBC-USD.sta",
+    "format": "MT940",
+    "account_id": "FR-HSBC-USD",
+    "bank": "HSBC"
+  },
+  {
+    "file": "camt053_DE-BNPP-EUR.xml",
+    "format": "camt.053.001.08",
+    "account_id": "DE-BNPP-EUR",
+    "bank": "BNPP"
+  },
+  {
+    "file": "mt940_UK-HSBC-GBP.sta",
+    "format": "MT940",
+    "account_id": "UK-HSBC-GBP",
+    "bank": "HSBC"
+  },
+  {
+    "file": "camt053_MA-SOGE-MAD.xml",
+    "format": "camt.053.001.08",
+    "account_id": "MA-SOGE-MAD",
+    "bank": "SOGE"
+  }
+]

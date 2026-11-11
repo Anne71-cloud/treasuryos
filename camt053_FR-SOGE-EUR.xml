@@ -1,0 +1,2303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Synthetic statement for the fictional Groupe Lumen. Built by TreasuryOS. -->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.08">
+  <BkToCstmrStmt>
+    <GrpHdr>
+      <MsgId>CAMT053-FR-SOGE-EUR-20261106</MsgId>
+      <CreDtTm>2026-11-06T20:30:00+01:00</CreDtTm>
+    </GrpHdr>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260810</Id>
+      <ElctrncSeqNb>1</ElctrncSeqNb>
+      <CreDtTm>2026-08-10T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-10</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-10</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260811</Id>
+      <ElctrncSeqNb>2</ElctrncSeqNb>
+      <CreDtTm>2026-08-11T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-11</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-11</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260812</Id>
+      <ElctrncSeqNb>3</ElctrncSeqNb>
+      <CreDtTm>2026-08-12T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-12</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-12</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260813</Id>
+      <ElctrncSeqNb>4</ElctrncSeqNb>
+      <CreDtTm>2026-08-13T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-13</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-13</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260814</Id>
+      <ElctrncSeqNb>5</ElctrncSeqNb>
+      <CreDtTm>2026-08-14T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-14</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-14</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260817</Id>
+      <ElctrncSeqNb>6</ElctrncSeqNb>
+      <CreDtTm>2026-08-17T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-17</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-17</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>1432611.02</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>1432611.02</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">1212806.49</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-17</Dt></BookgDt>
+        <ValDt><Dt>2026-08-17</Dt></ValDt>
+        <AcctSvcrRef>SOGE0043620260817</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>IDDT</Cd><SubFmlyCd>ESDD</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000436</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>URSSAF Ile-de-France</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>URSSAF DSN 07/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">219804.53</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-17</Dt></BookgDt>
+        <ValDt><Dt>2026-08-17</Dt></ValDt>
+        <AcctSvcrRef>SOGE0043720260817</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>IDDT</Cd><SubFmlyCd>ESDD</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000437</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>AGIRC-ARRCO Retraite</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>RETRAITE COMPLEMENTAIRE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">1432611.02</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-17</Dt></BookgDt>
+        <ValDt><Dt>2026-08-17</Dt></ValDt>
+        <AcctSvcrRef>SOGE0053220260817</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000532</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-FR</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260818</Id>
+      <ElctrncSeqNb>7</ElctrncSeqNb>
+      <CreDtTm>2026-08-18T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-18</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-18</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260819</Id>
+      <ElctrncSeqNb>8</ElctrncSeqNb>
+      <CreDtTm>2026-08-19T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-19</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-19</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260820</Id>
+      <ElctrncSeqNb>9</ElctrncSeqNb>
+      <CreDtTm>2026-08-20T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-20</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-20</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260821</Id>
+      <ElctrncSeqNb>10</ElctrncSeqNb>
+      <CreDtTm>2026-08-21T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-21</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-21</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260824</Id>
+      <ElctrncSeqNb>11</ElctrncSeqNb>
+      <CreDtTm>2026-08-24T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-24</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-24</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>888469.96</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>888469.96</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">888469.96</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-24</Dt></BookgDt>
+        <ValDt><Dt>2026-08-24</Dt></ValDt>
+        <AcctSvcrRef>SOGE0044020260824</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>TAXS</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000440</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>DGFIP SIE Paris 9</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>TVA CA3 07/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">888469.96</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-24</Dt></BookgDt>
+        <ValDt><Dt>2026-08-24</Dt></ValDt>
+        <AcctSvcrRef>SOGE0054420260824</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000544</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-FR</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260825</Id>
+      <ElctrncSeqNb>12</ElctrncSeqNb>
+      <CreDtTm>2026-08-25T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-25</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-25</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260826</Id>
+      <ElctrncSeqNb>13</ElctrncSeqNb>
+      <CreDtTm>2026-08-26T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-26</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-26</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260827</Id>
+      <ElctrncSeqNb>14</ElctrncSeqNb>
+      <CreDtTm>2026-08-27T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-27</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-27</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>1926762.25</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>1926762.25</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">1926762.25</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-27</Dt></BookgDt>
+        <ValDt><Dt>2026-08-27</Dt></ValDt>
+        <AcctSvcrRef>SOGE0043120260827</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>SALA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000431</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Salariés Lumen SA</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>SALAIRES 08/2026 VIREMENTS GROUPES</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">1926762.25</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-27</Dt></BookgDt>
+        <ValDt><Dt>2026-08-27</Dt></ValDt>
+        <AcctSvcrRef>SOGE0055220260827</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000552</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-FR</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260828</Id>
+      <ElctrncSeqNb>15</ElctrncSeqNb>
+      <CreDtTm>2026-08-28T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-28</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-28</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260831</Id>
+      <ElctrncSeqNb>16</ElctrncSeqNb>
+      <CreDtTm>2026-08-31T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-31</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-31</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260901</Id>
+      <ElctrncSeqNb>17</ElctrncSeqNb>
+      <CreDtTm>2026-09-01T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-01</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-01</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>180.92</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>180.92</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">180.92</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-01</Dt></BookgDt>
+        <ValDt><Dt>2026-09-01</Dt></ValDt>
+        <AcctSvcrRef>SOGE0044820260901</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>ACMT</Cd><Fmly><Cd>MDOP</Cd><SubFmlyCd>CHRG</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000448</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Société Générale</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>FRAIS BANCAIRES / COMMISSIONS 08/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">180.92</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-01</Dt></BookgDt>
+        <ValDt><Dt>2026-09-01</Dt></ValDt>
+        <AcctSvcrRef>SOGE0056020260901</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000560</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-FR</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260902</Id>
+      <ElctrncSeqNb>18</ElctrncSeqNb>
+      <CreDtTm>2026-09-02T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-02</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-02</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260903</Id>
+      <ElctrncSeqNb>19</ElctrncSeqNb>
+      <CreDtTm>2026-09-03T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-03</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-03</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260904</Id>
+      <ElctrncSeqNb>20</ElctrncSeqNb>
+      <CreDtTm>2026-09-04T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-04</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-04</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260907</Id>
+      <ElctrncSeqNb>21</ElctrncSeqNb>
+      <CreDtTm>2026-09-07T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-07</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-07</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260908</Id>
+      <ElctrncSeqNb>22</ElctrncSeqNb>
+      <CreDtTm>2026-09-08T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-08</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-08</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260909</Id>
+      <ElctrncSeqNb>23</ElctrncSeqNb>
+      <CreDtTm>2026-09-09T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-09</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-09</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260910</Id>
+      <ElctrncSeqNb>24</ElctrncSeqNb>
+      <CreDtTm>2026-09-10T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-10</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-10</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260911</Id>
+      <ElctrncSeqNb>25</ElctrncSeqNb>
+      <CreDtTm>2026-09-11T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-11</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-11</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260914</Id>
+      <ElctrncSeqNb>26</ElctrncSeqNb>
+      <CreDtTm>2026-09-14T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-14</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-14</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260915</Id>
+      <ElctrncSeqNb>27</ElctrncSeqNb>
+      <CreDtTm>2026-09-15T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-15</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-15</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>4</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>2579075.58</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>3</NbOfNtries><Sum>2579075.58</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">1183776.55</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-15</Dt></BookgDt>
+        <ValDt><Dt>2026-09-15</Dt></ValDt>
+        <AcctSvcrRef>SOGE0046420260915</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>IDDT</Cd><SubFmlyCd>ESDD</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000464</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>URSSAF Ile-de-France</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>URSSAF DSN 08/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">215299.03</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-15</Dt></BookgDt>
+        <ValDt><Dt>2026-09-15</Dt></ValDt>
+        <AcctSvcrRef>SOGE0046520260915</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>IDDT</Cd><SubFmlyCd>ESDD</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000465</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>AGIRC-ARRCO Retraite</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>RETRAITE COMPLEMENTAIRE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">1180000.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-15</Dt></BookgDt>
+        <ValDt><Dt>2026-09-15</Dt></ValDt>
+        <AcctSvcrRef>SOGE0051120260915</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>TAXS</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000511</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>DGFIP SIE Paris 9</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>IMPOT SOCIETES ACOMPTE 3</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="EUR">2579075.58</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-15</Dt></BookgDt>
+        <ValDt><Dt>2026-09-15</Dt></ValDt>
+        <AcctSvcrRef>SOGE0057620260915</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000576</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-FR</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260916</Id>
+      <ElctrncSeqNb>28</ElctrncSeqNb>
+      <CreDtTm>2026-09-16T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-16</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-16</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260917</Id>
+      <ElctrncSeqNb>29</ElctrncSeqNb>
+      <CreDtTm>2026-09-17T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-17</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-17</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260918</Id>
+      <ElctrncSeqNb>30</ElctrncSeqNb>
+      <CreDtTm>2026-09-18T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-18</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-18</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260921</Id>
+      <ElctrncSeqNb>31</ElctrncSeqNb>
+      <CreDtTm>2026-09-21T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-21</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-21</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260922</Id>
+      <ElctrncSeqNb>32</ElctrncSeqNb>
+      <CreDtTm>2026-09-22T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-22</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-22</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260923</Id>
+      <ElctrncSeqNb>33</ElctrncSeqNb>
+      <CreDtTm>2026-09-23T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-23</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-23</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260924</Id>
+      <ElctrncSeqNb>34</ElctrncSeqNb>
+      <CreDtTm>2026-09-24T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-24</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-24</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>895873.11</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>895873.11</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">895873.11</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-24</Dt></BookgDt>
+        <ValDt><Dt>2026-09-24</Dt></ValDt>
+        <AcctSvcrRef>SOGE0046820260924</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>TAXS</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000468</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>DGFIP SIE Paris 9</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>TVA CA3 08/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">895873.11</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-24</Dt></BookgDt>
+        <ValDt><Dt>2026-09-24</Dt></ValDt>
+        <AcctSvcrRef>SOGE0059220260924</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000592</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-FR</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260925</Id>
+      <ElctrncSeqNb>35</ElctrncSeqNb>
+      <CreDtTm>2026-09-25T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-25</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-25</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260928</Id>
+      <ElctrncSeqNb>36</ElctrncSeqNb>
+      <CreDtTm>2026-09-28T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-28</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-28</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>1882771.62</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>1882771.62</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">1882771.62</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-28</Dt></BookgDt>
+        <ValDt><Dt>2026-09-28</Dt></ValDt>
+        <AcctSvcrRef>SOGE0045920260928</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>SALA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000459</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Salariés Lumen SA</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>SALAIRES 09/2026 VIREMENTS GROUPES</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">1882771.62</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-28</Dt></BookgDt>
+        <ValDt><Dt>2026-09-28</Dt></ValDt>
+        <AcctSvcrRef>SOGE0059820260928</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000598</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-FR</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260929</Id>
+      <ElctrncSeqNb>37</ElctrncSeqNb>
+      <CreDtTm>2026-09-29T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-29</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-29</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20260930</Id>
+      <ElctrncSeqNb>38</ElctrncSeqNb>
+      <CreDtTm>2026-09-30T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-30</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-30</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261001</Id>
+      <ElctrncSeqNb>39</ElctrncSeqNb>
+      <CreDtTm>2026-10-01T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-01</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-01</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>182.70</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>182.70</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">182.70</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-01</Dt></BookgDt>
+        <ValDt><Dt>2026-10-01</Dt></ValDt>
+        <AcctSvcrRef>SOGE0047620261001</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>ACMT</Cd><Fmly><Cd>MDOP</Cd><SubFmlyCd>CHRG</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000476</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Société Générale</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>FRAIS BANCAIRES / COMMISSIONS 09/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">182.70</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-01</Dt></BookgDt>
+        <ValDt><Dt>2026-10-01</Dt></ValDt>
+        <AcctSvcrRef>SOGE0060620261001</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000606</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-FR</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261002</Id>
+      <ElctrncSeqNb>40</ElctrncSeqNb>
+      <CreDtTm>2026-10-02T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-02</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-02</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261005</Id>
+      <ElctrncSeqNb>41</ElctrncSeqNb>
+      <CreDtTm>2026-10-05T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-05</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-05</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261006</Id>
+      <ElctrncSeqNb>42</ElctrncSeqNb>
+      <CreDtTm>2026-10-06T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-06</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-06</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261007</Id>
+      <ElctrncSeqNb>43</ElctrncSeqNb>
+      <CreDtTm>2026-10-07T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-07</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-07</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261008</Id>
+      <ElctrncSeqNb>44</ElctrncSeqNb>
+      <CreDtTm>2026-10-08T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-08</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-08</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261009</Id>
+      <ElctrncSeqNb>45</ElctrncSeqNb>
+      <CreDtTm>2026-10-09T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-09</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-09</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261012</Id>
+      <ElctrncSeqNb>46</ElctrncSeqNb>
+      <CreDtTm>2026-10-12T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-12</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-12</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261013</Id>
+      <ElctrncSeqNb>47</ElctrncSeqNb>
+      <CreDtTm>2026-10-13T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-13</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-13</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261014</Id>
+      <ElctrncSeqNb>48</ElctrncSeqNb>
+      <CreDtTm>2026-10-14T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-14</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-14</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261015</Id>
+      <ElctrncSeqNb>49</ElctrncSeqNb>
+      <CreDtTm>2026-10-15T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-15</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-15</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>1387976.80</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>1387976.80</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">1174405.93</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-15</Dt></BookgDt>
+        <ValDt><Dt>2026-10-15</Dt></ValDt>
+        <AcctSvcrRef>SOGE0049220261015</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>IDDT</Cd><SubFmlyCd>ESDD</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000492</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>URSSAF Ile-de-France</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>URSSAF DSN 09/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">213570.87</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-15</Dt></BookgDt>
+        <ValDt><Dt>2026-10-15</Dt></ValDt>
+        <AcctSvcrRef>SOGE0049320261015</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>IDDT</Cd><SubFmlyCd>ESDD</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000493</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>AGIRC-ARRCO Retraite</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>RETRAITE COMPLEMENTAIRE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">1387976.80</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-15</Dt></BookgDt>
+        <ValDt><Dt>2026-10-15</Dt></ValDt>
+        <AcctSvcrRef>SOGE0062820261015</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000628</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-FR</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261016</Id>
+      <ElctrncSeqNb>50</ElctrncSeqNb>
+      <CreDtTm>2026-10-16T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-16</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-16</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261019</Id>
+      <ElctrncSeqNb>51</ElctrncSeqNb>
+      <CreDtTm>2026-10-19T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-19</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-19</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261020</Id>
+      <ElctrncSeqNb>52</ElctrncSeqNb>
+      <CreDtTm>2026-10-20T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-20</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-20</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261021</Id>
+      <ElctrncSeqNb>53</ElctrncSeqNb>
+      <CreDtTm>2026-10-21T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-21</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-21</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261022</Id>
+      <ElctrncSeqNb>54</ElctrncSeqNb>
+      <CreDtTm>2026-10-22T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-22</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-22</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261023</Id>
+      <ElctrncSeqNb>55</ElctrncSeqNb>
+      <CreDtTm>2026-10-23T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-23</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-23</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261026</Id>
+      <ElctrncSeqNb>56</ElctrncSeqNb>
+      <CreDtTm>2026-10-26T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-26</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-26</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>938332.48</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>938332.48</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">938332.48</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-26</Dt></BookgDt>
+        <ValDt><Dt>2026-10-26</Dt></ValDt>
+        <AcctSvcrRef>SOGE0049620261026</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>TAXS</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000496</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>DGFIP SIE Paris 9</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>TVA CA3 09/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">938332.48</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-26</Dt></BookgDt>
+        <ValDt><Dt>2026-10-26</Dt></ValDt>
+        <AcctSvcrRef>SOGE0064220261026</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000642</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-FR</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261027</Id>
+      <ElctrncSeqNb>57</ElctrncSeqNb>
+      <CreDtTm>2026-10-27T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-27</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-27</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>1880369.61</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>1880369.61</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">1880369.61</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-27</Dt></BookgDt>
+        <ValDt><Dt>2026-10-27</Dt></ValDt>
+        <AcctSvcrRef>SOGE0048720261027</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>SALA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000487</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Salariés Lumen SA</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>SALAIRES 10/2026 VIREMENTS GROUPES</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">1880369.61</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-27</Dt></BookgDt>
+        <ValDt><Dt>2026-10-27</Dt></ValDt>
+        <AcctSvcrRef>SOGE0064620261027</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000646</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-FR</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261028</Id>
+      <ElctrncSeqNb>58</ElctrncSeqNb>
+      <CreDtTm>2026-10-28T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-28</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-28</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261029</Id>
+      <ElctrncSeqNb>59</ElctrncSeqNb>
+      <CreDtTm>2026-10-29T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-29</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-29</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261030</Id>
+      <ElctrncSeqNb>60</ElctrncSeqNb>
+      <CreDtTm>2026-10-30T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-30</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-30</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261102</Id>
+      <ElctrncSeqNb>61</ElctrncSeqNb>
+      <CreDtTm>2026-11-02T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-02</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-02</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>185.83</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>185.83</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">185.83</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-02</Dt></BookgDt>
+        <ValDt><Dt>2026-11-02</Dt></ValDt>
+        <AcctSvcrRef>SOGE0050420261102</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>ACMT</Cd><Fmly><Cd>MDOP</Cd><SubFmlyCd>CHRG</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000504</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Société Générale</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>FRAIS BANCAIRES / COMMISSIONS 10/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">185.83</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-02</Dt></BookgDt>
+        <ValDt><Dt>2026-11-02</Dt></ValDt>
+        <AcctSvcrRef>SOGE0065620261102</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-FR-000656</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-FR</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261103</Id>
+      <ElctrncSeqNb>62</ElctrncSeqNb>
+      <CreDtTm>2026-11-03T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-03</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-03</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261104</Id>
+      <ElctrncSeqNb>63</ElctrncSeqNb>
+      <CreDtTm>2026-11-04T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-04</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-04</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261105</Id>
+      <ElctrncSeqNb>64</ElctrncSeqNb>
+      <CreDtTm>2026-11-05T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-05</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-05</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>FR-SOGE-EUR-20261106</Id>
+      <ElctrncSeqNb>65</ElctrncSeqNb>
+      <CreDtTm>2026-11-06T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>FR1630003036200002014785236</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen SA</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>SOGEFRPPXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-06</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-06</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+  </BkToCstmrStmt>
+</Document>

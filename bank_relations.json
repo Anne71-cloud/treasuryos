@@ -1,0 +1,160 @@
+{
+ "note": "Synthetic relationship data for the fictional Groupe Lumen. Ratings are illustrative, not real agency ratings.",
+ "banks": {
+  "BNPP": {
+   "rating": "A+",
+   "rm": "Sophie Laurent",
+   "rm_role": "Chargée d'affaires grandes entreprises",
+   "since": 2011,
+   "services": [
+    "Cash pool header",
+    "RCF agent",
+    "EUR operating account",
+    "EBICS T",
+    "FX spot"
+   ],
+   "kyc_due": "2027-03-31",
+   "ebics_cert_expiry": "2027-01-15",
+   "scores": {
+    "service": 4,
+    "digital": 4,
+    "responsiveness": 5
+   },
+   "fx_volume_eur_year": 10000000,
+   "fx_spread_pct": 0.25,
+   "avg_deposits_eur": 7500000,
+   "deposit_margin_pct": 0.2
+  },
+  "SOGE": {
+   "rating": "A",
+   "rm": "Marc Dubois",
+   "rm_role": "Chargé d'affaires entreprises",
+   "since": 2016,
+   "services": [
+    "Payroll and tax account",
+    "Moroccan subsidiary (SG Maroc)",
+    "RCF lender",
+    "EBICS T",
+    "SDD"
+   ],
+   "kyc_due": "2026-12-15",
+   "ebics_cert_expiry": "2026-12-01",
+   "scores": {
+    "service": 3,
+    "digital": 3,
+    "responsiveness": 3
+   },
+   "fx_volume_eur_year": 18000000,
+   "fx_spread_pct": 0.35,
+   "avg_deposits_eur": 600000,
+   "deposit_margin_pct": 0.2
+  },
+  "HSBC": {
+   "rating": "AA-",
+   "rm": "Emma Clarke",
+   "rm_role": "Relationship Director, Global Banking",
+   "since": 2019,
+   "services": [
+    "USD collections",
+    "UK subsidiary",
+    "RCF lender",
+    "SWIFT payments"
+   ],
+   "kyc_due": "2027-06-30",
+   "ebics_cert_expiry": null,
+   "scores": {
+    "service": 4,
+    "digital": 5,
+    "responsiveness": 4
+   },
+   "fx_volume_eur_year": 3000000,
+   "fx_spread_pct": 0.3,
+   "avg_deposits_eur": 3500000,
+   "deposit_margin_pct": 0.1
+  }
+ },
+ "weights": {
+  "credit": 30,
+  "pricing": 25,
+  "service": 20,
+  "digital": 15,
+  "responsiveness": 10
+ },
+ "monthly_volumes": {
+  "FR-BNPP-EUR": {
+   "sepa_ct_in": 60,
+   "sepa_ct_out": 18,
+   "swift_out": 4
+  },
+  "FR-SOGE-EUR": {
+   "sepa_ct_out": 120,
+   "swift_out": 2
+  },
+  "FR-HSBC-USD": {
+   "swift_out": 6,
+   "other_eur": 35
+  },
+  "DE-BNPP-EUR": {
+   "sepa_ct_in": 25,
+   "sepa_ct_out": 10
+  },
+  "UK-HSBC-GBP": {
+   "sepa_ct_in": 28,
+   "sepa_ct_out": 10,
+   "swift_out": 2
+  },
+  "MA-SOGE-MAD": {
+   "swift_out": 15,
+   "other_eur": 40
+  }
+ },
+ "audit_tolerance_pct": 5,
+ "last_kyc": {
+  "FR-BNPP-EUR": "2024-03-20",
+  "FR-SOGE-EUR": "2023-12-10",
+  "FR-HSBC-USD": "2024-06-25",
+  "DE-BNPP-EUR": "2024-03-20",
+  "UK-HSBC-GBP": "2024-06-25",
+  "MA-SOGE-MAD": "2023-12-10"
+ },
+ "mandate_changes": [
+  {
+   "account": "UK-HSBC-GBP",
+   "en": "James Carter leaves Lumen UK on 31 Dec 2026. Remove him and add the new UK Finance Director before that date.",
+   "fr": "James Carter quitte Lumen UK le 31 décembre 2026. Le retirer et ajouter le nouveau directeur financier UK avant cette date.",
+   "due": "2026-12-31"
+  }
+ ],
+ "agenda": [
+  {
+   "bank": "BNPP",
+   "en": "Ask for the 2027 cash pool fee to move from EUR 150 to the EUR 120 benchmark, given the pool volumes.",
+   "fr": "Demander une baisse de la commission de centralisation 2027 de 150 EUR au niveau du marché, 120 EUR, au vu des volumes."
+  },
+  {
+   "bank": "SOGE",
+   "en": "Renegotiate SEPA outgoing transfers (0.25 vs 0.18 benchmark): 120 payroll and tax payments a month go through this account.",
+   "fr": "Renégocier les virements SEPA émis (0,25 contre 0,18 sur le marché) : 120 paiements de paie et d'impôts par mois passent sur ce compte."
+  },
+  {
+   "bank": "SOGE",
+   "en": "Renew the EBICS certificate before 1 Dec 2026 and send the KYC documents due 15 Dec 2026.",
+   "fr": "Renouveler le certificat EBICS avant le 1er décembre 2026 et envoyer les pièces KYC attendues pour le 15 décembre 2026."
+  },
+  {
+   "bank": "SOGE",
+   "en": "Société Générale earns more than its 35% RCF share, mostly from Moroccan FX conversions. Use this to push for the SEPA price cut and ask for a larger RCF share at the 2027 extension.",
+   "fr": "Société Générale gagne plus que sa part de 35 % du RCF, surtout grâce aux conversions de change au Maroc. S'en servir pour obtenir la baisse du tarif SEPA et demander une part plus importante du RCF lors de l'extension 2027."
+  },
+  {
+   "bank": "HSBC",
+   "en": "HSBC earns less than its 25% share of the RCF. Offer the GBP money market fund and part of the 2027 FX hedging to rebalance.",
+   "fr": "HSBC perçoit moins que sa part de 25 % du RCF. Lui proposer l'OPCVM monétaire en GBP et une partie des couvertures de change 2027 pour rééquilibrer."
+  },
+  {
+   "bank": "ALL",
+   "en": "Share the 2026 accounts and covenant certificate, and present the 13-week forecast and the 2027 financing needs.",
+   "fr": "Transmettre les comptes 2026 et l'attestation de covenants, et présenter le prévisionnel 13 semaines et les besoins de financement 2027."
+  }
+ ]
+}

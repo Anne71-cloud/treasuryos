@@ -1,0 +1,38 @@
+[
+  {
+    "id": "LUM-FR",
+    "name": "Lumen SA",
+    "country": "FR",
+    "city": "Paris",
+    "role": "Holding and French sales",
+    "functional_ccy": "EUR",
+    "lei": "969500LUMENFR000SY01"
+  },
+  {
+    "id": "LUM-DE",
+    "name": "Lumen Deutschland GmbH",
+    "country": "DE",
+    "city": "Frankfurt am Main",
+    "role": "German sales",
+    "functional_ccy": "EUR",
+    "lei": "529900LUMENDE000SY02"
+  },
+  {
+    "id": "LUM-UK",
+    "name": "Lumen UK Ltd",
+    "country": "GB",
+    "city": "London",
+    "role": "UK sales",
+    "functional_ccy": "GBP",
+    "lei": "213800LUMENUK000SY03"
+  },
+  {
+    "id": "LUM-MA",
+    "name": "Lumen Maroc SARL",
+    "country": "MA",
+    "city": "Casablanca",
+    "role": "Assembly plant (buys components in USD)",
+    "functional_ccy": "MAD",
+    "lei": "894500LUMENMA000SY04"
+  }
+]

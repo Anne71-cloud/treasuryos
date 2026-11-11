@@ -1,0 +1,85 @@
+{
+ "forecast_start": "2026-11-09",
+ "as_of": "2026-11-06",
+ "weeks": 13,
+ "holidays": [
+  "2026-11-11",
+  "2026-12-25",
+  "2026-12-26",
+  "2027-01-01",
+  "2027-04-05",
+  "2027-05-01",
+  "2027-05-08",
+  "2027-05-13",
+  "2027-05-24",
+  "2027-07-14",
+  "2027-08-15",
+  "2027-11-01",
+  "2027-11-11"
+ ],
+ "week_season": {
+  "2026-12-21": 0.85,
+  "2026-12-28": 0.45,
+  "2027-01-04": 0.9
+ },
+ "ap_horizon_weeks": 8,
+ "liquidity_policy": {
+  "min_group_cash_eur": 6000000,
+  "rcf_commitment_eur": 25000000,
+  "rcf_drawn_eur": 6000000
+ },
+ "m12": {
+  "months": [
+   "2026-11",
+   "2026-12",
+   "2027-01",
+   "2027-02",
+   "2027-03",
+   "2027-04",
+   "2027-05",
+   "2027-06",
+   "2027-07",
+   "2027-08",
+   "2027-09",
+   "2027-10"
+  ],
+  "activity_growth_pct": 4.0,
+  "seasonality": {
+   "11": 1.05,
+   "12": 0.95,
+   "01": 0.85,
+   "02": 0.95,
+   "03": 1.05,
+   "04": 1.0,
+   "05": 1.0,
+   "06": 1.05,
+   "07": 0.95,
+   "08": 0.8,
+   "09": 1.1,
+   "10": 1.1
+  },
+  "one_offs": [
+   {
+    "month": "2027-05",
+    "cat": "TAXC",
+    "en": "Corporate tax balance (solde d'IS)",
+    "fr": "Solde d'impôt sur les sociétés",
+    "amount_eur": -650000
+   },
+   {
+    "month": "2027-06",
+    "cat": "FIN",
+    "en": "Dividend to shareholders",
+    "fr": "Dividende aux actionnaires",
+    "amount_eur": -3000000
+   },
+   {
+    "month": "2027-03",
+    "cat": "CAPX",
+    "en": "Warehouse automation, Lyon",
+    "fr": "Automatisation de l'entrepôt de Lyon",
+    "amount_eur": -1800000
+   }
+  ]
+ }
+}

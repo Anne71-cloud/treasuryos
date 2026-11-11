@@ -1,0 +1,58 @@
+{
+  "customers": {
+    "LUM-FR": [
+      "Batimax Distribution",
+      "Electra Ouest SAS",
+      "Domotik France",
+      "Habitat Plus Groupe",
+      "Lumi Pro Négoce",
+      "Rexa Bâtiment",
+      "Cité Éclairage",
+      "Atelier Nordlys",
+      "Somelec Grand Est",
+      "Vallée Distribution"
+    ],
+    "LUM-DE": [
+      "Lichtwerk Handel GmbH",
+      "Bauhaus Partner Süd",
+      "Elektro Krämer KG",
+      "Nordlicht Vertrieb GmbH",
+      "Hellmann Projekte AG"
+    ],
+    "LUM-UK": [
+      "Brightway Wholesale Ltd",
+      "Kingsley Electrical Ltd",
+      "Northern Light Supplies",
+      "Fenwick Build Ltd"
+    ],
+    "LUM-MA": [
+      "Atlas Électricité SARL",
+      "Maghreb Éclairage",
+      "Sofadis Maroc"
+    ]
+  },
+  "suppliers": {
+    "LUM-FR": [
+      "Transports Moreau",
+      "Optiverre Composants",
+      "Cartonnages du Rhône",
+      "Agence Lumen Digital",
+      "Delta Logistique"
+    ],
+    "LUM-DE": [
+      "Spedition Hartmann",
+      "Kunststoff Becker GmbH",
+      "IT Service Rhein GmbH"
+    ],
+    "LUM-UK": [
+      "Dawson Freight Ltd",
+      "Pemberton Packaging",
+      "Ashford IT Services"
+    ],
+    "LUM-MA": [
+      "Casa Logistique",
+      "Plastimaroc",
+      "Shenzhen Brightchip Co"
+    ]
+  }
+}

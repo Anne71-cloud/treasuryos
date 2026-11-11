@@ -1,0 +1,107 @@
+[
+  {
+    "id": "CUST",
+    "en": "Customer receipts",
+    "fr": "Encaissements clients",
+    "direction": "in",
+    "section": "Operating"
+  },
+  {
+    "id": "SUPP",
+    "en": "Supplier payments",
+    "fr": "Décaissements fournisseurs",
+    "direction": "out",
+    "section": "Operating"
+  },
+  {
+    "id": "PAYR",
+    "en": "Payroll",
+    "fr": "Salaires",
+    "direction": "out",
+    "section": "Operating"
+  },
+  {
+    "id": "SOCL",
+    "en": "Social charges",
+    "fr": "Charges sociales",
+    "direction": "out",
+    "section": "Operating"
+  },
+  {
+    "id": "TAXV",
+    "en": "VAT",
+    "fr": "TVA",
+    "direction": "both",
+    "section": "Operating"
+  },
+  {
+    "id": "TAXC",
+    "en": "Corporate and payroll taxes",
+    "fr": "Impôts et taxes",
+    "direction": "out",
+    "section": "Operating"
+  },
+  {
+    "id": "RENT",
+    "en": "Rent",
+    "fr": "Loyers",
+    "direction": "out",
+    "section": "Operating"
+  },
+  {
+    "id": "FEES",
+    "en": "Bank fees",
+    "fr": "Frais bancaires",
+    "direction": "out",
+    "section": "Financial"
+  },
+  {
+    "id": "INTR",
+    "en": "Interest",
+    "fr": "Intérêts",
+    "direction": "both",
+    "section": "Financial"
+  },
+  {
+    "id": "ICO",
+    "en": "Intercompany",
+    "fr": "Flux intragroupe",
+    "direction": "both",
+    "section": "Intercompany"
+  },
+  {
+    "id": "POOL",
+    "en": "Cash pool sweep",
+    "fr": "Équilibrage (centralisation de trésorerie)",
+    "direction": "both",
+    "section": "Intercompany"
+  },
+  {
+    "id": "FIN",
+    "en": "Financing (debt and equity)",
+    "fr": "Financement (dette et capitaux propres)",
+    "direction": "both",
+    "section": "Financing"
+  },
+  {
+    "id": "CAPX",
+    "en": "Capital expenditure",
+    "fr": "Investissements",
+    "direction": "out",
+    "section": "Investing"
+  },
+  {
+    "id": "FX",
+    "en": "FX conversion",
+    "fr": "Opérations de change",
+    "direction": "both",
+    "section": "Financial"
+  },
+  {
+    "id": "UNC",
+    "en": "Uncategorised",
+    "fr": "Non catégorisé",
+    "direction": "both",
+    "section": "To review"
+  }
+]

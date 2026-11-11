@@ -1,0 +1,116 @@
+[
+  {
+    "id": "FR-BNPP-EUR",
+    "entity": "LUM-FR",
+    "bank": "BNPP",
+    "bic": "BNPAFRPPXXX",
+    "ccy": "EUR",
+    "iban": "FR9330004008200001025874192",
+    "purpose": "Main operating account, cash pool header (compte centralisateur)",
+    "pool": "EUR-ZBA",
+    "pool_role": "header",
+    "opening": 7650000.0,
+    "signatories": [
+      "Claire Moreau (CFO)",
+      "Julien Petit (Group Treasurer)"
+    ],
+    "signing_rule": "Two signatures above EUR 50,000 equivalent",
+    "status": "Active",
+    "channel": "EBICS T"
+  },
+  {
+    "id": "FR-SOGE-EUR",
+    "entity": "LUM-FR",
+    "bank": "SOGE",
+    "bic": "SOGEFRPPXXX",
+    "ccy": "EUR",
+    "iban": "FR1630003036200002014785236",
+    "purpose": "Payroll, social charges and tax",
+    "pool": "EUR-ZBA",
+    "pool_role": "participant",
+    "opening": 0.0,
+    "signatories": [
+      "Claire Moreau (CFO)",
+      "Julien Petit (Group Treasurer)"
+    ],
+    "signing_rule": "Two signatures above EUR 50,000 equivalent",
+    "status": "Active",
+    "channel": "EBICS T"
+  },
+  {
+    "id": "FR-HSBC-USD",
+    "entity": "LUM-FR",
+    "bank": "HSBC",
+    "bic": "CCFRFRPPXXX",
+    "ccy": "USD",
+    "iban": "FR9830056001480148003652147",
+    "purpose": "USD collections from US customers",
+    "pool": null,
+    "pool_role": null,
+    "opening": 920000.0,
+    "signatories": [
+      "Claire Moreau (CFO)",
+      "Julien Petit (Group Treasurer)"
+    ],
+    "signing_rule": "Two signatures above EUR 50,000 equivalent",
+    "status": "Active",
+    "channel": "EBICS T"
+  },
+  {
+    "id": "DE-BNPP-EUR",
+    "entity": "LUM-DE",
+    "bank": "BNPP",
+    "bic": "BNPADEFFXXX",
+    "ccy": "EUR",
+    "iban": "DE24512108000012345678",
+    "purpose": "German operating account",
+    "pool": "EUR-ZBA",
+    "pool_role": "participant",
+    "opening": 0.0,
+    "signatories": [
+      "Claire Moreau (CFO)",
+      "Anna Weber (Geschäftsführerin)"
+    ],
+    "signing_rule": "Two signatures above EUR 50,000 equivalent",
+    "status": "Active",
+    "channel": "EBICS T"
+  },
+  {
+    "id": "UK-HSBC-GBP",
+    "entity": "LUM-UK",
+    "bank": "HSBC",
+    "bic": "HBUKGB4BXXX",
+    "ccy": "GBP",
+    "iban": "GB03HBUK40127631485972",
+    "purpose": "UK operating account",
+    "pool": null,
+    "pool_role": null,
+    "opening": 780000.0,
+    "signatories": [
+      "Claire Moreau (CFO)",
+      "James Carter (Managing Director)"
+    ],
+    "signing_rule": "Two signatures above EUR 50,000 equivalent",
+    "status": "Active",
+    "channel": "SWIFTNet FileAct"
+  },
+  {
+    "id": "MA-SOGE-MAD",
+    "entity": "LUM-MA",
+    "bank": "SOGE",
+    "bic": "SGMBMAMCXXX",
+    "ccy": "MAD",
+    "iban": "MA89022780000123456789012345",
+    "purpose": "Moroccan operating account (dirham, exchange controls apply)",
+    "pool": null,
+    "pool_role": null,
+    "opening": 6500000.0,
+    "signatories": [
+      "Claire Moreau (CFO)",
+      "Youssef Benali (Directeur général)"
+    ],
+    "signing_rule": "Two signatures above EUR 50,000 equivalent",
+    "status": "Active",
+    "channel": "EBICS T"
+  }
+]

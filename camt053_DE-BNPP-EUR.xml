@@ -1,0 +1,4220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Synthetic statement for the fictional Groupe Lumen. Built by TreasuryOS. -->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.08">
+  <BkToCstmrStmt>
+    <GrpHdr>
+      <MsgId>CAMT053-DE-BNPP-EUR-20261106</MsgId>
+      <CreDtTm>2026-11-06T20:30:00+01:00</CreDtTm>
+    </GrpHdr>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260810</Id>
+      <ElctrncSeqNb>1</ElctrncSeqNb>
+      <CreDtTm>2026-08-10T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-10</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-10</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>275306.70</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>275306.70</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">154370.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-10</Dt></BookgDt>
+        <ValDt><Dt>2026-08-10</Dt></ValDt>
+        <AcctSvcrRef>BNPP0000420260810</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000004</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Bauhaus Partner Süd</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1050</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">275306.70</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-10</Dt></BookgDt>
+        <ValDt><Dt>2026-08-10</Dt></ValDt>
+        <AcctSvcrRef>BNPP0043820260810</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>TAXS</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000438</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Finanzamt Frankfurt</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>UMSATZSTEUER VORANMELDUNG 07/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">120936.70</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-10</Dt></BookgDt>
+        <ValDt><Dt>2026-08-10</Dt></ValDt>
+        <AcctSvcrRef>BNPP0052220260810</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000522</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260811</Id>
+      <ElctrncSeqNb>2</ElctrncSeqNb>
+      <CreDtTm>2026-08-11T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-11</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-11</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>4</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>149180.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>149180.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">118390.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-11</Dt></BookgDt>
+        <ValDt><Dt>2026-08-11</Dt></ValDt>
+        <AcctSvcrRef>BNPP0001020260811</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000010</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Nordlicht Vertrieb GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1057</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">75910.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-11</Dt></BookgDt>
+        <ValDt><Dt>2026-08-11</Dt></ValDt>
+        <AcctSvcrRef>BNPP0001620260811</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000016</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Kunststoff Becker GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1074</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">73270.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-11</Dt></BookgDt>
+        <ValDt><Dt>2026-08-11</Dt></ValDt>
+        <AcctSvcrRef>BNPP0001720260811</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000017</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Spedition Hartmann</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1075</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="EUR">30790.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-11</Dt></BookgDt>
+        <ValDt><Dt>2026-08-11</Dt></ValDt>
+        <AcctSvcrRef>BNPP0052420260811</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000524</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260812</Id>
+      <ElctrncSeqNb>3</ElctrncSeqNb>
+      <CreDtTm>2026-08-12T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-12</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-12</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>159920.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>159920.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">159920.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-12</Dt></BookgDt>
+        <ValDt><Dt>2026-08-12</Dt></ValDt>
+        <AcctSvcrRef>BNPP0001920260812</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000019</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1079</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">159920.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-12</Dt></BookgDt>
+        <ValDt><Dt>2026-08-12</Dt></ValDt>
+        <AcctSvcrRef>BNPP0052620260812</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000526</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260813</Id>
+      <ElctrncSeqNb>4</ElctrncSeqNb>
+      <CreDtTm>2026-08-13T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-13</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-13</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>145430.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>145430.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">145430.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-13</Dt></BookgDt>
+        <ValDt><Dt>2026-08-13</Dt></ValDt>
+        <AcctSvcrRef>BNPP0002420260813</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000024</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Lichtwerk Handel GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1093</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">145430.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-13</Dt></BookgDt>
+        <ValDt><Dt>2026-08-13</Dt></ValDt>
+        <AcctSvcrRef>BNPP0052820260813</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000528</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260814</Id>
+      <ElctrncSeqNb>5</ElctrncSeqNb>
+      <CreDtTm>2026-08-14T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-14</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-14</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>150810.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>150810.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">150810.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-14</Dt></BookgDt>
+        <ValDt><Dt>2026-08-14</Dt></ValDt>
+        <AcctSvcrRef>BNPP0003120260814</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000031</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Nordlicht Vertrieb GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1110</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">150810.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-14</Dt></BookgDt>
+        <ValDt><Dt>2026-08-14</Dt></ValDt>
+        <AcctSvcrRef>BNPP0053020260814</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000530</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260817</Id>
+      <ElctrncSeqNb>6</ElctrncSeqNb>
+      <CreDtTm>2026-08-17T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-17</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-17</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>217950.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>217950.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">217950.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-17</Dt></BookgDt>
+        <ValDt><Dt>2026-08-17</Dt></ValDt>
+        <AcctSvcrRef>BNPP0003520260817</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000035</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Bauhaus Partner Süd</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1121</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">217950.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-17</Dt></BookgDt>
+        <ValDt><Dt>2026-08-17</Dt></ValDt>
+        <AcctSvcrRef>BNPP0053420260817</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000534</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260818</Id>
+      <ElctrncSeqNb>7</ElctrncSeqNb>
+      <CreDtTm>2026-08-18T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-18</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-18</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>4</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>228690.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>228690.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">219310.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-18</Dt></BookgDt>
+        <ValDt><Dt>2026-08-18</Dt></ValDt>
+        <AcctSvcrRef>BNPP0003820260818</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000038</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1128</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">119860.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-18</Dt></BookgDt>
+        <ValDt><Dt>2026-08-18</Dt></ValDt>
+        <AcctSvcrRef>BNPP0004320260818</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000043</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Spedition Hartmann</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1143</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">108830.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-18</Dt></BookgDt>
+        <ValDt><Dt>2026-08-18</Dt></ValDt>
+        <AcctSvcrRef>BNPP0004420260818</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000044</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>IT Service Rhein GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1144</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="EUR">9380.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-18</Dt></BookgDt>
+        <ValDt><Dt>2026-08-18</Dt></ValDt>
+        <AcctSvcrRef>BNPP0053620260818</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000536</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260819</Id>
+      <ElctrncSeqNb>8</ElctrncSeqNb>
+      <CreDtTm>2026-08-19T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-19</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-19</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>170400.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>170400.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">170400.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-19</Dt></BookgDt>
+        <ValDt><Dt>2026-08-19</Dt></ValDt>
+        <AcctSvcrRef>BNPP0004720260819</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000047</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Elektro Krämer KG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1151</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">170400.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-19</Dt></BookgDt>
+        <ValDt><Dt>2026-08-19</Dt></ValDt>
+        <AcctSvcrRef>BNPP0053820260819</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000538</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260820</Id>
+      <ElctrncSeqNb>9</ElctrncSeqNb>
+      <CreDtTm>2026-08-20T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-20</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-20</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>143100.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>143100.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">143100.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-20</Dt></BookgDt>
+        <ValDt><Dt>2026-08-20</Dt></ValDt>
+        <AcctSvcrRef>BNPP0005220260820</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000052</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1164</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">143100.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-20</Dt></BookgDt>
+        <ValDt><Dt>2026-08-20</Dt></ValDt>
+        <AcctSvcrRef>BNPP0054020260820</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000540</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260821</Id>
+      <ElctrncSeqNb>10</ElctrncSeqNb>
+      <CreDtTm>2026-08-21T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-21</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-21</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>209720.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>209720.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">209720.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-21</Dt></BookgDt>
+        <ValDt><Dt>2026-08-21</Dt></ValDt>
+        <AcctSvcrRef>BNPP0005920260821</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000059</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1180</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">209720.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-21</Dt></BookgDt>
+        <ValDt><Dt>2026-08-21</Dt></ValDt>
+        <AcctSvcrRef>BNPP0054220260821</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000542</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260824</Id>
+      <ElctrncSeqNb>11</ElctrncSeqNb>
+      <CreDtTm>2026-08-24T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-24</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-24</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>142070.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>142070.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">142070.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-24</Dt></BookgDt>
+        <ValDt><Dt>2026-08-24</Dt></ValDt>
+        <AcctSvcrRef>BNPP0006320260824</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000063</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Lichtwerk Handel GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1193</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">142070.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-24</Dt></BookgDt>
+        <ValDt><Dt>2026-08-24</Dt></ValDt>
+        <AcctSvcrRef>BNPP0054620260824</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000546</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260825</Id>
+      <ElctrncSeqNb>12</ElctrncSeqNb>
+      <CreDtTm>2026-08-25T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-25</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-25</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>4</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>181340.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>181340.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">157210.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-25</Dt></BookgDt>
+        <ValDt><Dt>2026-08-25</Dt></ValDt>
+        <AcctSvcrRef>BNPP0006820260825</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000068</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1206</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">91800.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-25</Dt></BookgDt>
+        <ValDt><Dt>2026-08-25</Dt></ValDt>
+        <AcctSvcrRef>BNPP0007520260825</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000075</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Kunststoff Becker GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1227</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">89540.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-25</Dt></BookgDt>
+        <ValDt><Dt>2026-08-25</Dt></ValDt>
+        <AcctSvcrRef>BNPP0007620260825</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000076</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>IT Service Rhein GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1229</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="EUR">24130.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-25</Dt></BookgDt>
+        <ValDt><Dt>2026-08-25</Dt></ValDt>
+        <AcctSvcrRef>BNPP0054820260825</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000548</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260826</Id>
+      <ElctrncSeqNb>13</ElctrncSeqNb>
+      <CreDtTm>2026-08-26T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-26</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-26</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>351158.22</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>351158.22</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">153390.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-26</Dt></BookgDt>
+        <ValDt><Dt>2026-08-26</Dt></ValDt>
+        <AcctSvcrRef>BNPP0007820260826</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000078</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1236</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">351158.22</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-26</Dt></BookgDt>
+        <ValDt><Dt>2026-08-26</Dt></ValDt>
+        <AcctSvcrRef>BNPP0043320260826</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>IDDT</Cd><SubFmlyCd>ESDD</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000433</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Techniker Krankenkasse</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>SOZIALVERSICHERUNG BEITRAEGE 08/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">197768.22</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-26</Dt></BookgDt>
+        <ValDt><Dt>2026-08-26</Dt></ValDt>
+        <AcctSvcrRef>BNPP0055020260826</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000550</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260827</Id>
+      <ElctrncSeqNb>14</ElctrncSeqNb>
+      <CreDtTm>2026-08-27T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-27</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-27</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>131420.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>131420.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">131420.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-27</Dt></BookgDt>
+        <ValDt><Dt>2026-08-27</Dt></ValDt>
+        <AcctSvcrRef>BNPP0008620260827</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000086</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Nordlicht Vertrieb GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1259</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">131420.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-27</Dt></BookgDt>
+        <ValDt><Dt>2026-08-27</Dt></ValDt>
+        <AcctSvcrRef>BNPP0055420260827</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000554</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260828</Id>
+      <ElctrncSeqNb>15</ElctrncSeqNb>
+      <CreDtTm>2026-08-28T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-28</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-28</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>732817.60</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>732817.60</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">170800.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-28</Dt></BookgDt>
+        <ValDt><Dt>2026-08-28</Dt></ValDt>
+        <AcctSvcrRef>BNPP0009320260828</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000093</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1274</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">732817.60</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-28</Dt></BookgDt>
+        <ValDt><Dt>2026-08-28</Dt></ValDt>
+        <AcctSvcrRef>BNPP0043220260828</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>SALA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000432</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Mitarbeiter Lumen DE</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>GEHALT 08/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">562017.60</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-28</Dt></BookgDt>
+        <ValDt><Dt>2026-08-28</Dt></ValDt>
+        <AcctSvcrRef>BNPP0055620260828</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000556</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260831</Id>
+      <ElctrncSeqNb>16</ElctrncSeqNb>
+      <CreDtTm>2026-08-31T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-31</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-08-31</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>163850.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>163850.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">163850.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-31</Dt></BookgDt>
+        <ValDt><Dt>2026-08-31</Dt></ValDt>
+        <AcctSvcrRef>BNPP0009720260831</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000097</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Lichtwerk Handel GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1288</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">163850.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-08-31</Dt></BookgDt>
+        <ValDt><Dt>2026-08-31</Dt></ValDt>
+        <AcctSvcrRef>BNPP0055820260831</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000558</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260901</Id>
+      <ElctrncSeqNb>17</ElctrncSeqNb>
+      <CreDtTm>2026-09-01T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-01</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-01</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>5</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>241977.26</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>4</NbOfNtries><Sum>241977.26</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">90050.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-01</Dt></BookgDt>
+        <ValDt><Dt>2026-09-01</Dt></ValDt>
+        <AcctSvcrRef>BNPP0010620260901</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000106</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Spedition Hartmann</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1317</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">110620.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-01</Dt></BookgDt>
+        <ValDt><Dt>2026-09-01</Dt></ValDt>
+        <AcctSvcrRef>BNPP0010720260901</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000107</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Kunststoff Becker GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1319</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">41200.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-01</Dt></BookgDt>
+        <ValDt><Dt>2026-09-01</Dt></ValDt>
+        <AcctSvcrRef>BNPP0044420260901</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000444</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Mainzer Immobilien GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>MIETE 09/2026 BUERO</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="EUR">107.26</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-01</Dt></BookgDt>
+        <ValDt><Dt>2026-09-01</Dt></ValDt>
+        <AcctSvcrRef>BNPP0045020260901</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>ACMT</Cd><Fmly><Cd>MDOP</Cd><SubFmlyCd>CHRG</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000450</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>BNP Paribas</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>FRAIS BANCAIRES / COMMISSIONS 08/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>5</NtryRef>
+        <Amt Ccy="EUR">241977.26</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-01</Dt></BookgDt>
+        <ValDt><Dt>2026-09-01</Dt></ValDt>
+        <AcctSvcrRef>BNPP0056220260901</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000562</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260902</Id>
+      <ElctrncSeqNb>18</ElctrncSeqNb>
+      <CreDtTm>2026-09-02T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-02</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-02</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260903</Id>
+      <ElctrncSeqNb>19</ElctrncSeqNb>
+      <CreDtTm>2026-09-03T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-03</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-03</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>218490.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>218490.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">218490.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-03</Dt></BookgDt>
+        <ValDt><Dt>2026-09-03</Dt></ValDt>
+        <AcctSvcrRef>BNPP0011420260903</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000114</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Elektro Krämer KG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1335</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">218490.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-03</Dt></BookgDt>
+        <ValDt><Dt>2026-09-03</Dt></ValDt>
+        <AcctSvcrRef>BNPP0056420260903</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000564</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260904</Id>
+      <ElctrncSeqNb>20</ElctrncSeqNb>
+      <CreDtTm>2026-09-04T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-04</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-04</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260907</Id>
+      <ElctrncSeqNb>21</ElctrncSeqNb>
+      <CreDtTm>2026-09-07T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-07</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-07</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>130280.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>130280.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">130280.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-07</Dt></BookgDt>
+        <ValDt><Dt>2026-09-07</Dt></ValDt>
+        <AcctSvcrRef>BNPP0012420260907</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000124</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Bauhaus Partner Süd</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1359</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">120000.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-07</Dt></BookgDt>
+        <ValDt><Dt>2026-09-07</Dt></ValDt>
+        <AcctSvcrRef>BNPP0045320260907</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000453</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Lumen SA</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>INTERCO MANAGEMENT FEE 09/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">10280.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-07</Dt></BookgDt>
+        <ValDt><Dt>2026-09-07</Dt></ValDt>
+        <AcctSvcrRef>BNPP0056620260907</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000566</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260908</Id>
+      <ElctrncSeqNb>22</ElctrncSeqNb>
+      <CreDtTm>2026-09-08T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-08</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-08</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>4</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>279910.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>279910.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">116350.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-08</Dt></BookgDt>
+        <ValDt><Dt>2026-09-08</Dt></ValDt>
+        <AcctSvcrRef>BNPP0013020260908</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000130</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1377</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">147320.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-08</Dt></BookgDt>
+        <ValDt><Dt>2026-09-08</Dt></ValDt>
+        <AcctSvcrRef>BNPP0013620260908</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000136</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Kunststoff Becker GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1393</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">132590.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-08</Dt></BookgDt>
+        <ValDt><Dt>2026-09-08</Dt></ValDt>
+        <AcctSvcrRef>BNPP0013720260908</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000137</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>IT Service Rhein GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1395</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="EUR">163560.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-08</Dt></BookgDt>
+        <ValDt><Dt>2026-09-08</Dt></ValDt>
+        <AcctSvcrRef>BNPP0056820260908</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000568</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260909</Id>
+      <ElctrncSeqNb>23</ElctrncSeqNb>
+      <CreDtTm>2026-09-09T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-09</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-09</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>218980.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>218980.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">218980.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-09</Dt></BookgDt>
+        <ValDt><Dt>2026-09-09</Dt></ValDt>
+        <AcctSvcrRef>BNPP0014120260909</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000141</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Lichtwerk Handel GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1402</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">218980.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-09</Dt></BookgDt>
+        <ValDt><Dt>2026-09-09</Dt></ValDt>
+        <AcctSvcrRef>BNPP0057020260909</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000570</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260910</Id>
+      <ElctrncSeqNb>24</ElctrncSeqNb>
+      <CreDtTm>2026-09-10T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-10</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-10</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>273202.13</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>273202.13</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">112580.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-10</Dt></BookgDt>
+        <ValDt><Dt>2026-09-10</Dt></ValDt>
+        <AcctSvcrRef>BNPP0014920260910</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000149</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Lichtwerk Handel GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1425</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">273202.13</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-10</Dt></BookgDt>
+        <ValDt><Dt>2026-09-10</Dt></ValDt>
+        <AcctSvcrRef>BNPP0046620260910</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>TAXS</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000466</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Finanzamt Frankfurt</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>UMSATZSTEUER VORANMELDUNG 08/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">160622.13</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-10</Dt></BookgDt>
+        <ValDt><Dt>2026-09-10</Dt></ValDt>
+        <AcctSvcrRef>BNPP0057220260910</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000572</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260911</Id>
+      <ElctrncSeqNb>25</ElctrncSeqNb>
+      <CreDtTm>2026-09-11T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-11</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-11</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>163020.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>163020.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">163020.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-11</Dt></BookgDt>
+        <ValDt><Dt>2026-09-11</Dt></ValDt>
+        <AcctSvcrRef>BNPP0015720260911</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000157</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Lichtwerk Handel GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1452</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">163020.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-11</Dt></BookgDt>
+        <ValDt><Dt>2026-09-11</Dt></ValDt>
+        <AcctSvcrRef>BNPP0057420260911</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000574</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260914</Id>
+      <ElctrncSeqNb>26</ElctrncSeqNb>
+      <CreDtTm>2026-09-14T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-14</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-14</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260915</Id>
+      <ElctrncSeqNb>27</ElctrncSeqNb>
+      <CreDtTm>2026-09-15T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-15</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-15</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>4</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>194080.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>3</NbOfNtries><Sum>194080.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">194080.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-15</Dt></BookgDt>
+        <ValDt><Dt>2026-09-15</Dt></ValDt>
+        <AcctSvcrRef>BNPP0016620260915</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000166</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Bauhaus Partner Süd</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1471</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">78510.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-15</Dt></BookgDt>
+        <ValDt><Dt>2026-09-15</Dt></ValDt>
+        <AcctSvcrRef>BNPP0017220260915</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000172</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Spedition Hartmann</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1485</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">92990.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-15</Dt></BookgDt>
+        <ValDt><Dt>2026-09-15</Dt></ValDt>
+        <AcctSvcrRef>BNPP0017320260915</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000173</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Kunststoff Becker GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1486</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="EUR">22580.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-15</Dt></BookgDt>
+        <ValDt><Dt>2026-09-15</Dt></ValDt>
+        <AcctSvcrRef>BNPP0057820260915</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000578</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260916</Id>
+      <ElctrncSeqNb>28</ElctrncSeqNb>
+      <CreDtTm>2026-09-16T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-16</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-16</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>166930.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>166930.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">166930.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-16</Dt></BookgDt>
+        <ValDt><Dt>2026-09-16</Dt></ValDt>
+        <AcctSvcrRef>BNPP0017620260916</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000176</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1494</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">166930.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-16</Dt></BookgDt>
+        <ValDt><Dt>2026-09-16</Dt></ValDt>
+        <AcctSvcrRef>BNPP0058020260916</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000580</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260917</Id>
+      <ElctrncSeqNb>29</ElctrncSeqNb>
+      <CreDtTm>2026-09-17T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-17</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-17</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>181880.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>181880.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">181880.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-17</Dt></BookgDt>
+        <ValDt><Dt>2026-09-17</Dt></ValDt>
+        <AcctSvcrRef>BNPP0018320260917</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000183</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Bauhaus Partner Süd</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1510</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">181880.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-17</Dt></BookgDt>
+        <ValDt><Dt>2026-09-17</Dt></ValDt>
+        <AcctSvcrRef>BNPP0058220260917</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000582</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260918</Id>
+      <ElctrncSeqNb>30</ElctrncSeqNb>
+      <CreDtTm>2026-09-18T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-18</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-18</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>146360.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>146360.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">146360.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-18</Dt></BookgDt>
+        <ValDt><Dt>2026-09-18</Dt></ValDt>
+        <AcctSvcrRef>BNPP0019020260918</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000190</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Elektro Krämer KG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1524</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">146360.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-18</Dt></BookgDt>
+        <ValDt><Dt>2026-09-18</Dt></ValDt>
+        <AcctSvcrRef>BNPP0058420260918</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000584</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260921</Id>
+      <ElctrncSeqNb>31</ElctrncSeqNb>
+      <CreDtTm>2026-09-21T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-21</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-21</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>135280.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>135280.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">135280.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-21</Dt></BookgDt>
+        <ValDt><Dt>2026-09-21</Dt></ValDt>
+        <AcctSvcrRef>BNPP0019520260921</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000195</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Nordlicht Vertrieb GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1535</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">135280.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-21</Dt></BookgDt>
+        <ValDt><Dt>2026-09-21</Dt></ValDt>
+        <AcctSvcrRef>BNPP0058620260921</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000586</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260922</Id>
+      <ElctrncSeqNb>32</ElctrncSeqNb>
+      <CreDtTm>2026-09-22T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-22</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-22</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>4</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>274020.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>274020.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">179480.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-22</Dt></BookgDt>
+        <ValDt><Dt>2026-09-22</Dt></ValDt>
+        <AcctSvcrRef>BNPP0020020260922</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000200</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Nordlicht Vertrieb GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1543</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">147650.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-22</Dt></BookgDt>
+        <ValDt><Dt>2026-09-22</Dt></ValDt>
+        <AcctSvcrRef>BNPP0020620260922</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000206</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Spedition Hartmann</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1556</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">126370.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-22</Dt></BookgDt>
+        <ValDt><Dt>2026-09-22</Dt></ValDt>
+        <AcctSvcrRef>BNPP0020720260922</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000207</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>IT Service Rhein GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1560</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="EUR">94540.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-22</Dt></BookgDt>
+        <ValDt><Dt>2026-09-22</Dt></ValDt>
+        <AcctSvcrRef>BNPP0058820260922</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000588</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260923</Id>
+      <ElctrncSeqNb>33</ElctrncSeqNb>
+      <CreDtTm>2026-09-23T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-23</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-23</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>145970.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>145970.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">145970.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-23</Dt></BookgDt>
+        <ValDt><Dt>2026-09-23</Dt></ValDt>
+        <AcctSvcrRef>BNPP0021020260923</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000210</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1570</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">145970.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-23</Dt></BookgDt>
+        <ValDt><Dt>2026-09-23</Dt></ValDt>
+        <AcctSvcrRef>BNPP0059020260923</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000590</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260924</Id>
+      <ElctrncSeqNb>34</ElctrncSeqNb>
+      <CreDtTm>2026-09-24T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-24</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-24</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>199610.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>199610.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">199610.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-24</Dt></BookgDt>
+        <ValDt><Dt>2026-09-24</Dt></ValDt>
+        <AcctSvcrRef>BNPP0021720260924</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000217</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1591</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">199610.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-24</Dt></BookgDt>
+        <ValDt><Dt>2026-09-24</Dt></ValDt>
+        <AcctSvcrRef>BNPP0059420260924</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000594</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260925</Id>
+      <ElctrncSeqNb>35</ElctrncSeqNb>
+      <CreDtTm>2026-09-25T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-25</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-25</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>358454.67</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>358454.67</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">212300.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-25</Dt></BookgDt>
+        <ValDt><Dt>2026-09-25</Dt></ValDt>
+        <AcctSvcrRef>BNPP0022320260925</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000223</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Bauhaus Partner Süd</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1610</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">358454.67</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-25</Dt></BookgDt>
+        <ValDt><Dt>2026-09-25</Dt></ValDt>
+        <AcctSvcrRef>BNPP0046120260925</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>IDDT</Cd><SubFmlyCd>ESDD</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000461</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Techniker Krankenkasse</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>SOZIALVERSICHERUNG BEITRAEGE 09/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">146154.67</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-25</Dt></BookgDt>
+        <ValDt><Dt>2026-09-25</Dt></ValDt>
+        <AcctSvcrRef>BNPP0059620260925</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000596</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260928</Id>
+      <ElctrncSeqNb>36</ElctrncSeqNb>
+      <CreDtTm>2026-09-28T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-28</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-28</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>745763.32</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>745763.32</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">180700.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-28</Dt></BookgDt>
+        <ValDt><Dt>2026-09-28</Dt></ValDt>
+        <AcctSvcrRef>BNPP0023020260928</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000230</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Lichtwerk Handel GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1627</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">745763.32</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-28</Dt></BookgDt>
+        <ValDt><Dt>2026-09-28</Dt></ValDt>
+        <AcctSvcrRef>BNPP0046020260928</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>SALA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000460</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Mitarbeiter Lumen DE</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>GEHALT 09/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">565063.32</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-28</Dt></BookgDt>
+        <ValDt><Dt>2026-09-28</Dt></ValDt>
+        <AcctSvcrRef>BNPP0060020260928</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000600</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260929</Id>
+      <ElctrncSeqNb>37</ElctrncSeqNb>
+      <CreDtTm>2026-09-29T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-29</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-29</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>233790.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>233790.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">148320.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-29</Dt></BookgDt>
+        <ValDt><Dt>2026-09-29</Dt></ValDt>
+        <AcctSvcrRef>BNPP0024020260929</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000240</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>IT Service Rhein GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1652</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">85470.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-29</Dt></BookgDt>
+        <ValDt><Dt>2026-09-29</Dt></ValDt>
+        <AcctSvcrRef>BNPP0024120260929</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000241</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Spedition Hartmann</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1653</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">233790.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-29</Dt></BookgDt>
+        <ValDt><Dt>2026-09-29</Dt></ValDt>
+        <AcctSvcrRef>BNPP0060220260929</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000602</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20260930</Id>
+      <ElctrncSeqNb>38</ElctrncSeqNb>
+      <CreDtTm>2026-09-30T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-30</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-09-30</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>123610.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>123610.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">123610.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-30</Dt></BookgDt>
+        <ValDt><Dt>2026-09-30</Dt></ValDt>
+        <AcctSvcrRef>BNPP0024420260930</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000244</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1660</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">123610.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-09-30</Dt></BookgDt>
+        <ValDt><Dt>2026-09-30</Dt></ValDt>
+        <AcctSvcrRef>BNPP0060420260930</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000604</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261001</Id>
+      <ElctrncSeqNb>39</ElctrncSeqNb>
+      <CreDtTm>2026-10-01T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-01</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-01</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>4</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>196560.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>3</NbOfNtries><Sum>196560.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">196560.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-01</Dt></BookgDt>
+        <ValDt><Dt>2026-10-01</Dt></ValDt>
+        <AcctSvcrRef>BNPP0025220261001</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000252</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1681</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">41200.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-01</Dt></BookgDt>
+        <ValDt><Dt>2026-10-01</Dt></ValDt>
+        <AcctSvcrRef>BNPP0047220261001</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000472</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Mainzer Immobilien GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>MIETE 10/2026 BUERO</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">105.58</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-01</Dt></BookgDt>
+        <ValDt><Dt>2026-10-01</Dt></ValDt>
+        <AcctSvcrRef>BNPP0047820261001</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>ACMT</Cd><Fmly><Cd>MDOP</Cd><SubFmlyCd>CHRG</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000478</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>BNP Paribas</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>FRAIS BANCAIRES / COMMISSIONS 09/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="EUR">155254.42</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-01</Dt></BookgDt>
+        <ValDt><Dt>2026-10-01</Dt></ValDt>
+        <AcctSvcrRef>BNPP0060820261001</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000608</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261002</Id>
+      <ElctrncSeqNb>40</ElctrncSeqNb>
+      <CreDtTm>2026-10-02T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-02</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-02</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>148630.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>148630.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">148630.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-02</Dt></BookgDt>
+        <ValDt><Dt>2026-10-02</Dt></ValDt>
+        <AcctSvcrRef>BNPP0026120261002</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000261</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Elektro Krämer KG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1708</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">148630.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-02</Dt></BookgDt>
+        <ValDt><Dt>2026-10-02</Dt></ValDt>
+        <AcctSvcrRef>BNPP0061020261002</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000610</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261005</Id>
+      <ElctrncSeqNb>41</ElctrncSeqNb>
+      <CreDtTm>2026-10-05T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-05</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-05</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>141900.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>141900.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">141900.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-05</Dt></BookgDt>
+        <ValDt><Dt>2026-10-05</Dt></ValDt>
+        <AcctSvcrRef>BNPP0026620261005</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000266</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Elektro Krämer KG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1716</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">120000.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-05</Dt></BookgDt>
+        <ValDt><Dt>2026-10-05</Dt></ValDt>
+        <AcctSvcrRef>BNPP0048120261005</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000481</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Lumen SA</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>INTERCO MANAGEMENT FEE 10/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">21900.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-05</Dt></BookgDt>
+        <ValDt><Dt>2026-10-05</Dt></ValDt>
+        <AcctSvcrRef>BNPP0061220261005</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000612</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261006</Id>
+      <ElctrncSeqNb>42</ElctrncSeqNb>
+      <CreDtTm>2026-10-06T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-06</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-06</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>4</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>195530.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>195530.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">119730.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-06</Dt></BookgDt>
+        <ValDt><Dt>2026-10-06</Dt></ValDt>
+        <AcctSvcrRef>BNPP0027020261006</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000270</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Nordlicht Vertrieb GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1725</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">103430.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-06</Dt></BookgDt>
+        <ValDt><Dt>2026-10-06</Dt></ValDt>
+        <AcctSvcrRef>BNPP0027620261006</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000276</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Spedition Hartmann</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1739</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">92100.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-06</Dt></BookgDt>
+        <ValDt><Dt>2026-10-06</Dt></ValDt>
+        <AcctSvcrRef>BNPP0027720261006</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000277</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>IT Service Rhein GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1741</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="EUR">75800.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-06</Dt></BookgDt>
+        <ValDt><Dt>2026-10-06</Dt></ValDt>
+        <AcctSvcrRef>BNPP0061420261006</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000614</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261007</Id>
+      <ElctrncSeqNb>43</ElctrncSeqNb>
+      <CreDtTm>2026-10-07T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-07</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-07</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>197450.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>197450.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">197450.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-07</Dt></BookgDt>
+        <ValDt><Dt>2026-10-07</Dt></ValDt>
+        <AcctSvcrRef>BNPP0028120261007</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000281</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Bauhaus Partner Süd</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1754</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">197450.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-07</Dt></BookgDt>
+        <ValDt><Dt>2026-10-07</Dt></ValDt>
+        <AcctSvcrRef>BNPP0061620261007</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000616</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261008</Id>
+      <ElctrncSeqNb>44</ElctrncSeqNb>
+      <CreDtTm>2026-10-08T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-08</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-08</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>117960.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>117960.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">117960.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-08</Dt></BookgDt>
+        <ValDt><Dt>2026-10-08</Dt></ValDt>
+        <AcctSvcrRef>BNPP0028720261008</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000287</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Hellmann Projekte AG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1772</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">117960.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-08</Dt></BookgDt>
+        <ValDt><Dt>2026-10-08</Dt></ValDt>
+        <AcctSvcrRef>BNPP0061820261008</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000618</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261009</Id>
+      <ElctrncSeqNb>45</ElctrncSeqNb>
+      <CreDtTm>2026-10-09T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-09</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-09</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>195040.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>195040.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">195040.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-09</Dt></BookgDt>
+        <ValDt><Dt>2026-10-09</Dt></ValDt>
+        <AcctSvcrRef>BNPP0029620261009</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000296</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Elektro Krämer KG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1790</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">195040.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-09</Dt></BookgDt>
+        <ValDt><Dt>2026-10-09</Dt></ValDt>
+        <AcctSvcrRef>BNPP0062020261009</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000620</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261012</Id>
+      <ElctrncSeqNb>46</ElctrncSeqNb>
+      <CreDtTm>2026-10-12T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-12</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-12</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>278802.67</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>278802.67</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">159720.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-12</Dt></BookgDt>
+        <ValDt><Dt>2026-10-12</Dt></ValDt>
+        <AcctSvcrRef>BNPP0030120261012</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000301</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Lichtwerk Handel GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1802</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">278802.67</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-12</Dt></BookgDt>
+        <ValDt><Dt>2026-10-12</Dt></ValDt>
+        <AcctSvcrRef>BNPP0049420261012</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>TAXS</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000494</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Finanzamt Frankfurt</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>UMSATZSTEUER VORANMELDUNG 09/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">119082.67</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-12</Dt></BookgDt>
+        <ValDt><Dt>2026-10-12</Dt></ValDt>
+        <AcctSvcrRef>BNPP0062220261012</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000622</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261013</Id>
+      <ElctrncSeqNb>47</ElctrncSeqNb>
+      <CreDtTm>2026-10-13T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-13</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-13</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>244280.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>244280.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">124630.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-13</Dt></BookgDt>
+        <ValDt><Dt>2026-10-13</Dt></ValDt>
+        <AcctSvcrRef>BNPP0031020261013</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000310</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>IT Service Rhein GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1821</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">119650.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-13</Dt></BookgDt>
+        <ValDt><Dt>2026-10-13</Dt></ValDt>
+        <AcctSvcrRef>BNPP0031120261013</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000311</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Kunststoff Becker GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1824</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">244280.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-13</Dt></BookgDt>
+        <ValDt><Dt>2026-10-13</Dt></ValDt>
+        <AcctSvcrRef>BNPP0062420261013</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000624</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261014</Id>
+      <ElctrncSeqNb>48</ElctrncSeqNb>
+      <CreDtTm>2026-10-14T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-14</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-14</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>209690.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>209690.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">209690.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-14</Dt></BookgDt>
+        <ValDt><Dt>2026-10-14</Dt></ValDt>
+        <AcctSvcrRef>BNPP0031420261014</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000314</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Lichtwerk Handel GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1832</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">209690.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-14</Dt></BookgDt>
+        <ValDt><Dt>2026-10-14</Dt></ValDt>
+        <AcctSvcrRef>BNPP0062620261014</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000626</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261015</Id>
+      <ElctrncSeqNb>49</ElctrncSeqNb>
+      <CreDtTm>2026-10-15T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-15</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-15</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>219380.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>219380.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">219380.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-15</Dt></BookgDt>
+        <ValDt><Dt>2026-10-15</Dt></ValDt>
+        <AcctSvcrRef>BNPP0032120261015</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000321</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Nordlicht Vertrieb GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1850</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">219380.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-15</Dt></BookgDt>
+        <ValDt><Dt>2026-10-15</Dt></ValDt>
+        <AcctSvcrRef>BNPP0063020261015</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000630</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261016</Id>
+      <ElctrncSeqNb>50</ElctrncSeqNb>
+      <CreDtTm>2026-10-16T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-16</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-16</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>200490.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>200490.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">200490.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-16</Dt></BookgDt>
+        <ValDt><Dt>2026-10-16</Dt></ValDt>
+        <AcctSvcrRef>BNPP0032920261016</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000329</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Elektro Krämer KG</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1873</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">200490.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-16</Dt></BookgDt>
+        <ValDt><Dt>2026-10-16</Dt></ValDt>
+        <AcctSvcrRef>BNPP0063220261016</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000632</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261019</Id>
+      <ElctrncSeqNb>51</ElctrncSeqNb>
+      <CreDtTm>2026-10-19T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-19</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-19</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>161130.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>161130.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">161130.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-19</Dt></BookgDt>
+        <ValDt><Dt>2026-10-19</Dt></ValDt>
+        <AcctSvcrRef>BNPP0033220261019</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000332</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Nordlicht Vertrieb GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1879</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">161130.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-19</Dt></BookgDt>
+        <ValDt><Dt>2026-10-19</Dt></ValDt>
+        <AcctSvcrRef>BNPP0063420261019</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000634</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261020</Id>
+      <ElctrncSeqNb>52</ElctrncSeqNb>
+      <CreDtTm>2026-10-20T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-20</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-20</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>4</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>222510.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>222510.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">115020.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-20</Dt></BookgDt>
+        <ValDt><Dt>2026-10-20</Dt></ValDt>
+        <AcctSvcrRef>BNPP0033520261020</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000335</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Nordlicht Vertrieb GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1889</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">130540.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-20</Dt></BookgDt>
+        <ValDt><Dt>2026-10-20</Dt></ValDt>
+        <AcctSvcrRef>BNPP0034220261020</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000342</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Kunststoff Becker GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1908</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">91970.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-20</Dt></BookgDt>
+        <ValDt><Dt>2026-10-20</Dt></ValDt>
+        <AcctSvcrRef>BNPP0034320261020</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000343</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Spedition Hartmann</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1911</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="EUR">107490.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-20</Dt></BookgDt>
+        <ValDt><Dt>2026-10-20</Dt></ValDt>
+        <AcctSvcrRef>BNPP0063620261020</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000636</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261021</Id>
+      <ElctrncSeqNb>53</ElctrncSeqNb>
+      <CreDtTm>2026-10-21T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-21</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-21</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>109090.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>109090.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">109090.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-21</Dt></BookgDt>
+        <ValDt><Dt>2026-10-21</Dt></ValDt>
+        <AcctSvcrRef>BNPP0034720261021</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000347</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Lichtwerk Handel GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1917</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">109090.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-21</Dt></BookgDt>
+        <ValDt><Dt>2026-10-21</Dt></ValDt>
+        <AcctSvcrRef>BNPP0063820261021</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000638</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261022</Id>
+      <ElctrncSeqNb>54</ElctrncSeqNb>
+      <CreDtTm>2026-10-22T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-22</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-22</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>168360.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>168360.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">168360.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-22</Dt></BookgDt>
+        <ValDt><Dt>2026-10-22</Dt></ValDt>
+        <AcctSvcrRef>BNPP0035420261022</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000354</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Lichtwerk Handel GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1932</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">168360.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-22</Dt></BookgDt>
+        <ValDt><Dt>2026-10-22</Dt></ValDt>
+        <AcctSvcrRef>BNPP0064020261022</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000640</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261023</Id>
+      <ElctrncSeqNb>55</ElctrncSeqNb>
+      <CreDtTm>2026-10-23T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-23</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-23</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261026</Id>
+      <ElctrncSeqNb>56</ElctrncSeqNb>
+      <CreDtTm>2026-10-26T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-26</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-26</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>347935.41</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>347935.41</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">112130.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-26</Dt></BookgDt>
+        <ValDt><Dt>2026-10-26</Dt></ValDt>
+        <AcctSvcrRef>BNPP0036520261026</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000365</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Lichtwerk Handel GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1955</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">347935.41</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-26</Dt></BookgDt>
+        <ValDt><Dt>2026-10-26</Dt></ValDt>
+        <AcctSvcrRef>BNPP0048920261026</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>IDDT</Cd><SubFmlyCd>ESDD</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000489</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Techniker Krankenkasse</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>SOZIALVERSICHERUNG BEITRAEGE 10/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">235805.41</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-26</Dt></BookgDt>
+        <ValDt><Dt>2026-10-26</Dt></ValDt>
+        <AcctSvcrRef>BNPP0064420261026</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000644</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261027</Id>
+      <ElctrncSeqNb>57</ElctrncSeqNb>
+      <CreDtTm>2026-10-27T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-27</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-27</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>4</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>204240.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>3</NbOfNtries><Sum>204240.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">204240.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-27</Dt></BookgDt>
+        <ValDt><Dt>2026-10-27</Dt></ValDt>
+        <AcctSvcrRef>BNPP0037020261027</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000370</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Nordlicht Vertrieb GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1965</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">78920.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-27</Dt></BookgDt>
+        <ValDt><Dt>2026-10-27</Dt></ValDt>
+        <AcctSvcrRef>BNPP0037620261027</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000376</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Spedition Hartmann</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1985</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">103450.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-27</Dt></BookgDt>
+        <ValDt><Dt>2026-10-27</Dt></ValDt>
+        <AcctSvcrRef>BNPP0037720261027</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000377</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Kunststoff Becker GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-1987</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="EUR">21870.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-27</Dt></BookgDt>
+        <ValDt><Dt>2026-10-27</Dt></ValDt>
+        <AcctSvcrRef>BNPP0064820261027</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000648</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261028</Id>
+      <ElctrncSeqNb>58</ElctrncSeqNb>
+      <CreDtTm>2026-10-28T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-28</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-28</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>2</NbOfNtries><Sum>745980.77</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>745980.77</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">159820.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-28</Dt></BookgDt>
+        <ValDt><Dt>2026-10-28</Dt></ValDt>
+        <AcctSvcrRef>BNPP0038020261028</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000380</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Bauhaus Partner Süd</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-1996</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">745980.77</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-28</Dt></BookgDt>
+        <ValDt><Dt>2026-10-28</Dt></ValDt>
+        <AcctSvcrRef>BNPP0048820261028</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>SALA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000488</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Mitarbeiter Lumen DE</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>GEHALT 10/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">586160.77</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-28</Dt></BookgDt>
+        <ValDt><Dt>2026-10-28</Dt></ValDt>
+        <AcctSvcrRef>BNPP0065020261028</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000650</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261029</Id>
+      <ElctrncSeqNb>59</ElctrncSeqNb>
+      <CreDtTm>2026-10-29T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-29</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-29</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>133080.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>133080.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">133080.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-29</Dt></BookgDt>
+        <ValDt><Dt>2026-10-29</Dt></ValDt>
+        <AcctSvcrRef>BNPP0038620261029</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000386</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Nordlicht Vertrieb GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-2010</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">133080.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-29</Dt></BookgDt>
+        <ValDt><Dt>2026-10-29</Dt></ValDt>
+        <AcctSvcrRef>BNPP0065220261029</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000652</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261030</Id>
+      <ElctrncSeqNb>60</ElctrncSeqNb>
+      <CreDtTm>2026-10-30T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-30</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-10-30</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>123790.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>123790.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">123790.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-30</Dt></BookgDt>
+        <ValDt><Dt>2026-10-30</Dt></ValDt>
+        <AcctSvcrRef>BNPP0039320261030</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000393</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Bauhaus Partner Süd</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-2027</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">123790.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-30</Dt></BookgDt>
+        <ValDt><Dt>2026-10-30</Dt></ValDt>
+        <AcctSvcrRef>BNPP0065420261030</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000654</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261102</Id>
+      <ElctrncSeqNb>61</ElctrncSeqNb>
+      <CreDtTm>2026-11-02T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-02</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-02</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>4</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>127450.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>3</NbOfNtries><Sum>127450.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">127450.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-02</Dt></BookgDt>
+        <ValDt><Dt>2026-11-02</Dt></ValDt>
+        <AcctSvcrRef>BNPP0039820261102</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000398</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Bauhaus Partner Süd</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-2042</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">41200.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-02</Dt></BookgDt>
+        <ValDt><Dt>2026-11-02</Dt></ValDt>
+        <AcctSvcrRef>BNPP0050020261102</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000500</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Mainzer Immobilien GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>MIETE 11/2026 BUERO</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">108.85</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-02</Dt></BookgDt>
+        <ValDt><Dt>2026-11-02</Dt></ValDt>
+        <AcctSvcrRef>BNPP0050620261102</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>ACMT</Cd><Fmly><Cd>MDOP</Cd><SubFmlyCd>CHRG</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000506</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>BNP Paribas</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>FRAIS BANCAIRES / COMMISSIONS 10/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>4</NtryRef>
+        <Amt Ccy="EUR">86141.15</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-02</Dt></BookgDt>
+        <ValDt><Dt>2026-11-02</Dt></ValDt>
+        <AcctSvcrRef>BNPP0065820261102</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000658</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261103</Id>
+      <ElctrncSeqNb>62</ElctrncSeqNb>
+      <CreDtTm>2026-11-03T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-03</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-03</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>3</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>221240.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>2</NbOfNtries><Sum>221240.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">74220.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-03</Dt></BookgDt>
+        <ValDt><Dt>2026-11-03</Dt></ValDt>
+        <AcctSvcrRef>BNPP0040920261103</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000409</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>IT Service Rhein GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-2072</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">147020.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-03</Dt></BookgDt>
+        <ValDt><Dt>2026-11-03</Dt></ValDt>
+        <AcctSvcrRef>BNPP0041020261103</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000410</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Kunststoff Becker GmbH</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>ZAHLUNG LIEFERANT L-2073</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>3</NtryRef>
+        <Amt Ccy="EUR">221240.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-03</Dt></BookgDt>
+        <ValDt><Dt>2026-11-03</Dt></ValDt>
+        <AcctSvcrRef>BNPP0066020261103</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000660</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261104</Id>
+      <ElctrncSeqNb>63</ElctrncSeqNb>
+      <CreDtTm>2026-11-04T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-04</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-04</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>112080.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>112080.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">112080.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-04</Dt></BookgDt>
+        <ValDt><Dt>2026-11-04</Dt></ValDt>
+        <AcctSvcrRef>BNPP0041220261104</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000412</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>Lichtwerk Handel GmbH</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>RECHNUNG RE-26-2076</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">112080.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-04</Dt></BookgDt>
+        <ValDt><Dt>2026-11-04</Dt></ValDt>
+        <AcctSvcrRef>BNPP0066220261104</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000662</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>ZBA sweep to header</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA REMONTEE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261105</Id>
+      <ElctrncSeqNb>64</ElctrncSeqNb>
+      <CreDtTm>2026-11-05T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-05</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-05</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>2</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>1</NbOfNtries><Sum>120000.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>1</NbOfNtries><Sum>120000.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+      <Ntry>
+        <NtryRef>1</NtryRef>
+        <Amt Ccy="EUR">120000.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-05</Dt></BookgDt>
+        <ValDt><Dt>2026-11-05</Dt></ValDt>
+        <AcctSvcrRef>BNPP0050920261105</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>ICDT</Cd><SubFmlyCd>ESCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000509</EndToEndId></Refs>
+          <RltdPties><Cdtr><Pty><Nm>Lumen SA</Nm></Pty></Cdtr></RltdPties>
+          <RmtInf><Ustrd>INTERCO MANAGEMENT FEE 11/2026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <NtryRef>2</NtryRef>
+        <Amt Ccy="EUR">120000.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-11-05</Dt></BookgDt>
+        <ValDt><Dt>2026-11-05</Dt></ValDt>
+        <AcctSvcrRef>BNPP0066420261105</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>CAMT</Cd><Fmly><Cd>ACCB</Cd><SubFmlyCd>ZABA</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>E2E-DE-000664</EndToEndId></Refs>
+          <RltdPties><Dbtr><Pty><Nm>ZBA funding from header</Nm></Pty></Dbtr></RltdPties>
+          <RmtInf><Ustrd>EQUILIBRAGE ZBA EUR-ZBA DESCENTE LUM-DE</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+    </Stmt>
+    <Stmt>
+      <Id>DE-BNPP-EUR-20261106</Id>
+      <ElctrncSeqNb>65</ElctrncSeqNb>
+      <CreDtTm>2026-11-06T20:15:00+01:00</CreDtTm>
+      <Acct>
+        <Id><IBAN>DE24512108000012345678</IBAN></Id>
+        <Ccy>EUR</Ccy>
+        <Ownr><Nm>Lumen Deutschland GmbH</Nm></Ownr>
+        <Svcr><FinInstnId><BICFI>BNPADEFFXXX</BICFI></FinInstnId></Svcr>
+      </Acct>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-06</Dt></Dt>
+      </Bal>
+      <Bal>
+        <Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp>
+        <Amt Ccy="EUR">0.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt><Dt>2026-11-06</Dt></Dt>
+      </Bal>
+      <TxsSummry>
+        <TtlNtries><NbOfNtries>0</NbOfNtries></TtlNtries>
+        <TtlCdtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlCdtNtries>
+        <TtlDbtNtries><NbOfNtries>0</NbOfNtries><Sum>0.00</Sum></TtlDbtNtries>
+      </TxsSummry>
+
+    </Stmt>
+  </BkToCstmrStmt>
+</Document>

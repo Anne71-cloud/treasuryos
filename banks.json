@@ -1,0 +1,51 @@
+{
+  "banks": [
+    {
+      "id": "BNPP",
+      "name": "BNP Paribas",
+      "role": "Lead bank, cash pool header, RCF agent",
+      "fees": {
+        "account_maintenance_month": 45,
+        "sepa_ct_out": 0.2,
+        "sepa_ct_in": 0.1,
+        "swift_out": 18.0,
+        "ebics_month": 60,
+        "cash_pool_month": 150
+      }
+    },
+    {
+      "id": "SOGE",
+      "name": "Société Générale",
+      "role": "Payroll and tax payments in France; Moroccan subsidiary bank",
+      "fees": {
+        "account_maintenance_month": 50,
+        "sepa_ct_out": 0.25,
+        "sepa_ct_in": 0.12,
+        "swift_out": 22.0,
+        "ebics_month": 55,
+        "cash_pool_month": 0
+      }
+    },
+    {
+      "id": "HSBC",
+      "name": "HSBC",
+      "role": "USD collections and UK subsidiary",
+      "fees": {
+        "account_maintenance_month": 40,
+        "sepa_ct_out": 0.3,
+        "sepa_ct_in": 0.15,
+        "swift_out": 25.0,
+        "ebics_month": 65,
+        "cash_pool_month": 0
+      }
+    }
+  ],
+  "fee_benchmark": {
+    "account_maintenance_month": 40,
+    "sepa_ct_out": 0.18,
+    "sepa_ct_in": 0.08,
+    "swift_out": 15.0,
+    "ebics_month": 50,
+    "cash_pool_month": 120
+  }
+}

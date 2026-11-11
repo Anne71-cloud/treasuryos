@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TreasuryOS</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="TreasuryOS: a portfolio treasury management system for the fictional Groupe Lumen, built by Saranne Ndamba. Synthetic data only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: a treasury workstation. Sticky top bar, module tabs, then dense panels on a two-column grid. */
+:root {
+  --bg: #F2F5F4;
+  --surface: #FFFFFF;
+  --raised: #F7F9F8;
+  --ink: #14201C;
+  --muted: #5B6A65;
+  --line: #DCE3E0;
+  --accent: #0E6B5B;
+  --accent-soft: #DCEEEA;
+  --pos: #1F7A4D;
+  --neg: #B3261E;
+  --warn: #9A5B00;
+  --warn-soft: #FBEFD9;
+  --display: 'Space Grotesk', 'IBM Plex Sans', system-ui, sans-serif;
+  --text: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --radius: 6px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0D1412; --surface: #141D1A; --raised: #18231F; --ink: #E4ECE8; --muted: #93A49E; --line: #25332E;
+    --accent: #4CC2A6; --accent-soft: #173A33; --pos: #5CC98E; --neg: #F27A70; --warn: #E9A846; --warn-soft: #3A2C14;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0D1412; --surface: #141D1A; --raised: #18231F; --ink: #E4ECE8; --muted: #93A49E; --line: #25332E;
+  --accent: #4CC2A6; --accent-soft: #173A33; --pos: #5CC98E; --neg: #F27A70; --warn: #E9A846; --warn-soft: #3A2C14;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font: 14px/1.5 var(--text); -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--surface); }
+.wrap { max-width: 1320px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+button, select, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.neg { color: var(--neg); } .pos { color: var(--pos); }
+.muted { color: var(--muted); }
+
+/* Top bar */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--surface); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 16px; padding-block: 10px; flex-wrap: wrap; }
+.brand { display: flex; align-items: baseline; gap: 10px; margin-right: auto; }
+.brand b { font-family: var(--display); font-size: 19px; letter-spacing: -0.01em; }
+.brand b span { color: var(--accent); }
+.brand small { color: var(--muted); font-size: 12.5px; }
+.ctrl { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.ctrl select { background: var(--raised); border: 1px solid var(--line); border-radius: var(--radius); padding: 5px 8px; color: var(--ink); }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.seg button { background: transparent; border: 0; padding: 5px 11px; cursor: pointer; font-size: 12.5px; font-weight: 500; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
+
+/* Tabs */
+.tabs { background: var(--surface); border-bottom: 1px solid var(--line); }
+.tabs .wrap { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.tab { border: 0; background: none; padding: 11px 12px; cursor: pointer; font-size: 13.5px; white-space: nowrap; color: var(--muted); border-bottom: 2px solid transparent; display: flex; gap: 6px; align-items: center; }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); font-weight: 500; }
+.tab[disabled] { cursor: default; opacity: .55; }
+.tab .n { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+.soon { font-size: 10.5px; border: 1px solid var(--line); border-radius: 99px; padding: 0 6px; }
+
+main { padding-block: 20px 48px; }
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+.head h1 { font-family: var(--display); font-size: 24px; letter-spacing: -0.015em; margin: 0; text-wrap: balance; }
+.head p { margin: 4px 0 0; color: var(--muted); max-width: 70ch; }
+.mirror { font-size: 12.5px; color: var(--muted); }
+.mirror b { color: var(--ink); font-weight: 500; }
+
+/* KPI strip */
+.kpis { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-bottom: 18px; }
+@media (max-width: 900px) { .kpis { grid-template-columns: 1fr 1fr; } .kpis > :first-child { grid-column: 1 / -1; } }
+.kpi { background: var(--surface); padding: 14px 16px; min-width: 0; }
+.kpi .l { font-size: 12px; color: var(--muted); }
+.kpi .v { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 22px; font-weight: 500; margin-top: 2px; letter-spacing: -0.02em; }
+.kpi:first-child .v { font-size: 28px; }
+.kpi .s { font-size: 12.5px; margin-top: 2px; }
+.kpi.warn .v { color: var(--warn); }
+
+/* Panels */
+.grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 1000px) { .grid { grid-template-columns: 1fr; } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); min-width: 0; }
+.panel + .panel, .stack > .panel + .panel { margin-top: 18px; }
+.ph { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.ph h2 { font-size: 14.5px; margin: 0; font-weight: 600; }
+.ph .sub { font-size: 12.5px; color: var(--muted); }
+.pb { padding: 14px 16px; }
+.scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; font-weight: 500; color: var(--muted); font-size: 12px; padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; background: var(--raised); }
+td { padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td.r, th.r { text-align: right; white-space: nowrap; }
+.stack { min-width: 0; }
+tr.grp td { background: var(--raised); font-weight: 600; }
+tr.tot td { font-weight: 600; border-top: 2px solid var(--ink); background: var(--surface); }
+.acct { font-family: var(--mono); font-size: 12px; }
+.iban { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+.chip { display: inline-block; font-size: 11.5px; padding: 1px 8px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
+.chip.unc { background: var(--warn-soft); color: var(--warn); }
+.chip.fmt { background: var(--raised); color: var(--ink); border: 1px solid var(--line); font-family: var(--mono); }
+.ok { color: var(--pos); font-weight: 500; }
+.bad { color: var(--neg); font-weight: 500; }
+.btc { font-family: var(--mono); font-size: 11.5px; color: var(--muted); white-space: nowrap; }
+.rem { max-width: 340px; }
+.rem .c { font-weight: 500; }
+.rem .t { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+
+/* Chart */
+.chart svg { width: 100%; height: auto; display: block; }
+.chart .gl { stroke: var(--line); stroke-width: 1; }
+.chart .ax { fill: var(--muted); font: 11px var(--mono); }
+.chart .ln { stroke: var(--accent); stroke-width: 2; fill: none; }
+.chart .ar { fill: var(--accent); opacity: .12; }
+.chart .dt { fill: var(--accent); stroke: var(--surface); stroke-width: 2; }
+.chart .lbl { fill: var(--ink); font: 500 12px var(--mono); }
+.legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 12px; color: var(--muted); padding: 0 16px 12px; }
+.legend > span { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Controls row */
+.filters { display: flex; gap: 8px; flex-wrap: wrap; padding: 10px 16px; border-bottom: 1px solid var(--line); background: var(--raised); }
+.filters select, .filters input { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 6px 8px; font-size: 13px; min-width: 0; }
+.filters input { flex: 1 1 200px; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); padding: 6px 11px; font-size: 13px; cursor: pointer; text-decoration: none; color: var(--ink); display: inline-flex; gap: 6px; align-items: center; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.pager { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); }
+
+/* Import */
+.drop { border: 1.5px dashed var(--line); border-radius: var(--radius); padding: 16px; text-align: center; color: var(--muted); font-size: 13px; }
+.drop.over { border-color: var(--accent); background: var(--accent-soft); }
+.msg { margin-top: 10px; font-size: 13px; }
+pre.raw { margin: 0; max-height: 360px; overflow: auto; font: 11.5px/1.5 var(--mono); background: var(--raised); padding: 12px 16px; border-top: 1px solid var(--line); white-space: pre; }
+
+/* Learn */
+.learn { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--line); }
+.learn > div { background: var(--surface); padding: 14px 16px; }
+.learn h3 { margin: 0 0 4px; font-size: 13.5px; }
+.learn h3 i { font-style: normal; color: var(--accent); font-weight: 500; }
+.learn p { margin: 0; color: var(--muted); font-size: 13px; }
+details.rules summary { cursor: pointer; padding: 12px 16px; font-weight: 600; font-size: 14px; list-style: none; display: flex; justify-content: space-between; }
+details.rules summary::-webkit-details-marker { display: none; }
+details.rules summary::after { content: "+"; color: var(--accent); }
+details.rules[open] summary::after { content: "−"; }
+details.rules[open] summary { border-bottom: 1px solid var(--line); }
+.foot { margin-top: 28px; font-size: 12px; color: var(--muted); }
+.loading { padding: 40px; text-align: center; color: var(--muted); }
+table.fc td, table.fc th { padding: 6px 8px; }
+table.fc td:first-child, table.fc th:first-child { position: sticky; left: 0; background: var(--surface); z-index: 1; min-width: 200px; }
+table.fc tr.grp td:first-child { background: var(--raised); }
+tr.catrow td:first-child { font-weight: 500; }
+tr.subrow td { color: var(--muted); font-size: 12.5px; }
+tr.subrow td:first-child { padding-left: 22px; }
+td.warnc { color: var(--warn); background: var(--warn-soft); }
+.chart .buf { stroke: var(--warn); stroke-width: 1.5; stroke-dasharray: 6 4; }
+.chart .bufl { fill: var(--warn); }
+.chart .ln2 { stroke: var(--muted); stroke-width: 1.8; fill: none; }
+.chart .barF { fill: var(--line); stroke: var(--muted); stroke-width: .5; }
+.chart .barA { fill: var(--accent); }
+.sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; vertical-align: -1px; }
+.swF { background: var(--line); border: 1px solid var(--muted); } .swA { background: var(--accent); }
+.pool { display: grid; grid-template-columns: 1.1fr auto 1fr 1.1fr; gap: 16px; align-items: center; }
+@media (max-width: 1000px) { .pool { grid-template-columns: 1fr; } .parrow { flex-direction: row !important; justify-content: center; } }
+.pcol { display: grid; gap: 10px; min-width: 0; }
+.pcard { border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; background: var(--raised); min-width: 0; }
+.pcard.hdr { border: 2px solid var(--accent); background: var(--accent-soft); }
+.pcard.out { background: var(--surface); border-style: dashed; }
+.pt { font-size: 11.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.parrow { display: flex; flex-direction: column; gap: 8px; color: var(--accent); font-size: 12.5px; font-weight: 500; text-align: center; white-space: nowrap; }
+.segbar { display: flex; height: 22px; border-radius: 4px; overflow: hidden; gap: 2px; }
+.b1 { background: var(--muted); } .b2 { background: var(--warn); } .b3 { background: var(--accent); }
+.seglg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; font-size: 13px; }
+@media (max-width: 700px) { .seglg { grid-template-columns: 1fr; } }
+ul.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 13px; }
+.expo { display: grid; grid-template-columns: 110px 1fr 40px; gap: 8px; align-items: center; font-size: 12.5px; margin-bottom: 6px; }
+.expo .track { position: relative; height: 8px; background: var(--raised); border: 1px solid var(--line); border-radius: 4px; }
+.expo .track i { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 4px; }
+.expo .track b { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--warn); }
+.occ { padding: 14px 16px; border-bottom: 1px solid var(--line); } .occ:last-child { border-bottom: 0; }
+.occ h3 { margin: 0 0 4px; font-size: 13.5px; } .occ p { margin: 0; color: var(--muted); font-size: 13px; }
+@media (max-width: 700px) { .pb[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; } }
+.wbar { height: 7px; background: var(--raised); border-radius: 3px; overflow: hidden; margin: 3px 0; }
+.wbar i { display: block; height: 100%; background: var(--accent); } .wbar.c i { background: var(--muted); }
+ul.agenda { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 13px; }
+tr.click { cursor: pointer; } tr.click:hover td { background: var(--raised); }
+tr.detail td { background: var(--accent-soft); font-size: 12.5px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><b>Treasury<span>OS</span></b><small data-i18n="tagline">Groupe Lumen · fictional group, synthetic data</small></div>
+    <label class="ctrl" for="asof"><span data-i18n="asof">Position date</span>
+      <select id="asof"></select>
+    </label>
+    <div class="seg" role="group" aria-label="Language">
+      <button id="lang-en" aria-pressed="true">EN</button><button id="lang-fr" aria-pressed="false">FR</button>
+    </div>
+  </div>
+</header>
+<nav class="tabs" aria-label="Modules">
+  <div class="wrap" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-tab="m1"><span class="n">1</span><span data-i18n="m1">Bank connectivity</span></button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="m2"><span class="n">2</span><span data-i18n="m2">Cash forecast</span></button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="m3"><span class="n">3</span><span data-i18n="m3">Cash pooling</span></button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="m4"><span class="n">4</span><span data-i18n="m4">Bank relationships</span></button>
+    <button class="tab" role="tab" disabled><span class="n">5</span><span data-i18n="m5">Payments</span><span class="soon" data-i18n="soon">soon</span></button>
+    <button class="tab" role="tab" disabled><span class="n">6</span><span data-i18n="m6">FX hedging</span><span class="soon" data-i18n="soon">soon</span></button>
+    <button class="tab" role="tab" disabled><span class="n">7</span><span data-i18n="m7">KPIs</span><span class="soon" data-i18n="soon">soon</span></button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="glossary"><span data-i18n="gl">Glossary</span></button>
+  </div>
+</nav>
+
+<main class="wrap" id="app"><div class="loading" data-i18n="loading">Reading bank statements…</div></main>
+
+<script>
+/* ===================================================================
+   TreasuryOS · Module 1: bank connectivity
+   Reads camt.053 (ISO 20022 XML) and MT940 (SWIFT) statements,
+   categorises every line with rules, and builds the daily cash position.
+   All data is synthetic. Groupe Lumen is fictional.
+   =================================================================== */
+
+const T = {
+  en: {
+    tagline: 'Groupe Lumen · fictional group, synthetic data', asof: 'Position date', loading: 'Reading bank statements…', soon: 'soon',
+    m1: 'Bank connectivity', m2: 'Cash forecast', m3: 'Cash pooling', m4: 'Bank relationships', m5: 'Payments', m6: 'FX hedging', m7: 'KPIs',
+    h1: 'Bank connectivity and cash position',
+    intro: 'Every evening each bank sends an end-of-day statement. TreasuryOS reads them in both standard formats, checks they reconcile, sorts each line into the cash flow plan and shows the group cash position in euros.',
+    mirrors: 'Mirrors', mirrorsTxt: 'Kyriba bank statement reporting and cash positioning · Agicap bank sync and auto-categorisation · SAP Bank Statement Monitor (FF.5 / FEBAN)',
+    kCash: 'Group cash position', kVsPrev: 'vs previous day', kAcc: 'Accounts reporting', kAccS: 'banks', kLines: 'Statement lines', kLinesS: 'over 13 weeks', kAuto: 'Auto-categorised', kAutoS: 'by rules', kRev: 'To review', kRevS: 'need a category',
+    posTitle: 'Cash position', posSub: 'Closing booked balances (CLBD), converted at the day\'s rate',
+    by: 'Group by', byEntity: 'Entity', byBank: 'Bank', byCcy: 'Currency',
+    thAccount: 'Account', thBank: 'Bank', thBal: 'Balance', thRate: 'Rate', thEur: 'EUR equivalent', thChg: 'Day change', thShare: 'Share',
+    total: 'Group total', subtotal: 'Subtotal',
+    chartTitle: 'Group cash, last 13 weeks', chartSub: 'Daily closing position in EUR m, all accounts',
+    stTitle: 'Statements received', stSub: 'One file per account, one statement per business day',
+    thFile: 'File', thFormat: 'Format', thStmts: 'Statements', thLines: 'Lines', thPeriod: 'Period', thChecks: 'Checks', view: 'View', hide: 'Hide', dl: 'Download',
+    checksOk: 'Reconciled', checksBad: 'Break',
+    checksHelp: 'Two controls per statement: opening balance plus lines equals closing balance, and each opening equals the previous closing.',
+    impTitle: 'Import a statement', impDrop: 'Drop a camt.053 (.xml) or MT940 (.sta, .txt) file here, or', impPick: 'choose a file',
+    impOk: 'Imported {n} statements and {l} lines for {a}.', impUnknown: 'The IBAN {i} is not in the account register. Add the account first.', impFail: 'This file could not be read as camt.053 or MT940.',
+    txTitle: 'Bank lines', txSub: 'Categorised against the cash flow plan',
+    allAcc: 'All accounts', allCat: 'All categories', search: 'Search counterparty or reference',
+    thDate: 'Booking', thVal: 'Value', thDetails: 'Counterparty and reference', thCode: 'Bank code', thAmt: 'Amount', thCat: 'Category',
+    shown: '{a} to {b} of {n} lines', prev: 'Previous', next: 'Next',
+    revTitle: 'Review queue', revSub: 'Lines no rule could categorise', revEmpty: 'Nothing to review. Every line has a category.', assign: 'Assign',
+    rulesTitle: 'Categorisation rules', thPrio: 'Priority', thIf: 'Condition', thThen: 'Category', thWhy: 'Why',
+    learnTitle: 'Concepts in this module',
+    l1h: 'Cash position', l1f: 'position de trésorerie', l1: 'How much cash the group holds today, account by account and in one reporting currency. A treasurer starts every morning here.',
+    l2h: 'camt.053 and MT940', l2f: 'relevés de fin de journée', l2: 'camt.053 is the ISO 20022 XML end-of-day statement. It replaces the older text formats: SWIFT MT940 internationally and CFONB 120 (AFB 120) in France. Many banks still send both during the migration.',
+    l3h: 'Booking vs value date', l3f: 'date d\'opération / date de valeur', l3: 'The bank records a line on the booking date, but the money only counts for balance and interest from the value date. Look at the USD wires: value date is one day later.',
+    l4h: 'Bank transaction code', l4f: 'code opération', l4: 'Each line carries a code such as PMNT-RCDT-ESCT (a SEPA transfer received). Rules read the code first, then the text, which is why most lines categorise themselves.',
+    gl: 'Glossary', glH: 'Treasury glossary, English and French', glIntro: 'The ISO 20022, SEPA and cash pooling vocabulary used in this project, with the term a French treasury team would use.', glAll: 'All', glIso: 'ISO 20022 and bank formats', glSepa: 'SEPA', glPool: 'Cash pooling', glSearch: 'Search a term in English or French', thEn: 'English', thFr: 'Français', thDef: 'Meaning',
+    foot: 'TreasuryOS is a portfolio project by Saranne Ndamba. Groupe Lumen, its banks, accounts and figures are fictional and generated for this demo.'
+  },
+  fr: {
+    tagline: 'Groupe Lumen · groupe fictif, données synthétiques', asof: 'Date de position', loading: 'Lecture des relevés bancaires…', soon: 'bientôt',
+    m1: 'Connectivité bancaire', m2: 'Prévisionnel', m3: 'Centralisation', m4: 'Relations bancaires', m5: 'Paiements', m6: 'Couverture de change', m7: 'Indicateurs',
+    h1: 'Connectivité bancaire et position de trésorerie',
+    intro: 'Chaque soir, chaque banque envoie un relevé de fin de journée. TreasuryOS les lit dans les deux formats standards, vérifie leur cohérence, classe chaque ligne dans le plan de trésorerie et affiche la position du groupe en euros.',
+    mirrors: 'Équivalent de', mirrorsTxt: 'Kyriba relevés et position de trésorerie · Agicap synchronisation bancaire et catégorisation automatique · SAP moniteur des relevés bancaires (FF.5 / FEBAN)',
+    kCash: 'Position de trésorerie groupe', kVsPrev: 'vs veille', kAcc: 'Comptes remontés', kAccS: 'banques', kLines: 'Lignes de relevés', kLinesS: 'sur 13 semaines', kAuto: 'Catégorisation automatique', kAutoS: 'par règles', kRev: 'À revoir', kRevS: 'sans catégorie',
+    posTitle: 'Position de trésorerie', posSub: 'Soldes comptables de clôture (CLBD), convertis au cours du jour',
+    by: 'Regrouper par', byEntity: 'Entité', byBank: 'Banque', byCcy: 'Devise',
+    thAccount: 'Compte', thBank: 'Banque', thBal: 'Solde', thRate: 'Cours', thEur: 'Contre-valeur EUR', thChg: 'Variation jour', thShare: 'Part',
+    total: 'Total groupe', subtotal: 'Sous-total',
+    chartTitle: 'Trésorerie groupe, 13 dernières semaines', chartSub: 'Position de clôture quotidienne en M EUR, tous comptes',
+    stTitle: 'Relevés reçus', stSub: 'Un fichier par compte, un relevé de fin de journée par jour ouvré',
+    thFile: 'Fichier', thFormat: 'Format', thStmts: 'Relevés', thLines: 'Lignes', thPeriod: 'Période', thChecks: 'Contrôles', view: 'Voir', hide: 'Masquer', dl: 'Télécharger',
+    checksOk: 'Rapproché', checksBad: 'Écart',
+    checksHelp: 'Deux contrôles par relevé : solde d\'ouverture plus mouvements égale solde de clôture, et chaque ouverture égale la clôture précédente.',
+    impTitle: 'Importer un relevé', impDrop: 'Déposez un fichier camt.053 (.xml) ou MT940 (.sta, .txt) ici, ou', impPick: 'choisissez un fichier',
+    impOk: '{n} relevés et {l} lignes importés pour {a}.', impUnknown: 'L\'IBAN {i} n\'est pas dans le référentiel des comptes. Ajoutez d\'abord le compte.', impFail: 'Ce fichier ne peut pas être lu comme un camt.053 ou un MT940.',
+    txTitle: 'Mouvements bancaires', txSub: 'Catégorisés selon le plan de trésorerie',
+    allAcc: 'Tous les comptes', allCat: 'Toutes les rubriques', search: 'Rechercher un tiers ou une référence',
+    thDate: 'Opération', thVal: 'Valeur', thDetails: 'Tiers et référence', thCode: 'Code opération ISO', thAmt: 'Montant', thCat: 'Rubrique',
+    shown: '{a} à {b} sur {n} lignes', prev: 'Précédent', next: 'Suivant',
+    revTitle: 'File de revue', revSub: 'Lignes qu\'aucune règle n\'a pu catégoriser', revEmpty: 'Rien à revoir. Chaque ligne a une rubrique.', assign: 'Affecter',
+    rulesTitle: 'Règles de catégorisation', thPrio: 'Priorité', thIf: 'Condition', thThen: 'Rubrique', thWhy: 'Pourquoi',
+    learnTitle: 'Notions de ce module',
+    l1h: 'Position de trésorerie', l1f: 'cash position', l1: 'Le montant de trésorerie détenu aujourd\'hui, compte par compte et dans une devise de reporting. C\'est le premier écran du trésorier chaque matin.',
+    l2h: 'camt.053 et MT940', l2f: 'end-of-day statements', l2: 'Le camt.053 est le relevé de compte de fin de journée au format XML ISO 20022. Il remplace les anciens formats texte : MT940 (SWIFT) et, en France, le CFONB 120 (AFB 120). Pendant la migration, beaucoup de banques envoient encore les deux.',
+    l3h: 'Date d\'opération et date de valeur', l3f: 'booking vs value date', l3: 'La banque enregistre la ligne à la date d\'opération, mais l\'argent ne compte pour le solde et les intérêts qu\'à la date de valeur. Regardez les virements USD : la valeur est à J+1.',
+    l4h: 'Code opération ISO 20022', l4f: 'bank transaction code', l4: 'Chaque ligne porte un code à trois niveaux (domaine, famille, sous-famille), par exemple PMNT-RCDT-ESCT pour un virement SEPA reçu. Les règles lisent d\'abord le code, puis le libellé : c\'est pourquoi la plupart des lignes se catégorisent seules.',
+    gl: 'Lexique', glH: 'Lexique de trésorerie, français et anglais', glIntro: 'Le vocabulaire ISO 20022, SEPA et centralisation de trésorerie utilisé dans ce projet, avec le terme employé par une équipe trésorerie en France.', glAll: 'Tout', glIso: 'ISO 20022 et formats bancaires', glSepa: 'SEPA', glPool: 'Centralisation de trésorerie', glSearch: 'Rechercher un terme en français ou en anglais', thEn: 'English', thFr: 'Français', thDef: 'Définition',
+    foot: 'TreasuryOS est un projet de portfolio de Saranne Ndamba. Le Groupe Lumen, ses banques, ses comptes et ses chiffres sont fictifs et générés pour cette démonstration.'
+  }
+};
+
+const S = { view: 'm1', glD: '', glQ: '', lang: 'en', asof: null, groupBy: 'entity', page: 0, fAcc: '', fCat: '', q: '', open: null, overrides: {} };
+try { const l = localStorage.getItem('tos-lang'); if (l === 'fr' || l === 'en') S.lang = l; } catch (e) {}
+try { S.overrides = JSON.parse(localStorage.getItem('tos-overrides') || '{}'); } catch (e) {}
+const t = (k, v = {}) => (T[S.lang][k] || k).replace(/\{(\w+)\}/g, (_, x) => v[x] ?? '');
+const loc = () => (S.lang === 'fr' ? 'fr-FR' : 'en-GB');
+const fmt = (x, d = 0) => new Intl.NumberFormat(loc(), { minimumFractionDigits: d, maximumFractionDigits: d }).format(x);
+const fmtM = x => fmt(x / 1e6, 2);
+const mU = () => (S.lang === 'fr' ? '\u00a0M' : 'm');
+const fM = x => fmtM(x) + mU();
+const fdate = s => new Date(s + 'T12:00:00').toLocaleDateString(loc(), { day: 'numeric', month: 'short', year: 'numeric' });
+const fdShort = s => new Date(s + 'T12:00:00').toLocaleDateString(loc(), { day: '2-digit', month: 'short' });
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+/* ------------------------------------------------------------ parsers */
+function parseCamt053(text) {
+  const doc = new DOMParser().parseFromString(text, 'application/xml');
+  if (doc.getElementsByTagName('parsererror').length) throw new Error('xml');
+  const kids = (el, name) => Array.from(el.children).filter(c => c.localName === name);
+  const one = (el, path) => path.split('/').reduce((n, p) => n && kids(n, p)[0], el);
+  const txt = (el, path) => { const n = one(el, path); return n ? n.textContent.trim() : ''; };
+  const signed = (el) => { const v = parseFloat(txt(el, 'Amt')); return txt(el, 'CdtDbtInd') === 'DBIT' ? -v : v; };
+  const root = one(doc.documentElement, 'BkToCstmrStmt');
+  if (!root) throw new Error('camt');
+  return kids(root, 'Stmt').map(st => {
+    const bals = kids(st, 'Bal');
+    const bal = code => { const b = bals.find(x => txt(x, 'Tp/CdOrPrtry/Cd') === code); return b ? signed(b) : null; };
+    const date = txt(bals[0], 'Dt/Dt');
+    return {
+      iban: txt(st, 'Acct/Id/IBAN'), ccy: txt(st, 'Acct/Ccy'), date, opening: bal('OPBD'), closing: bal('CLBD'),
+      entries: kids(st, 'Ntry').map(n => {
+        const tx = one(n, 'NtryDtls/TxDtls');
+        const dom = one(n, 'BkTxCd/Domn');
+        return {
+          booking: txt(n, 'BookgDt/Dt'), value: txt(n, 'ValDt/Dt'), amount: signed(n),
+          btc: dom ? [txt(dom, 'Cd'), txt(dom, 'Fmly/Cd'), txt(dom, 'Fmly/SubFmlyCd')].join('-') : '',
+          ref: txt(n, 'AcctSvcrRef'), e2e: tx ? txt(tx, 'Refs/EndToEndId') : '',
+          cpty: tx ? (txt(tx, 'RltdPties/Dbtr/Pty/Nm') || txt(tx, 'RltdPties/Cdtr/Pty/Nm')) : '',
+          info: tx ? txt(tx, 'RmtInf/Ustrd') : ''
+        };
+      })
+    };
+  });
+}
+
+function parseMT940(text) {
+  // Join continuation lines onto the tag they belong to, then walk the tags.
+  const lines = text.replace(/\r/g, '').split('\n');
+  const tags = []; let cur = null;
+  for (const raw of lines) {
+    const m = raw.match(/^:(\d{2}[A-Z]?):(.*)$/);
+    if (m) { cur = { tag: m[1], val: m[2] }; tags.push(cur); }
+    else if (raw.trim() === '-') { tags.push({ tag: 'END' }); cur = null; }
+    else if (cur) cur.val += raw;
+  }
+  const amt = s => parseFloat(s.replace(',', '.'));
+  const d6 = s => `20${s.slice(0, 2)}-${s.slice(2, 4)}-${s.slice(4, 6)}`;
+  const bal = v => { const m = v.match(/^([CD])(\d{6})([A-Z]{3})([\d,]+)/); return { amt: (m[1] === 'D' ? -1 : 1) * amt(m[4]), date: d6(m[2]), ccy: m[3] }; };
+  const out = []; let st = null, last = null;
+  for (const x of tags) {
+    if (x.tag === '20') { st = { entries: [] }; }
+    else if (!st) continue;
+    else if (x.tag === '25') st.iban = x.val.split('/').pop().trim();
+    else if (x.tag === '60F' || x.tag === '60M') { const b = bal(x.val); st.opening = b.amt; st.ccy = b.ccy; st.date = b.date; }
+    else if (x.tag === '61') {
+      // value date YYMMDD, optional entry date MMDD, C/D (or RC/RD), amount, type code, references
+      const m = x.val.match(/^(\d{6})(\d{4})?(R?[CD])([\d,]+)([NF][A-Z0-9]{3})([^/]*)(?:\/\/(.*))?$/);
+      if (!m) continue;
+      const value = d6(m[1]);
+      const booking = m[2] ? `${value.slice(0, 4)}-${m[2].slice(0, 2)}-${m[2].slice(2)}` : value;
+      last = { booking, value, amount: (m[3].endsWith('D') ? -1 : 1) * amt(m[4]), swift: m[5], ref: (m[7] || '').trim(), e2e: m[6].trim(), cpty: '', info: '', btc: '' };
+      st.entries.push(last);
+    }
+    else if (x.tag === '86' && last) {
+      const f = {}; x.val.replace(/\/(NAME|REMI|BTC|EREF)\/(.*?)(?=\/(?:NAME|REMI|BTC|EREF)\/|$)/g, (_, k, v) => { f[k] = v.trim(); });
+      last.cpty = f.NAME || ''; last.info = f.REMI || x.val; last.btc = f.BTC || ''; if (f.EREF) last.e2e = f.EREF;
+    }
+    else if (x.tag === '62F') { st.closing = bal(x.val).amt; }
+    else if (x.tag === 'END') { out.push(st); st = null; last = null; }
+  }
+  if (st) out.push(st);
+  return out;
+}
+
+function parseStatement(text) {
+  const s = text.trimStart();
+  if (s.startsWith('<')) return { format: 'camt.053', statements: parseCamt053(text) };
+  if (/^:20:|\n:20:/.test(s)) return { format: 'MT940', statements: parseMT940(text) };
+  throw new Error('unknown');
+}
+
+/* ------------------------------------------------------------ engine */
+let D = {};     // reference data
+let FILES = []; // imported files
+let LINES = []; // every bank line, categorised
+let BAL = {};   // BAL[accountId][date] = closing balance
+
+function categorise(line) {
+  if (S.overrides[line.key]) return { cat: S.overrides[line.key], rule: 'manual' };
+  const text = (line.cpty + ' ' + line.info).toUpperCase();
+  for (const r of D.rules) {
+    if (r.if_btc && r.if_btc !== line.btc) continue;
+    if (r.if_btc_family && line.btc.split('-')[1] !== r.if_btc_family) continue;
+    if (r.if_sign && ((line.amount > 0) !== (r.if_sign === '+'))) continue;
+    if (r.if_text && !new RegExp(r.if_text, 'i').test(text)) continue;
+    return { cat: r.category, rule: r.priority };
+  }
+  return { cat: 'UNC', rule: null };
+}
+
+function rebuild() {
+  LINES = []; BAL = {};
+  for (const f of FILES) {
+    for (const st of f.statements) {
+      const acc = D.byIban[st.iban];
+      if (!acc) continue;
+      (BAL[acc.id] ||= {})[st.date] = st.closing;
+      st.entries.forEach((e, i) => {
+        const line = { ...e, account: acc.id, entity: acc.entity, bank: acc.bank, ccy: acc.ccy, key: `${acc.id}|${st.date}|${i}|${e.amount}` };
+        Object.assign(line, categorise(line));
+        LINES.push(line);
+      });
+    }
+  }
+  LINES.sort((a, b) => b.booking.localeCompare(a.booking) || a.account.localeCompare(b.account));
+  D.days = [...new Set(Object.values(BAL).flatMap(o => Object.keys(o)))].sort();
+  if (!S.asof || !D.days.includes(S.asof)) S.asof = D.days[D.days.length - 1];
+}
+
+function checkFile(f) {
+  let ok = true, prev = null;
+  for (const st of f.statements) {
+    const sum = st.entries.reduce((s, e) => s + e.amount, 0);
+    if (Math.abs(st.opening + sum - st.closing) > 0.005) ok = false;
+    if (prev !== null && Math.abs(prev - st.opening) > 0.005) ok = false;
+    prev = st.closing;
+  }
+  return ok;
+}
+
+function rate(date, ccy) {
+  if (ccy === 'EUR') return 1;
+  let i = D.fxDates.length - 1;
+  while (i > 0 && D.fxDates[i] > date) i--;
+  return D.fx[D.fxDates[i]]['EUR' + ccy];
+}
+function balanceOn(accId, date) {
+  const b = BAL[accId] || {};
+  const ds = Object.keys(b).filter(d => d <= date).sort();
+  return ds.length ? b[ds[ds.length - 1]] : null;
+}
+function prevDay(date) { const i = D.days.indexOf(date); return i > 0 ? D.days[i - 1] : null; }
+function groupCash(date) {
+  return D.accounts.reduce((s, a) => { const b = balanceOn(a.id, date); return s + (b == null ? 0 : b / rate(date, a.ccy)); }, 0);
+}
+
+/* ------------------------------------------------------------ views */
+function catLabel(id) { const c = D.catById[id]; return c ? c[S.lang] : id; }
+
+function viewKpis() {
+  const cash = groupCash(S.asof), p = prevDay(S.asof), chg = p ? cash - groupCash(p) : 0;
+  const reporting = D.accounts.filter(a => balanceOn(a.id, S.asof) != null).length;
+  const auto = LINES.filter(l => l.rule !== null && l.rule !== 'manual').length;
+  const rev = LINES.filter(l => l.cat === 'UNC').length;
+  return `<section class="kpis">
+    <div class="kpi"><div class="l">${t('kCash')} · ${fdate(S.asof)}</div><div class="v">EUR ${fmt(cash)}</div>
+      <div class="s ${chg < 0 ? 'neg' : 'pos'}">${chg < 0 ? '' : '+'}${fmt(chg)} ${t('kVsPrev')}</div></div>
+    <div class="kpi"><div class="l">${t('kAcc')}</div><div class="v">${reporting}/${D.accounts.length}</div><div class="s muted">3 ${t('kAccS')}</div></div>
+    <div class="kpi"><div class="l">${t('kLines')}</div><div class="v">${fmt(LINES.length)}</div><div class="s muted">${t('kLinesS')}</div></div>
+    <div class="kpi"><div class="l">${t('kAuto')}</div><div class="v">${fmt(100 * auto / LINES.length, 1)}%</div><div class="s muted">${t('kAutoS')}</div></div>
+    <div class="kpi ${rev ? 'warn' : ''}"><div class="l">${t('kRev')}</div><div class="v">${rev}</div><div class="s muted">${t('kRevS')}</div></div>
+  </section>`;
+}
+
+function viewPosition() {
+  const p = prevDay(S.asof);
+  const rows = D.accounts.map(a => {
+    const b = balanceOn(a.id, S.asof) ?? 0, r = rate(S.asof, a.ccy), eur = b / r;
+    const pb = p ? (balanceOn(a.id, p) ?? 0) / rate(p, a.ccy) : eur;
+    return { a, b, r, eur, chg: eur - pb };
+  });
+  const total = rows.reduce((s, x) => s + x.eur, 0), totChg = rows.reduce((s, x) => s + x.chg, 0);
+  const key = { entity: x => x.a.entity, bank: x => x.a.bank, currency: x => x.a.ccy }[S.groupBy];
+  const label = { entity: k => D.entById[k].name, bank: k => D.bankById[k].name, currency: k => k }[S.groupBy];
+  const groups = [...new Set(rows.map(key))];
+  let body = '';
+  for (const g of groups) {
+    const rs = rows.filter(x => key(x) === g), ge = rs.reduce((s, x) => s + x.eur, 0), gc = rs.reduce((s, x) => s + x.chg, 0);
+    const sameCcy = new Set(rs.map(x => x.a.ccy)).size === 1;
+    body += `<tr class="grp"><td>${esc(label(g))}</td><td></td><td class="r num">${sameCcy && S.groupBy === 'currency' ? fmt(rs.reduce((s, x) => s + x.b, 0)) : ''}</td><td></td>
+      <td class="r num">${fmt(ge)}</td><td class="r num ${gc < 0 ? 'neg' : ''}">${fmt(gc)}</td><td class="r num">${fmt(100 * ge / total, 1)}%</td></tr>`;
+    for (const x of rs) {
+      body += `<tr><td><div class="acct">${x.a.id}</div><div class="iban">${x.a.iban.replace(/(.{4})/g, '$1 ').trim()}</div></td>
+        <td>${esc(D.bankById[x.a.bank].name)}</td>
+        <td class="r num">${x.a.ccy} ${fmt(x.b)}</td>
+        <td class="r num muted">${x.a.ccy === 'EUR' ? '' : fmt(x.r, 4)}</td>
+        <td class="r num">${fmt(x.eur)}</td>
+        <td class="r num ${x.chg < 0 ? 'neg' : ''}">${fmt(x.chg)}</td>
+        <td class="r num muted">${fmt(100 * x.eur / total, 1)}%</td></tr>`;
+    }
+  }
+  body += `<tr class="tot"><td>${t('total')}</td><td></td><td></td><td></td><td class="r num">${fmt(total)}</td><td class="r num ${totChg < 0 ? 'neg' : ''}">${fmt(totChg)}</td><td class="r num">100%</td></tr>`;
+  const segBtn = (v, k) => `<button data-group="${v}" aria-pressed="${S.groupBy === v}">${t(k)}</button>`;
+  return `<section class="panel">
+    <div class="ph"><div><h2>${t('posTitle')}</h2><div class="sub">${t('posSub')}</div></div>
+      <div class="ctrl"><span>${t('by')}</span><div class="seg">${segBtn('entity', 'byEntity')}${segBtn('bank', 'byBank')}${segBtn('currency', 'byCcy')}</div></div></div>
+    <div class="scroll"><table>
+      <thead><tr><th>${t('thAccount')}</th><th>${t('thBank')}</th><th class="r">${t('thBal')}</th><th class="r">${t('thRate')}</th><th class="r">${t('thEur')}</th><th class="r">${t('thChg')}</th><th class="r">${t('thShare')}</th></tr></thead>
+      <tbody>${body}</tbody></table></div></section>`;
+}
+
+function viewChart() {
+  const pts = D.days.map(d => ({ d, v: groupCash(d) / 1e6 }));
+  const W = 640, H = 230, L = 44, R = 64, Tp = 14, B = 26;
+  const lo = Math.floor(Math.min(...pts.map(p => p.v)) - 0.5), hi = Math.ceil(Math.max(...pts.map(p => p.v)) + 0.5);
+  const x = i => L + (W - L - R) * i / (pts.length - 1), y = v => Tp + (H - Tp - B) * (1 - (v - lo) / (hi - lo));
+  const step = (hi - lo) > 8 ? 2 : 1;
+  let grid = '';
+  for (let v = lo; v <= hi; v += step) grid += `<line class="gl" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text class="ax" x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  pts.forEach((p, i) => { if (new Date(p.d + 'T12:00:00').getDay() === 1 && i % 10 < 5 && i > 0 && i < pts.length - 2) grid += `<text class="ax" x="${x(i)}" y="${H - 8}" text-anchor="middle">${fdShort(p.d)}</text>`; });
+  const path = pts.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(p.v).toFixed(1)}`).join('');
+  const area = `${path}L${x(pts.length - 1)},${y(lo)}L${x(0)},${y(lo)}Z`;
+  const si = pts.findIndex(p => p.d === S.asof), sp = pts[si];
+  return `<section class="panel chart">
+    <div class="ph"><div><h2>${t('chartTitle')}</h2><div class="sub">${t('chartSub')}</div></div></div>
+    <div class="pb"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${t('chartTitle')}">${grid}
+      <path class="ar" d="${area}"/><path class="ln" d="${path}"/>
+      <circle class="dt" cx="${x(si)}" cy="${y(sp.v)}" r="5"/>
+      <text class="lbl" x="${Math.min(x(si) + 9, W - 4)}" y="${y(sp.v) - 9}" text-anchor="${si > pts.length - 6 ? 'end' : 'start'}">${fmt(sp.v, 1)}${mU()}</text>
+    </svg></div></section>`;
+}
+
+function viewFiles() {
+  const rows = FILES.map((f, i) => {
+    const acc = D.byIban[f.statements[0]?.iban], ok = checkFile(f);
+    const n = f.statements.reduce((s, x) => s + x.entries.length, 0);
+    return `<tr><td class="acct">${esc(f.name)}</td><td><span class="chip fmt">${f.format}</span></td><td>${acc ? esc(D.bankById[acc.bank].name) : ''}</td>
+      <td class="r num">${f.statements.length}</td><td class="r num">${n}</td>
+      <td class="num muted" style="white-space:nowrap">${fdShort(f.statements[0].date)} → ${fdShort(f.statements[f.statements.length - 1].date)}</td>
+      <td class="${ok ? 'ok' : 'bad'}" style="white-space:nowrap">${ok ? '✓ ' + t('checksOk') : '✕ ' + t('checksBad')}</td>
+      <td style="white-space:nowrap"><button class="btn" data-view="${i}">${S.open === i ? t('hide') : t('view')}</button> ${f.url ? `<a class="btn" href="${f.url}" download>${t('dl')}</a>` : ''}</td></tr>`;
+  }).join('');
+  const raw = S.open !== null && FILES[S.open] ? `<pre class="raw">${esc(FILES[S.open].text.slice(0, 12000))}${FILES[S.open].text.length > 12000 ? '\n…' : ''}</pre>` : '';
+  return `<section class="panel">
+    <div class="ph"><div><h2>${t('stTitle')}</h2><div class="sub">${t('stSub')}</div></div></div>
+    <div class="scroll"><table><thead><tr><th>${t('thFile')}</th><th>${t('thFormat')}</th><th>${t('thBank')}</th><th class="r">${t('thStmts')}</th><th class="r">${t('thLines')}</th><th>${t('thPeriod')}</th><th>${t('thChecks')}</th><th></th></tr></thead>
+    <tbody>${rows}</tbody></table></div>${raw}
+    <div class="pb muted" style="font-size:12.5px;border-top:1px solid var(--line)">${t('checksHelp')}</div>
+    <div class="pb" style="border-top:1px solid var(--line)"><h2 style="font-size:14px;margin:0 0 8px">${t('impTitle')}</h2>
+      <div class="drop" id="drop">${t('impDrop')} <label class="btn" for="file" style="margin-left:4px">${t('impPick')}</label>
+      <input type="file" id="file" accept=".xml,.sta,.txt,.940,.mt940" hidden></div><div class="msg" id="impmsg">${S.impMsg || ''}</div></div>
+  </section>`;
+}
+
+function filtered() {
+  const q = S.q.trim().toUpperCase();
+  return LINES.filter(l => (!S.fAcc || l.account === S.fAcc) && (!S.fCat || l.cat === S.fCat) && (!q || (l.cpty + ' ' + l.info + ' ' + l.e2e).toUpperCase().includes(q)));
+}
+
+function viewLines() {
+  const list = filtered(), per = 40, pages = Math.max(1, Math.ceil(list.length / per));
+  S.page = Math.min(S.page, pages - 1);
+  const slice = list.slice(S.page * per, S.page * per + per);
+  const rows = slice.map(l => `<tr>
+    <td class="num">${fdShort(l.booking)}</td><td class="num ${l.value !== l.booking ? '' : 'muted'}">${fdShort(l.value)}</td>
+    <td class="acct">${l.account}</td>
+    <td class="rem"><div class="c">${esc(l.cpty)}</div><div class="t">${esc(l.info)}</div></td>
+    <td class="btc">${esc(l.btc)}</td>
+    <td class="r num ${l.amount < 0 ? 'neg' : ''}">${l.ccy} ${fmt(l.amount, 2)}</td>
+    <td><span class="chip ${l.cat === 'UNC' ? 'unc' : ''}" title="${l.rule === 'manual' ? 'manual' : l.rule ? 'rule ' + l.rule : ''}">${esc(catLabel(l.cat))}</span></td></tr>`).join('');
+  const accOpt = D.accounts.map(a => `<option value="${a.id}" ${S.fAcc === a.id ? 'selected' : ''}>${a.id}</option>`).join('');
+  const catOpt = D.categories.map(c => `<option value="${c.id}" ${S.fCat === c.id ? 'selected' : ''}>${esc(c[S.lang])}</option>`).join('');
+  const a = list.length ? S.page * per + 1 : 0, b = Math.min(list.length, S.page * per + per);
+  return `<section class="panel">
+    <div class="ph"><div><h2>${t('txTitle')}</h2><div class="sub">${t('txSub')}</div></div></div>
+    <div class="filters">
+      <select id="facc" aria-label="${t('allAcc')}"><option value="">${t('allAcc')}</option>${accOpt}</select>
+      <select id="fcat" aria-label="${t('allCat')}"><option value="">${t('allCat')}</option>${catOpt}</select>
+      <input id="fq" type="search" placeholder="${t('search')}" value="${esc(S.q)}">
+    </div>
+    <div class="scroll"><table><thead><tr><th>${t('thDate')}</th><th>${t('thVal')}</th><th>${t('thAccount')}</th><th>${t('thDetails')}</th><th>${t('thCode')}</th><th class="r">${t('thAmt')}</th><th>${t('thCat')}</th></tr></thead>
+    <tbody>${rows}</tbody></table></div>
+    <div class="pager"><span>${t('shown', { a, b, n: fmt(list.length) })}</span>
+      <span><button class="btn" id="pprev" ${S.page === 0 ? 'disabled' : ''}>${t('prev')}</button> <button class="btn" id="pnext" ${S.page >= pages - 1 ? 'disabled' : ''}>${t('next')}</button></span></div>
+  </section>`;
+}
+
+function viewReview() {
+  const items = LINES.filter(l => l.cat === 'UNC');
+  const opts = D.categories.filter(c => c.id !== 'UNC').map(c => `<option value="${c.id}">${esc(c[S.lang])}</option>`).join('');
+  const body = items.length ? `<div class="scroll"><table><tbody>${items.map(l => `<tr>
+      <td class="num">${fdShort(l.booking)}</td><td class="rem"><div class="c">${esc(l.cpty)}</div><div class="t">${esc(l.info)} · ${l.account}</div></td>
+      <td class="r num ${l.amount < 0 ? 'neg' : ''}">${l.ccy} ${fmt(l.amount, 2)}</td>
+      <td style="white-space:nowrap"><select data-key="${esc(l.key)}" aria-label="${t('assign')}"><option value="">${t('assign')}…</option>${opts}</select></td></tr>`).join('')}</tbody></table></div>`
+    : `<div class="pb ok">${t('revEmpty')}</div>`;
+  return `<section class="panel"><div class="ph"><div><h2>${t('revTitle')}</h2><div class="sub">${t('revSub')}</div></div></div>${body}</section>`;
+}
+
+function viewRules() {
+  const cond = r => [r.if_btc && `code = ${r.if_btc}`, r.if_btc_family && `family = ${r.if_btc_family}`, r.if_sign && `amount ${r.if_sign === '+' ? '> 0' : '< 0'}`, r.if_text && `text ~ ${r.if_text.replace(/\\b/g, '')}`].filter(Boolean).join(' and ');
+  return `<details class="panel rules"><summary>${t('rulesTitle')} (${D.rules.length})</summary>
+    <div class="scroll"><table><thead><tr><th class="r">${t('thPrio')}</th><th>${t('thIf')}</th><th>${t('thThen')}</th><th>${t('thWhy')}</th></tr></thead>
+    <tbody>${D.rules.map(r => `<tr><td class="r num">${r.priority}</td><td class="btc" style="white-space:normal">${esc(cond(r))}</td><td><span class="chip">${esc(catLabel(r.category))}</span></td><td class="muted">${esc(r.why)}</td></tr>`).join('')}</tbody></table></div></details>`;
+}
+
+function viewLearn() {
+  const c = n => `<div><h3>${t('l' + n + 'h')} <i>· ${t('l' + n + 'f')}</i></h3><p>${t('l' + n)}</p></div>`;
+  return `<section class="panel"><div class="ph"><h2>${t('learnTitle')}</h2></div><div class="learn">${c(1)}${c(2)}${c(3)}${c(4)}</div></section>`;
+}
+
+function viewGlossary() {
+  const q = S.glQ.trim().toLowerCase();
+  const items = D.glossary.filter(g => (!S.glD || g.d === S.glD) && (!q || (g.en + ' ' + g.fr + ' ' + g.den + ' ' + g.dfr).toLowerCase().includes(q)));
+  const chip = (v, k) => `<button data-gld="${v}" aria-pressed="${S.glD === v}">${t(k)}</button>`;
+  const dom = { iso: t('glIso'), sepa: t('glSepa'), pool: t('glPool') };
+  const frFirst = S.lang === 'fr';
+  return `<div class="head"><div><h1>${t('glH')}</h1><p>${t('glIntro')}</p></div></div>
+    <section class="panel">
+      <div class="filters"><div class="seg">${chip('', 'glAll')}${chip('iso', 'glIso')}${chip('sepa', 'glSepa')}${chip('pool', 'glPool')}</div>
+        <input id="glq" type="search" placeholder="${t('glSearch')}" value="${esc(S.glQ)}"></div>
+      <div class="scroll"><table><thead><tr><th>${frFirst ? t('thFr') : t('thEn')}</th><th>${frFirst ? t('thEn') : t('thFr')}</th><th>${t('thDef')}</th></tr></thead>
+      <tbody>${items.map(g => `<tr><td style="min-width:180px"><b>${esc(frFirst ? g.fr : g.en)}</b><div class="muted" style="font-size:12px">${dom[g.d]}</div></td>
+        <td style="min-width:180px" class="muted">${esc(frFirst ? g.en : g.fr)}</td><td style="max-width:60ch">${esc(frFirst ? g.dfr : g.den)}</td></tr>`).join('')}</tbody></table></div>
+    </section><p class="foot">${t('foot')}</p>`;
+}
+
+function render() {
+  document.documentElement.lang = S.lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
+  document.getElementById('lang-en').setAttribute('aria-pressed', S.lang === 'en');
+  document.getElementById('lang-fr').setAttribute('aria-pressed', S.lang === 'fr');
+  const sel = document.getElementById('asof');
+  sel.innerHTML = D.days.slice().reverse().map(d => `<option value="${d}" ${d === S.asof ? 'selected' : ''}>${fdate(d)}</option>`).join('');
+  const focusId = document.activeElement && document.activeElement.id;
+  document.querySelectorAll('[data-tab]').forEach(b => b.setAttribute('aria-selected', b.dataset.tab === S.view));
+  if (S.view === 'm4') { document.getElementById('app').innerHTML = viewM4(); bindM4(); return; }
+  if (S.view === 'm3') { document.getElementById('app').innerHTML = viewM3(); return; }
+  if (S.view === 'm2') { document.getElementById('app').innerHTML = viewM2(); bindM2(); return; }
+  if (S.view === 'glossary') {
+    document.getElementById('app').innerHTML = viewGlossary();
+    document.querySelectorAll('[data-gld]').forEach(b => b.onclick = () => { S.glD = b.dataset.gld; render(); });
+    const gq = document.getElementById('glq'); let tm;
+    gq.oninput = () => { clearTimeout(tm); tm = setTimeout(() => { S.glQ = gq.value; render(); }, 200); };
+    if (focusId === 'glq') { gq.focus(); gq.setSelectionRange(gq.value.length, gq.value.length); }
+    return;
+  }
+  document.getElementById('app').innerHTML = `
+    <div class="head"><div><h1>${t('h1')}</h1><p>${t('intro')}</p></div>
+      <div class="mirror"><b>${t('mirrors')}:</b> ${t('mirrorsTxt')}</div></div>
+    ${viewKpis()}
+    <div class="grid">
+      <div class="stack">${viewPosition()}</div>
+      <div class="stack">${viewChart()}${viewReview()}</div>
+    </div>
+    <div style="margin-top:18px">${viewFiles()}</div>
+    <div style="margin-top:18px">${viewLines()}</div>
+    <div style="margin-top:18px">${viewRules()}</div>
+    <div style="margin-top:18px">${viewLearn()}</div>
+    <p class="foot">${t('foot')}</p>`;
+  bind();
+  if (focusId === 'fq') { const q = document.getElementById('fq'); q.focus(); q.setSelectionRange(q.value.length, q.value.length); }
+}
+
+function bind() {
+  document.querySelectorAll('[data-group]').forEach(b => b.onclick = () => { S.groupBy = b.dataset.group; render(); });
+  document.querySelectorAll('[data-view]').forEach(b => b.onclick = () => { const i = +b.dataset.view; S.open = S.open === i ? null : i; render(); });
+  const facc = document.getElementById('facc'), fcat = document.getElementById('fcat'), fq = document.getElementById('fq');
+  facc.onchange = () => { S.fAcc = facc.value; S.page = 0; render(); };
+  fcat.onchange = () => { S.fCat = fcat.value; S.page = 0; render(); };
+  let tmr; fq.oninput = () => { clearTimeout(tmr); tmr = setTimeout(() => { S.q = fq.value; S.page = 0; render(); }, 250); };
+  document.getElementById('pprev').onclick = () => { S.page--; render(); };
+  document.getElementById('pnext').onclick = () => { S.page++; render(); };
+  document.querySelectorAll('select[data-key]').forEach(s => s.onchange = () => {
+    if (!s.value) return;
+    S.overrides[s.dataset.key] = s.value;
+    try { localStorage.setItem('tos-overrides', JSON.stringify(S.overrides)); } catch (e) {}
+    rebuild(); render();
+  });
+  const drop = document.getElementById('drop'), file = document.getElementById('file');
+  file.onchange = () => file.files[0] && importFile(file.files[0]);
+  drop.ondragover = e => { e.preventDefault(); drop.classList.add('over'); };
+  drop.ondragleave = () => drop.classList.remove('over');
+  drop.ondrop = e => { e.preventDefault(); drop.classList.remove('over'); e.dataTransfer.files[0] && importFile(e.dataTransfer.files[0]); };
+}
+
+async function importFile(f) {
+  const text = await f.text();
+  try {
+    const p = parseStatement(text);
+    if (!p.statements.length) throw new Error('empty');
+    const iban = p.statements[0].iban, acc = D.byIban[iban];
+    if (!acc) { S.impMsg = `<span class="bad">${esc(t('impUnknown', { i: iban }))}</span>`; render(); return; }
+    // Replace statements for the same account and dates, keep the rest.
+    const dates = new Set(p.statements.map(s => s.date));
+    FILES.forEach(x => { x.statements = x.statements.filter(s => !(s.iban === iban && dates.has(s.date))); });
+    FILES = FILES.filter(x => x.statements.length);
+    FILES.push({ name: f.name, format: p.format, statements: p.statements, text });
+    S.impMsg = `<span class="ok">${esc(t('impOk', { n: p.statements.length, l: p.statements.reduce((s, x) => s + x.entries.length, 0), a: acc.id }))}</span>`;
+    rebuild(); S.asof = D.days[D.days.length - 1]; render();
+  } catch (e) { S.impMsg = `<span class="bad">${t('impFail')}</span>`; render(); }
+}
+
+/* ===================================================================
+   TreasuryOS · Module 2: prévisionnel (cash forecast)
+   13-week rolling forecast by entity and category (direct method),
+   forecast vs actual, 12-month forecast, and reforecast scenarios.
+   =================================================================== */
+Object.assign(T.en, {
+  m2h1: 'Cash forecast', m2intro: 'A 13-week rolling forecast built line by line from what the group already knows: open customer and supplier invoices, payroll and tax calendars, and run-rates for what is not invoiced yet. Then the test every treasurer faces: how accurate was the last forecast?',
+  m2mirrors: 'Kyriba cash forecasting · Agicap prévisionnel and scenarios · SAP Liquidity Planning and One Exposure',
+  sub13: '13-week forecast', subVar: 'Forecast vs actual', sub12: '12-month forecast',
+  kOpen: 'Opening cash', kLow: 'Lowest point', kClose: 'Cash in week 13', kHead: 'Headroom at lowest', kHeadS: 'cash + undrawn RCF − buffer', kFAcc: 'Last forecast accuracy', kFAccS: 'August forecast, 13 weeks',
+  asmTitle: 'Reforecast assumptions', asmSub: 'Change an assumption and the whole forecast updates',
+  scope: 'Scope', group: 'Group', delay: 'Customers pay later by', days: 'days', haircut: 'Collection haircut', payroll: 'Payroll increase', uninv: 'Include sales not yet invoiced',
+  saveV: 'Save as version', clearV: 'Clear versions', versions: 'Saved versions', base: 'Current',
+  fcTitle: '13-week rolling forecast', fcSub: 'EUR thousands, converted at 6 Nov 2026 spot rates', fcSubEnt: 'EUR thousands, net flows of the entity. Its cash sits in the group pool.',
+  chTitle: 'Projected group cash', chSub: 'Weekly closing cash in EUR m against the EUR 6m liquidity buffer',
+  buffer: 'Buffer', wk: 'Wk', fTotal: 'Total',
+  rOpen: 'Opening cash', rNet: 'Net cash flow', rClose: 'Closing cash', rHead: 'Liquidity headroom',
+  sAR: 'Invoiced (open receivables)', sEst: 'Not yet invoiced (run-rate)', sAP: 'Supplier invoices (open payables)', sAPe: 'Not yet received (run-rate)', sCal: 'Known schedule',
+  belowBuf: 'Below the buffer',
+  vTitle: 'Forecast vs actual', vSub: 'The forecast made on 7 August 2026 against what the bank statements show, 10 Aug to 6 Nov',
+  thF: 'Forecast', thA: 'Actual', thV: 'Variance', thVp: 'Var. %', thCause: 'Main cause',
+  cVol: 'Volume', cTim: 'Timing', cNot: 'Not forecast', cOk: 'On target',
+  missTitle: 'Largest misses', missSub: 'Where the forecast was furthest from reality, and why',
+  vChart: 'Weekly net cash flow, forecast vs actual (EUR m)',
+  accHelp: 'Accuracy = 1 − sum of absolute weekly variances ÷ sum of absolute actual flows, by category.',
+  m12Title: '12-month forecast', m12Sub: 'EUR thousands, group. Run-rates grown by 4% a year with monthly seasonality, plus known payments and planned one-offs.',
+  minM: 'Lowest month-end cash', covLiq: 'Minimum liquidity covenant (EUR 15m)', met: 'met', breached: 'breached',
+  m2learn: 'Concepts in this module',
+  ml1h: 'Direct method', ml1f: 'méthode directe (encaissements / décaissements)', ml1: 'Short-term forecasts list every receipt and payment. Invoices already issued are the most reliable part, then known schedules, then run-rates for what is not invoiced yet.',
+  ml2h: 'Rolling forecast', ml2f: 'prévisionnel glissant', ml2: 'Each week the oldest week drops off, a new week 13 is added, and actuals replace forecasts. The horizon never shrinks.',
+  ml3h: 'Forecast vs actual', ml3f: 'prévu / réalisé', ml3: 'Variances are either volume (the amount was wrong), timing (right amount, wrong week) or not forecast at all. Each needs a different fix.',
+  ml4h: 'Reforecast', ml4f: 'réestimé', ml4: 'When assumptions change, such as customers paying later, the treasurer reruns the forecast and compares versions to show management the impact.',
+  noRows: 'No flows for this scope.'
+});
+Object.assign(T.fr, {
+  m2h1: 'Prévisionnel de trésorerie', m2intro: 'Un prévisionnel à 13 semaines glissantes construit ligne à ligne à partir de ce que le groupe sait déjà : factures clients et fournisseurs en cours, calendrier de paie et de fiscalité, et tendances pour ce qui n\'est pas encore facturé. Puis la question de tout trésorier : le dernier prévisionnel était-il fiable ?',
+  m2mirrors: 'Kyriba prévisions de trésorerie · Agicap prévisionnel et scénarios · SAP Liquidity Planning et One Exposure',
+  sub13: 'Prévisionnel 13 semaines', subVar: 'Prévu / réalisé', sub12: 'Prévisionnel 12 mois',
+  kOpen: 'Trésorerie d\'ouverture', kLow: 'Point bas', kClose: 'Trésorerie semaine 13', kHead: 'Marge au point bas', kHeadS: 'trésorerie + RCF non tiré − coussin', kFAcc: 'Fiabilité du dernier prévisionnel', kFAccS: 'prévisionnel d\'août, 13 semaines',
+  asmTitle: 'Hypothèses du réestimé', asmSub: 'Modifiez une hypothèse, tout le prévisionnel se met à jour',
+  scope: 'Périmètre', group: 'Groupe', delay: 'Retard de paiement clients', days: 'jours', haircut: 'Décote sur encaissements', payroll: 'Hausse de la masse salariale', uninv: 'Inclure les ventes non encore facturées',
+  saveV: 'Enregistrer la version', clearV: 'Effacer les versions', versions: 'Versions enregistrées', base: 'Actuelle',
+  fcTitle: 'Prévisionnel à 13 semaines glissantes', fcSub: 'En milliers d\'euros, convertis au cours comptant du 6 nov. 2026', fcSubEnt: 'En milliers d\'euros, flux nets de l\'entité. Sa trésorerie est centralisée au niveau du groupe.',
+  chTitle: 'Trésorerie groupe projetée', chSub: 'Trésorerie de fin de semaine en M EUR, face au coussin de liquidité de 6 M EUR',
+  buffer: 'Coussin', wk: 'S', fTotal: 'Total',
+  rOpen: 'Trésorerie d\'ouverture', rNet: 'Flux net de trésorerie', rClose: 'Trésorerie de clôture', rHead: 'Marge de liquidité',
+  sAR: 'Facturé (créances clients en cours)', sEst: 'Non encore facturé (tendance)', sAP: 'Factures fournisseurs (dettes en cours)', sAPe: 'Non encore reçues (tendance)', sCal: 'Échéancier connu',
+  belowBuf: 'Sous le coussin',
+  vTitle: 'Prévu / réalisé', vSub: 'Le prévisionnel établi le 7 août 2026 face aux relevés bancaires, du 10 août au 6 novembre',
+  thF: 'Prévu', thA: 'Réalisé', thV: 'Écart', thVp: 'Écart %', thCause: 'Cause principale',
+  cVol: 'Volume', cTim: 'Décalage', cNot: 'Non prévu', cOk: 'Conforme',
+  missTitle: 'Principaux écarts', missSub: 'Là où le prévisionnel s\'est le plus éloigné de la réalité, et pourquoi',
+  vChart: 'Flux net hebdomadaire, prévu et réalisé (M EUR)',
+  accHelp: 'Fiabilité = 1 − somme des écarts hebdomadaires en valeur absolue ÷ somme des flux réalisés en valeur absolue, par rubrique.',
+  m12Title: 'Prévisionnel à 12 mois', m12Sub: 'En milliers d\'euros, groupe. Tendances majorées de 4 % par an avec saisonnalité mensuelle, plus échéances connues et opérations exceptionnelles prévues.',
+  minM: 'Point bas de fin de mois', covLiq: 'Covenant de liquidité minimale (15 M EUR)', met: 'respecté', breached: 'non respecté',
+  m2learn: 'Notions de ce module',
+  ml1h: 'Méthode directe', ml1f: 'direct method', ml1: 'À court terme, on liste chaque encaissement et décaissement. Les factures émises sont la partie la plus fiable, puis l\'échéancier connu, puis les tendances pour ce qui n\'est pas encore facturé.',
+  ml2h: 'Prévisionnel glissant', ml2f: 'rolling forecast', ml2: 'Chaque semaine, la plus ancienne sort, une nouvelle semaine 13 s\'ajoute, et le réalisé remplace le prévu. L\'horizon ne raccourcit jamais.',
+  ml3h: 'Prévu / réalisé', ml3f: 'forecast vs actual', ml3: 'Un écart vient du volume (mauvais montant), d\'un décalage (bon montant, mauvaise semaine) ou d\'un flux non prévu. Chacun appelle une correction différente.',
+  ml4h: 'Réestimé', ml4f: 'reforecast', ml4: 'Quand une hypothèse change, par exemple des clients qui paient plus tard, le trésorier relance le prévisionnel et compare les versions pour montrer l\'impact à la direction.',
+  noRows: 'Aucun flux pour ce périmètre.'
+});
+
+const F = { sub: '13', scope: 'GROUP', delay: 0, haircut: 0, payroll: 0, uninv: true, versions: [] };
+
+/* ---------------- calendar helpers (ISO dates as strings, UTC maths) */
+const addDays = (iso, n) => { const d = new Date(iso + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+let HOL = new Set();
+const isBD = iso => { const w = new Date(iso + 'T00:00:00Z').getUTCDay(); return w !== 0 && w !== 6 && !HOL.has(iso); };
+const nextBD = iso => { while (!isBD(iso)) iso = addDays(iso, 1); return iso; };
+const prevBD = iso => { while (!isBD(iso)) iso = addDays(iso, -1); return iso; };
+function monthEnd(y, m) { const d = new Date(Date.UTC(y, m, 0)); return d.toISOString().slice(0, 10); }  // m is 1-12
+const isoWeek = iso => { const d = new Date(iso + 'T00:00:00Z'); const day = (d.getUTCDay() + 6) % 7; d.setUTCDate(d.getUTCDate() - day + 3); const fy = new Date(Date.UTC(d.getUTCFullYear(), 0, 4)); return 1 + Math.round(((d - fy) / 864e5 - 3 + ((fy.getUTCDay() + 6) % 7)) / 7); };
+const mondayOf = iso => { const d = new Date(iso + 'T00:00:00Z'); return addDays(iso, -((d.getUTCDay() + 6) % 7)); };
+function bdCount(a, b) { let n = 0; for (let d = a; d <= b; d = addDays(d, 1)) if (isBD(d)) n++; return n; }
+function parseCSV(text) {
+  const [h, ...rows] = text.trim().split(/\r?\n/); const cols = h.split(',');
+  return rows.map(r => { const v = r.split(','); return Object.fromEntries(cols.map((c, i) => [c, isNaN(+v[i]) || v[i] === '' ? v[i] : +v[i]])); });
+}
+
+/* expand one calendar item into dated occurrences between a and b (inclusive) */
+function occurrences(item, a, b) {
+  const out = [];
+  if (item.dates) { item.dates.forEach(d => { const x = nextBD(d); if (x >= a && x <= b) out.push({ date: x, factor: 1 }); }); return out; }
+  let y = +a.slice(0, 4), m = +a.slice(5, 7) - 1;  // start a month early to catch rolled dates
+  if (m === 0) { y--; m = 12; }
+  for (let i = 0; i < 16; i++) {
+    const me = monthEnd(y, m);
+    const raw = `${y}-${String(m).padStart(2, '0')}-${String(Math.min(item.day === 'last' ? 31 : item.day, +me.slice(8))).padStart(2, '0')}`;
+    const d = item.day === 'last' || item.roll === 'prev' ? prevBD(raw) : nextBD(raw);
+    if (d >= a && d <= b) out.push({ date: d, factor: (item.months_factor && item.months_factor[String(m)]) || 1 });
+    m++; if (m > 12) { m = 1; y++; }
+    if (`${y}-${String(m).padStart(2, '0')}-01` > b) break;
+  }
+  return out;
+}
+
+/* ---------------- run-rates from the 13 weeks of actual bank lines */
+function runRates() {
+  const rr = {};
+  const weeks = D.days.length / 5;
+  for (const l of LINES) {
+    const k = l.entity + '|' + l.ccy;
+    rr[k] ||= { CUST: 0, SUPP: 0 };
+    if (l.cat === 'CUST') rr[k].CUST += l.amount;
+    if (l.cat === 'SUPP' && l.btc.split('-')[1] === 'ICDT') rr[k].SUPP += l.amount;
+  }
+  for (const k in rr) { rr[k].CUST /= weeks; rr[k].SUPP /= weeks; }
+  return rr;
+}
+
+/* ---------------- the 13-week forecast */
+function forecast13(f) {
+  const st = D.fs.forecast_start, N = D.fs.weeks, end = addDays(st, 7 * N - 1), asof = D.fs.as_of;
+  const weeks = [...Array(N)].map((_, i) => addDays(st, 7 * i));
+  const wi = iso => { const i = Math.floor((Date.parse(iso) - Date.parse(st)) / 6048e5); return i >= 0 && i < N ? i : -1; };
+  const season = i => D.fs.week_season[weeks[i]] || 1;
+  const spot = ccy => rate(asof, ccy);
+  const lines = {};
+  const put = (entity, ccy, cat, src, i, amt, label) => {
+    if (i < 0) return;
+    const k = [entity, ccy, cat, src].join('|');
+    lines[k] ||= { entity, ccy, cat, src, label, vals: Array(N).fill(0) };
+    lines[k].vals[i] += amt;
+  };
+  // 1. open receivables: due date + delay, times probability, times (1 - haircut)
+  const arWeek = {};
+  for (const r of D.ar) {
+    const d = nextBD(addDays(r.due_date, f.delay)), i = wi(d);
+    const amt = r.amount * r.probability_pct / 100 * (1 - f.haircut / 100);
+    put(r.entity, r.currency, 'CUST', 'AR', i, amt);
+    if (i >= 0) { const k = r.entity + '|' + r.currency; (arWeek[k] ||= Array(N).fill(0))[i] += amt; }
+  }
+  // 2. sales not invoiced yet: run-rate minus what open invoices already cover
+  const rr = runRates();
+  if (f.uninv) for (const k in rr) {
+    const [entity, ccy] = k.split('|');
+    for (let i = 0; i < N; i++) {
+      const target = rr[k].CUST * season(i) * (1 - f.haircut / 100);
+      const shift = Math.round(f.delay / 7);  // later payment also pushes the run-rate out
+      if (i - shift < 0) continue;
+      const covered = (arWeek[k] || [])[i] || 0;
+      put(entity, ccy, 'CUST', 'EST', i, Math.max(0, target - covered));
+    }
+  }
+  // 3. open payables (8 weeks known), then the supplier run-rate
+  const apH = D.fs.ap_horizon_weeks;
+  for (const p of D.ap) {
+    const i = wi(nextBD(p.due_date));
+    if (i < 0 || i >= apH) continue;
+    let amt = -p.amount, ccy = p.currency;
+    if (p.entity === 'LUM-MA' && ccy === 'USD') { amt = amt / spot('USD') * spot('MAD'); ccy = 'MAD'; }
+    put(p.entity, ccy, 'SUPP', 'AP', i, amt);
+  }
+  for (const k in rr) {
+    const [entity, ccy] = k.split('|');
+    for (let i = apH; i < N; i++) put(entity, ccy, 'SUPP', 'APE', i, rr[k].SUPP * season(i));
+  }
+  // 4. known schedule (calendar): payroll, social charges, taxes, rent, intercompany, interest
+  for (const c of D.cal) {
+    for (const o of occurrences(c, st, end)) {
+      let amt = c.amount * o.factor;
+      if ((c.cat === 'PAYR' || c.cat === 'SOCL')) amt *= 1 + f.payroll / 100;
+      put(c.entity, c.ccy, c.cat, 'CAL', wi(o.date), amt, c[S.lang]);
+    }
+  }
+  // EUR conversion at spot
+  const out = Object.values(lines).map(l => ({ ...l, eur: l.vals.map(v => v / spot(l.ccy)) }));
+  // opening cash by entity bucket and for the group
+  const open = groupCash(asof);
+  const net = [...Array(N)].map((_, i) => out.reduce((s, l) => s + l.eur[i], 0));
+  const close = []; net.reduce((c, n, i) => (close[i] = c + n), open);
+  return { weeks, lines: out, open, net, close };
+}
+
+/* ---------------- forecast vs actual */
+function variance(scope) {
+  const snap = D.snap.filter(r => scope === 'GROUP' || r.entity === scope);
+  const act = {}, fc = {};
+  for (const l of LINES) {
+    if (l.cat === 'POOL' || (scope !== 'GROUP' && l.entity !== scope)) continue;
+    const k = mondayOf(l.booking) + '|' + l.cat;
+    act[k] = (act[k] || 0) + l.amount / rate(l.booking, l.ccy);
+  }
+  for (const r of snap) { const k = r.week_start + '|' + r.category; fc[k] = (fc[k] || 0) + r.forecast_eur; }
+  const keys = new Set([...Object.keys(act), ...Object.keys(fc)]);
+  const byCat = {}, byWeek = {};
+  let absVar = 0, absAct = 0;
+  const cells = [];
+  for (const k of keys) {
+    const [w, c] = k.split('|'), a = act[k] || 0, fv = fc[k] || 0;
+    (byCat[c] ||= { f: 0, a: 0, absv: 0 }); byCat[c].f += fv; byCat[c].a += a; byCat[c].absv += Math.abs(a - fv);
+    (byWeek[w] ||= { f: 0, a: 0 }); byWeek[w].f += fv; byWeek[w].a += a;
+    absVar += Math.abs(a - fv); absAct += Math.abs(a);
+    cells.push({ w, c, a, f: fv, v: a - fv });
+  }
+  const cause = (c, x) => {
+    if (Math.abs(x.f) < 1 && Math.abs(x.a) > 1) return 'cNot';
+    if (x.absv < 0.03 * Math.abs(x.a)) return 'cOk';
+    return Math.abs(x.a - x.f) < 0.4 * x.absv ? 'cTim' : 'cVol';
+  };
+  for (const c in byCat) byCat[c].cause = cause(c, byCat[c]);
+  // A miss is timing when the next or previous week of the same category shows the opposite variance.
+  const cellAt = (w, c) => cells.find(x => x.w === w && x.c === c);
+  const causeOf = m => {
+    if (Math.abs(m.f) < 1) return 'cNot';
+    const adj = [cellAt(addDays(m.w, 7), m.c), cellAt(addDays(m.w, -7), m.c)].filter(Boolean);
+    return adj.some(x => Math.sign(x.v) === -Math.sign(m.v) && Math.abs(x.v) > 0.5 * Math.abs(m.v)) ? 'cTim' : 'cVol';
+  };
+  const ranked = cells.slice().sort((p, q) => Math.abs(q.v) - Math.abs(p.v));
+  const misses = ranked.slice(0, 4).map(m => ({ ...m, cause: causeOf(m) }));
+  const notF = ranked.find(m => Math.abs(m.f) < 1 && Math.abs(m.a) > 1000);
+  if (notF && !misses.some(m => m === notF)) misses.push({ ...notF, cause: 'cNot' });
+  const tim = ranked.find(m => causeOf(m) === 'cTim');
+  if (tim && !misses.some(m => m.w === tim.w && m.c === tim.c)) misses.push({ ...tim, cause: 'cTim' });
+  return { byCat, byWeek, acc: 1 - absVar / absAct, misses };
+}
+
+/* ---------------- 12-month forecast (group, EUR) */
+function forecast12(f) {
+  const m12 = D.fs.m12, st = D.fs.forecast_start, rr = runRates();
+  const rrEur = Object.entries(rr).reduce((s, [k, v]) => { const ccy = k.split('|')[1], r = rate(D.fs.as_of, ccy); s.CUST += v.CUST / r; s.SUPP += v.SUPP / r; return s; }, { CUST: 0, SUPP: 0 });
+  const cats = {};
+  const add = (cat, i, v) => { (cats[cat] ||= Array(12).fill(0))[i] += v; };
+  m12.months.forEach((ym, i) => {
+    const y = +ym.slice(0, 4), m = +ym.slice(5);
+    const a = i === 0 ? st : ym + '-01', b = monthEnd(y, m);
+    const wks = bdCount(a, b) / 5, g = Math.pow(1 + m12.activity_growth_pct / 100, i / 12), s = m12.seasonality[ym.slice(5)] || 1;
+    add('CUST', i, rrEur.CUST * wks * s * g * (1 - f.haircut / 100));
+    add('SUPP', i, rrEur.SUPP * wks * s * g);
+    for (const c of D.cal) for (const o of occurrences(c, a, b)) {
+      let v = c.amount * o.factor / rate(D.fs.as_of, c.ccy);
+      if (c.cat === 'PAYR' || c.cat === 'SOCL') v *= 1 + f.payroll / 100;
+      add(c.cat, i, v);
+    }
+    for (const x of m12.one_offs) if (x.month === ym) add(x.cat, i, x.amount_eur);
+  });
+  const net = [...Array(12)].map((_, i) => Object.values(cats).reduce((s, a) => s + a[i], 0));
+  const close = []; net.reduce((c, n, i) => (close[i] = c + n), groupCash(D.fs.as_of));
+  return { months: m12.months, cats, net, close };
+}
+
+/* ---------------- views */
+const CAT_ORDER = ['CUST', 'SUPP', 'PAYR', 'SOCL', 'TAXV', 'TAXC', 'RENT', 'FEES', 'INTR', 'CAPX', 'FIN', 'ICO'];
+const kE = v => fmt(v / 1000);
+const fmMonth = ym => new Date(ym + '-15T12:00:00').toLocaleDateString(loc(), { month: 'short', year: '2-digit' });
+
+function viewM2() {
+  const fc = forecast13(F), vr = variance('GROUP');
+  const lowI = fc.close.indexOf(Math.min(...fc.close));
+  const pol = D.fs.liquidity_policy, undrawn = pol.rcf_commitment_eur - pol.rcf_drawn_eur;
+  const head = fc.close[lowI] + undrawn - pol.min_group_cash_eur;
+  const sub = (v, k) => `<button data-sub="${v}" aria-pressed="${F.sub === v}">${t(k)}</button>`;
+  let body = '';
+  if (F.sub === '13') body = viewF13(fc);
+  else if (F.sub === 'var') body = viewVar();
+  else body = viewF12();
+  const c = n => `<div><h3>${t('ml' + n + 'h')} <i>· ${t('ml' + n + 'f')}</i></h3><p>${t('ml' + n)}</p></div>`;
+  return `<div class="head"><div><h1>${t('m2h1')}</h1><p>${t('m2intro')}</p></div>
+      <div class="mirror"><b>${t('mirrors')}:</b> ${t('m2mirrors')}</div></div>
+    <section class="kpis">
+      <div class="kpi"><div class="l">${t('kOpen')} · ${fdate(D.fs.as_of)}</div><div class="v">EUR ${fmt(fc.open)}</div><div class="s muted">${t('kClose')}${S.lang === 'fr' ? '\u00a0:' : ':'} EUR ${fmt(fc.close[12])}</div></div>
+      <div class="kpi ${fc.close[lowI] < pol.min_group_cash_eur ? 'warn' : ''}"><div class="l">${t('kLow')}</div><div class="v">${fM(fc.close[lowI])}</div><div class="s muted">${t('wk')}${isoWeek(fc.weeks[lowI])} · ${fdShort(fc.weeks[lowI])}</div></div>
+      <div class="kpi"><div class="l">${t('kHead')}</div><div class="v">${fM(head)}</div><div class="s muted">${t('kHeadS')}</div></div>
+      <div class="kpi"><div class="l">${t('kFAcc')}</div><div class="v">${fmt(100 * vr.acc, 1)}%</div><div class="s muted">${t('kFAccS')}</div></div>
+      <div class="kpi"><div class="l">${t('buffer')}</div><div class="v">${fM(pol.min_group_cash_eur)}</div><div class="s muted">RCF ${fM(undrawn)}</div></div>
+    </section>
+    <div class="filters" style="border:1px solid var(--line);border-radius:var(--radius);margin-bottom:18px"><div class="seg">${sub('13', 'sub13')}${sub('var', 'subVar')}${sub('12', 'sub12')}</div></div>
+    ${body}
+    <div style="margin-top:18px"><section class="panel"><div class="ph"><h2>${t('m2learn')}</h2></div><div class="learn">${c(1)}${c(2)}${c(3)}${c(4)}</div></section></div>
+    <p class="foot">${t('foot')}</p>`;
+}
+
+function viewAssumptions() {
+  const opt = (id, vals, cur, suf) => `<select id="${id}">${vals.map(v => `<option value="${v}" ${+cur === v ? 'selected' : ''}>${v > 0 && id !== 'a-delay' ? '+' : ''}${v}${suf}</option>`).join('')}</select>`;
+  const ents = [['GROUP', t('group')], ...D.entities.map(e => [e.id, e.name])];
+  return `<section class="panel"><div class="ph"><div><h2>${t('asmTitle')}</h2><div class="sub">${t('asmSub')}</div></div></div>
+    <div class="filters" style="border-bottom:0;align-items:center">
+      <label class="ctrl" for="a-scope">${t('scope')} <select id="a-scope">${ents.map(([v, l]) => `<option value="${v}" ${F.scope === v ? 'selected' : ''}>${esc(l)}</option>`).join('')}</select></label>
+      <label class="ctrl" for="a-delay">${t('delay')} ${opt('a-delay', [0, 7, 14, 21], F.delay, ' ' + t('days'))}</label>
+      <label class="ctrl" for="a-hair">${t('haircut')} ${opt('a-hair', [0, 5, 10, 20], F.haircut, '%')}</label>
+      <label class="ctrl" for="a-pay">${t('payroll')} ${opt('a-pay', [0, 3, 5], F.payroll, '%')}</label>
+      <label class="ctrl" for="a-uninv"><input type="checkbox" id="a-uninv" ${F.uninv ? 'checked' : ''}> ${t('uninv')}</label>
+      <span style="margin-left:auto;display:flex;gap:8px"><button class="btn primary" id="a-save">${t('saveV')}</button>${F.versions.length ? `<button class="btn" id="a-clear">${t('clearV')}</button>` : ''}</span>
+    </div></section>`;
+}
+
+function viewF13(fc) {
+  const N = fc.weeks.length, grp = F.scope === 'GROUP';
+  const lines = fc.lines.filter(l => grp || l.entity === F.scope);
+  const sum = (arr) => [...Array(N)].map((_, i) => arr.reduce((s, l) => s + l.eur[i], 0));
+  const pol = D.fs.liquidity_policy, undrawn = pol.rcf_commitment_eur - pol.rcf_drawn_eur;
+  const cell = (v, cls = '') => `<td class="r num ${v < -0.5 ? 'neg' : ''} ${cls}">${Math.abs(v) < 500 ? '–' : kE(v)}</td>`;
+  const row = (label, vals, cls = '', lead = '') => `<tr class="${cls}"><td>${lead}${label}</td>${vals.map(v => cell(v)).join('')}${cell(vals.reduce((a, b) => a + b, 0))}</tr>`;
+  let rows = '';
+  const net = sum(lines);
+  if (grp) rows += `<tr class="grp"><td>${t('rOpen')}</td>${[fc.open, ...fc.close.slice(0, -1)].map(v => `<td class="r num">${kE(v)}</td>`).join('')}<td></td></tr>`;
+  const SRC = { AR: 'sAR', EST: 'sEst', AP: 'sAP', APE: 'sAPe', CAL: 'sCal' };
+  for (const c of CAT_ORDER) {
+    const ls = lines.filter(l => l.cat === c);
+    if (!ls.length) continue;
+    const tot = sum(ls);
+    if (tot.every(v => Math.abs(v) < 1)) continue;
+    rows += row(esc(catLabel(c)), tot, 'catrow');
+    if (c === 'CUST' || c === 'SUPP') {
+      const srcs = [...new Set(ls.map(l => l.src))];
+      for (const s of srcs) rows += row(t(SRC[s]), sum(ls.filter(l => l.src === s)), 'subrow', '<span class="indent"></span>');
+    }
+  }
+  rows += row(t('rNet'), net, 'grp');
+  if (grp) {
+    rows += `<tr class="tot"><td>${t('rClose')}</td>${fc.close.map(v => `<td class="r num ${v < pol.min_group_cash_eur ? 'warnc' : ''}">${kE(v)}</td>`).join('')}<td></td></tr>`;
+    rows += `<tr class="subrow"><td>${t('rHead')}</td>${fc.close.map(v => `<td class="r num muted">${kE(v + undrawn - pol.min_group_cash_eur)}</td>`).join('')}<td></td></tr>`;
+  }
+  const head = fc.weeks.map(w => `<th class="r">${t('wk')}${isoWeek(w)}<div class="muted" style="font-weight:400">${fdShort(w)}</div></th>`).join('');
+  return `${viewAssumptions()}
+    <div style="margin-top:18px">${grp ? viewF13Chart(fc) : ''}</div>
+    <section class="panel" style="margin-top:18px"><div class="ph"><div><h2>${t('fcTitle')}${grp ? '' : ' · ' + esc(D.entById[F.scope].name)}</h2><div class="sub">${grp ? t('fcSub') : t('fcSubEnt')}</div></div></div>
+      <div class="scroll"><table class="fc"><thead><tr><th class="stick"></th>${head}<th class="r">${t('fTotal')}</th></tr></thead><tbody>${rows}</tbody></table></div></section>`;
+}
+
+function viewF13Chart(fc) {
+  const W = 1100, H = 280, L = 46, R = 16, Tp = 16, B = 30, N = fc.close.length;
+  const pol = D.fs.liquidity_policy;
+  const series = [{ name: t('base'), v: fc.close.map(x => x / 1e6), cls: 'ln' }, ...F.versions.map((v, i) => ({ name: v.name, v: v.close.map(x => x / 1e6), cls: 'ln2', dash: i }))];
+  const all = series.flatMap(s => s.v).concat([pol.min_group_cash_eur / 1e6, fc.open / 1e6]);
+  const lo = Math.floor(Math.min(...all) - 1), hi = Math.ceil(Math.max(...all) + 1);
+  const x = i => L + (W - L - R) * (i + 0.5) / N, y = v => Tp + (H - Tp - B) * (1 - (v - lo) / (hi - lo));
+  const step = hi - lo > 12 ? 4 : hi - lo > 6 ? 2 : 1;
+  let g = '';
+  for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) g += `<line class="gl" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text class="ax" x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  fc.weeks.forEach((w, i) => { g += `<text class="ax" x="${x(i)}" y="${H - 10}" text-anchor="middle">${t('wk')}${isoWeek(w)}</text>`; });
+  const yb = y(pol.min_group_cash_eur / 1e6);
+  g += `<line x1="${L}" x2="${W - R}" y1="${yb}" y2="${yb}" class="buf"/><text class="ax bufl" x="${W - R - 4}" y="${yb - 6}" text-anchor="end">${t('buffer')} ${fmt(pol.min_group_cash_eur / 1e6, 0)}${mU()}</text>`;
+  const lines = series.map((s, si) => `<path class="${s.cls}" ${si ? `stroke-dasharray="${4 + 3 * s.dash} 4"` : ''} d="${s.v.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join('')}"/>`).join('');
+  const dots = fc.close.map((v, i) => `<circle class="dt" cx="${x(i)}" cy="${y(v / 1e6)}" r="3.5"/>`).join('');
+  const last = fc.close[N - 1] / 1e6;
+  const legend = series.length > 1 ? `<div class="legend">${series.map((s, i) => `<span><svg width="22" height="8"><line x1="0" x2="22" y1="4" y2="4" class="${s.cls}" ${i ? `stroke-dasharray="${4 + 3 * s.dash} 4"` : ''}/></svg> ${esc(s.name)}</span>`).join('')}</div>` : '';
+  return `<section class="panel chart"><div class="ph"><div><h2>${t('chTitle')}</h2><div class="sub">${t('chSub')}</div></div></div>
+    <div class="pb"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${t('chTitle')}">${g}${lines}${dots}
+    <text class="lbl" x="${x(N - 1) - 6}" y="${y(last) - 10}" text-anchor="end">${fmt(last, 1)}${mU()}</text></svg></div>${legend}</section>`;
+}
+
+function viewVar() {
+  const ents = [['GROUP', t('group')], ...D.entities.map(e => [e.id, e.name])];
+  const vr = variance(F.scope);
+  const rows = CAT_ORDER.concat(['FX', 'UNC']).filter(c => vr.byCat[c] && (Math.abs(vr.byCat[c].f) > 1000 || Math.abs(vr.byCat[c].a) > 1000)).map(c => {
+    const x = vr.byCat[c], v = x.a - x.f, vp = Math.abs(x.f) > 1 ? 100 * v / Math.abs(x.f) : null;
+    return `<tr><td>${esc(catLabel(c))}</td><td class="r num">${kE(x.f)}</td><td class="r num">${kE(x.a)}</td>
+      <td class="r num ${v < 0 ? 'neg' : 'pos'}">${v > 0 ? '+' : ''}${kE(v)}</td><td class="r num muted">${vp === null ? '' : (vp > 0 ? '+' : '') + fmt(vp, 1) + '%'}</td>
+      <td><span class="chip ${x.cause === 'cOk' ? '' : 'unc'}">${t(x.cause)}</span></td></tr>`;
+  }).join('');
+  const tf = Object.values(vr.byCat).reduce((s, x) => s + x.f, 0), ta = Object.values(vr.byCat).reduce((s, x) => s + x.a, 0);
+  const misses = vr.misses.map(m => `<tr><td class="num">${t('wk')}${isoWeek(m.w)} · ${fdShort(m.w)}</td><td>${esc(catLabel(m.c))}</td>
+    <td class="r num">${kE(m.f)}</td><td class="r num">${kE(m.a)}</td><td class="r num ${m.v < 0 ? 'neg' : 'pos'}">${m.v > 0 ? '+' : ''}${kE(m.v)}</td><td><span class="chip unc">${t(m.cause)}</span></td></tr>`).join('');
+  // weekly chart: paired bars
+  const wk = Object.keys(vr.byWeek).sort(), W = 640, H = 260, L = 46, R = 12, Tp = 12, B = 28;
+  const vals = wk.flatMap(w => [vr.byWeek[w].f / 1e6, vr.byWeek[w].a / 1e6]);
+  const lo = Math.floor(Math.min(0, ...vals)), hi = Math.ceil(Math.max(0, ...vals));
+  const bw = (W - L - R) / wk.length, y = v => Tp + (H - Tp - B) * (1 - (v - lo) / (hi - lo));
+  let g = '';
+  for (let v = lo; v <= hi; v += (hi - lo > 6 ? 2 : 1)) g += `<line class="gl" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text class="ax" x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  wk.forEach((w, i) => {
+    const x0 = L + i * bw, f = vr.byWeek[w].f / 1e6, a = vr.byWeek[w].a / 1e6;
+    g += `<rect class="barF" x="${x0 + bw * 0.14}" width="${bw * 0.34}" y="${Math.min(y(f), y(0))}" height="${Math.abs(y(f) - y(0))}"/>`;
+    g += `<rect class="barA" x="${x0 + bw * 0.52}" width="${bw * 0.34}" y="${Math.min(y(a), y(0))}" height="${Math.abs(y(a) - y(0))}"/>`;
+    if (i % 2 === 0) g += `<text class="ax" x="${x0 + bw / 2}" y="${H - 9}" text-anchor="middle">${t('wk')}${isoWeek(w)}</text>`;
+  });
+  g += `<line x1="${L}" x2="${W - R}" y1="${y(0)}" y2="${y(0)}" stroke="var(--muted)"/>`;
+  return `<section class="panel"><div class="ph"><div><h2>${t('vTitle')}</h2><div class="sub">${t('vSub')}</div></div>
+      <label class="ctrl" for="v-scope">${t('scope')} <select id="v-scope">${ents.map(([v, l]) => `<option value="${v}" ${F.scope === v ? 'selected' : ''}>${esc(l)}</option>`).join('')}</select></label></div>
+    <div class="grid" style="gap:0">
+      <div class="scroll"><table><thead><tr><th>${t('thCat')}</th><th class="r">${t('thF')}</th><th class="r">${t('thA')}</th><th class="r">${t('thV')}</th><th class="r">${t('thVp')}</th><th>${t('thCause')}</th></tr></thead>
+        <tbody>${rows}<tr class="tot"><td>${t('rNet')}</td><td class="r num">${kE(tf)}</td><td class="r num">${kE(ta)}</td><td class="r num">${kE(ta - tf)}</td><td></td><td class="num"><b>${fmt(100 * vr.acc, 1)}%</b></td></tr></tbody></table>
+        <div class="pb muted" style="font-size:12.5px">${t('accHelp')}</div></div>
+      <div class="chart" style="border-left:1px solid var(--line)"><div class="pb"><div class="sub" style="margin-bottom:6px;font-size:12.5px;color:var(--muted)">${t('vChart')}</div>
+        <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${t('vChart')}">${g}</svg>
+        <div class="legend" style="padding:6px 0 0"><span><span class="sw swF"></span> ${t('thF')}</span><span><span class="sw swA"></span> ${t('thA')}</span></div></div></div>
+    </div></section>
+    <section class="panel" style="margin-top:18px"><div class="ph"><div><h2>${t('missTitle')}</h2><div class="sub">${t('missSub')}</div></div></div>
+      <div class="scroll"><table><thead><tr><th>${t('wk')}</th><th>${t('thCat')}</th><th class="r">${t('thF')}</th><th class="r">${t('thA')}</th><th class="r">${t('thV')}</th><th>${t('thCause')}</th></tr></thead><tbody>${misses}</tbody></table></div></section>`;
+}
+
+function viewF12() {
+  const f12 = forecast12(F);
+  const cell = v => `<td class="r num ${v < -0.5 ? 'neg' : ''}">${Math.abs(v) < 500 ? '–' : kE(v)}</td>`;
+  let rows = `<tr class="grp"><td>${t('rOpen')}</td>${[groupCash(D.fs.as_of), ...f12.close.slice(0, -1)].map(v => `<td class="r num">${kE(v)}</td>`).join('')}<td></td></tr>`;
+  for (const c of CAT_ORDER) if (f12.cats[c]) rows += `<tr class="catrow"><td>${esc(catLabel(c))}</td>${f12.cats[c].map(cell).join('')}${cell(f12.cats[c].reduce((a, b) => a + b, 0))}</tr>`;
+  rows += `<tr class="grp"><td>${t('rNet')}</td>${f12.net.map(cell).join('')}${cell(f12.net.reduce((a, b) => a + b, 0))}</tr>`;
+  rows += `<tr class="tot"><td>${t('rClose')}</td>${f12.close.map(v => `<td class="r num">${kE(v)}</td>`).join('')}<td></td></tr>`;
+  const pol = D.fs.liquidity_policy, undrawn = pol.rcf_commitment_eur - pol.rcf_drawn_eur;
+  const minI = f12.close.indexOf(Math.min(...f12.close)), liq = f12.close[minI] + undrawn;
+  const ones = D.fs.m12.one_offs.map(o => `<li><b>${fmMonth(o.month)}</b> · ${esc(o[S.lang])}: EUR ${kE(o.amount_eur)}k</li>`).join('');
+  return `${viewAssumptions()}
+    <section class="panel" style="margin-top:18px"><div class="ph"><div><h2>${t('m12Title')}</h2><div class="sub">${t('m12Sub')}</div></div></div>
+      <div class="scroll"><table class="fc"><thead><tr><th></th>${f12.months.map(m => `<th class="r">${fmMonth(m)}</th>`).join('')}<th class="r">${t('fTotal')}</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <div class="pb" style="border-top:1px solid var(--line);display:flex;gap:28px;flex-wrap:wrap;font-size:13px">
+        <div><span class="muted">${t('minM')}:</span> <b class="num">EUR ${fM(f12.close[minI])}</b> (${fmMonth(f12.months[minI])})</div>
+        <div><span class="muted">${t('covLiq')}:</span> <b class="${liq >= 15e6 ? 'ok' : 'bad'}">${fM(liq)}, ${liq >= 15e6 ? t('met') : t('breached')}</b></div>
+        <ul style="margin:0;padding-left:18px;color:var(--muted)">${ones}</ul></div></section>`;
+}
+
+function bindM2() {
+  document.querySelectorAll('[data-sub]').forEach(b => b.onclick = () => { F.sub = b.dataset.sub; render(); });
+  const on = (id, fn) => { const el = document.getElementById(id); if (el) el.onchange = () => { fn(el); render(); }; };
+  on('a-scope', el => F.scope = el.value); on('v-scope', el => F.scope = el.value);
+  on('a-delay', el => F.delay = +el.value); on('a-hair', el => F.haircut = +el.value); on('a-pay', el => F.payroll = +el.value);
+  on('a-uninv', el => F.uninv = el.checked);
+  const sv = document.getElementById('a-save');
+  if (sv) sv.onclick = () => {
+    const fc = forecast13(F);
+    const fr = S.lang === 'fr';
+    const parts = [F.delay ? `+${F.delay} ${fr ? 'j' : 'd'}` : '', F.haircut ? `-${F.haircut}%` : '', F.payroll ? `${fr ? 'paie' : 'pay'} +${F.payroll}%` : '', F.uninv ? '' : (fr ? 'facturé seul' : 'invoiced only')].filter(Boolean);
+    F.versions.push({ name: `V${F.versions.length + 1}${parts.length ? ' (' + parts.join(', ') + ')' : ''}`, close: fc.close });
+    render();
+  };
+  const cl = document.getElementById('a-clear'); if (cl) cl.onclick = () => { F.versions = []; render(); };
+}
+
+/* ===================================================================
+   TreasuryOS · Module 3: centralisation de trésorerie (cash pooling)
+   Zero-balancing sweeps from the statements, intercompany positions and
+   interest, liquidity buffer policy and idle cash investment proposals.
+   =================================================================== */
+Object.assign(T.en, {
+  m3h1: 'Cash pooling', m3intro: 'Every evening BNP Paribas sweeps the participant accounts to zero against Lumen SA\'s header account. TreasuryOS turns those sweeps into intercompany loans, charges arm\'s length interest on them, and shows how much cash the group can safely invest.',
+  m3mirrors: 'Kyriba in-house banking and intercompany loans · SAP In-House Cash and cash concentration · Agicap multi-entity cash view',
+  pk1: 'Cash in the header account', pk2: 'Lumen Deutschland lends to the pool', pk2b: 'Lumen Deutschland borrows from the pool', pk3: 'Intercompany interest since 10 Aug', pk4: 'Surplus cash to invest', pk4s: 'lowest forecast cash − buffer', pk5: 'Income over 3 months', pk5s: 'at the proposed allocation',
+  stTitle3: 'Pool structure', stSub3: 'Physical zero-balancing pool in EUR at BNP Paribas, under the group cash pooling agreement',
+  hdr: 'Header account', part: 'Participant', outsideT: 'Outside the pool', sameEnt: 'Same company as the header: internal transfer, no loan', icYes: 'Different company: each sweep is an intercompany loan',
+  today: 'Today', sweep: 'Sweep', up: 'Sweep up', down: 'Sweep down',
+  icTitle: 'Intercompany position, Lumen Deutschland', icSub: 'Positive: Lumen Deutschland has lent this cash to Lumen SA through the pool (EUR m)',
+  stmtTitle: 'Intercompany interest statement', stmtSub: 'Monthly, on end-of-day positions, calendar days, ACT/360',
+  thMonth: 'Month', thAvg: 'Average position', thDir: 'Direction', thRateC: 'Rate', thDays: 'Days', thInt: 'Interest', thPays: 'Payer → beneficiary',
+  dirLend: 'DE lends', dirBorrow: 'DE borrows', mtd: 'to date',
+  lastSw: 'Latest sweeps', thCum: 'Position after',
+  sogeLine: 'FR-SOGE-EUR belongs to Lumen SA, like the header. Since 10 August the pool has sent it EUR {d} to cover payroll and taxes paid from this account. No loan, no interest.',
+  bufTitle: 'Liquidity buffer and surplus', bufSub: 'How today\'s group cash splits under the treasury policy, using the 13-week forecast',
+  seg1: 'Operating buffer', seg1d: 'policy minimum, always available', seg2: 'Kept for forecast dips', seg2d: 'needed before the lowest forecast week', seg3: 'Surplus to invest', seg3d: 'never needed over the 13 weeks',
+  bufNote: 'The surplus follows the forecast assumptions. Try "customers pay 14 days later" in the Cash forecast tab and come back.',
+  invTitle: 'Investment proposal for the EUR surplus', invSub: 'Within the treasury policy: no capital risk, 3 months maximum, bank limits and a liquid share',
+  thInstr: 'Instrument', thCpty: 'Bank', thAmt3: 'Amount', thLiq: 'Liquidity', thInc: 'Income, 3 months', fund: 'Fund',
+  polTitle: 'Policy checks', pc1: 'Share per bank at or below {x}%', pc2: 'At least {x}% available within a week', pc3: 'Maximum maturity {x} months', pc4: 'Buffer kept at EUR {x}m',
+  bankExp: 'Bank exposure after investing',
+  ocTitle: 'Other currencies, outside the pool', ocSub: 'Balances above each account\'s working balance, and what to do with them',
+  usdT: 'USD at HSBC France', usdTxt: 'USD {s} above the USD {t} working balance. Lumen Maroc buys about USD {n} of components in the next 8 weeks by converting dirhams. Lumen SA could pay those invoices for Lumen Maroc from this account (payment factory) and recharge them intercompany. That avoids two currency conversions, saving about USD {v} in FX spread. Check the arrangement against Moroccan exchange control rules first.',
+  gbpT: 'GBP at HSBC UK', gbpTxt: 'GBP {s} above the GBP {t} working balance. Options: a GBP money market fund at {r}% (about GBP {i} over 3 months), or lend it to Lumen SA intercompany. Longer term, a multi-currency notional pool with HSBC would bring it into the structure.',
+  madT: 'MAD at Société Générale Maroc', madTxt: 'MAD {s} above the MAD {t} working balance. Exchange controls keep it in Morocco: place it on a 1-month term deposit at {r}%, and plan dividend repatriation once the annual accounts are approved.',
+  m3learn: 'Concepts in this module',
+  cl1h: 'Zero balancing', cl1f: 'équilibrage à zéro', cl1: 'The bank brings every participant account back to zero each evening. Surpluses go up to the header account (remontée), shortfalls are funded from it (descente).',
+  cl2h: 'Cash pooling agreement', cl2f: 'convention de trésorerie', cl2: 'The legal basis of the pool. In France, group companies may lend to each other thanks to the exception in article L511-7 of the Code monétaire et financier.',
+  cl3h: 'Arm\'s length interest', cl3f: 'taux de pleine concurrence', cl3: 'Intercompany interest must be at a market rate, or the tax authorities can reject it. Here: €STR plus a margin, different for lenders and borrowers.',
+  cl4h: 'Cash segmentation', cl4f: 'trésorerie opérationnelle, de précaution, excédentaire', cl4: 'Cash is split into what operations need, a reserve for forecast dips, and a true surplus. Only the surplus is invested, and never at the cost of liquidity or capital.'
+});
+Object.assign(T.fr, {
+  m3h1: 'Centralisation de trésorerie', m3intro: 'Chaque soir, BNP Paribas équilibre à zéro les comptes participants contre le compte centralisateur de Lumen SA. TreasuryOS transforme ces remontées et descentes en prêts intragroupe, calcule les intérêts à un taux de pleine concurrence et montre la trésorerie que le groupe peut placer sans risque.',
+  m3mirrors: 'Kyriba banque interne et prêts intragroupe · SAP In-House Cash et concentration de trésorerie · Agicap vue multi-entités',
+  pk1: 'Trésorerie sur le compte centralisateur', pk2: 'Lumen Deutschland prête au pool', pk2b: 'Lumen Deutschland emprunte au pool', pk3: 'Intérêts intragroupe depuis le 10 août', pk4: 'Excédent à placer', pk4s: 'point bas prévisionnel − coussin', pk5: 'Produits sur 3 mois', pk5s: 'selon l\'allocation proposée',
+  stTitle3: 'Structure de la centralisation', stSub3: 'Centralisation physique à zéro en EUR chez BNP Paribas, encadrée par la convention de trésorerie du groupe',
+  hdr: 'Compte centralisateur', part: 'Compte participant', outsideT: 'Hors centralisation', sameEnt: 'Même société que le centralisateur : virement interne, pas de prêt', icYes: 'Société différente : chaque équilibrage crée un prêt intragroupe',
+  today: 'Aujourd\'hui', sweep: 'Équilibrage', up: 'Remontée', down: 'Descente',
+  icTitle: 'Position intragroupe, Lumen Deutschland', icSub: 'Positive : Lumen Deutschland a prêté cette trésorerie à Lumen SA via le pool (M EUR)',
+  stmtTitle: 'Relevé d\'intérêts intragroupe', stmtSub: 'Mensuel, sur les positions de fin de journée, jours calendaires, base exact/360',
+  thMonth: 'Mois', thAvg: 'Position moyenne', thDir: 'Sens', thRateC: 'Taux', thDays: 'Jours', thInt: 'Intérêts', thPays: 'Débiteur → bénéficiaire',
+  dirLend: 'DE prête', dirBorrow: 'DE emprunte', mtd: 'à date',
+  lastSw: 'Derniers équilibrages', thCum: 'Position après',
+  sogeLine: 'FR-SOGE-EUR appartient à Lumen SA, comme le compte centralisateur. Depuis le 10 août, le pool lui a versé {d} EUR pour couvrir la paie et les impôts réglés depuis ce compte. Ni prêt ni intérêts.',
+  bufTitle: 'Coussin de liquidité et excédent', bufSub: 'Répartition de la trésorerie du jour selon la politique de trésorerie, à partir du prévisionnel 13 semaines',
+  seg1: 'Coussin opérationnel', seg1d: 'minimum de la politique, toujours disponible', seg2: 'Réserve pour les creux prévus', seg2d: 'nécessaire avant le point bas du prévisionnel', seg3: 'Excédent à placer', seg3d: 'jamais nécessaire sur les 13 semaines',
+  bufNote: 'L\'excédent suit les hypothèses du prévisionnel. Essayez « retard de paiement clients 14 jours » dans l\'onglet Prévisionnel, puis revenez.',
+  invTitle: 'Proposition de placement de l\'excédent en EUR', invSub: 'Dans le cadre de la politique : sans risque en capital, 3 mois maximum, limites par banque et part liquide',
+  thInstr: 'Support', thCpty: 'Banque', thAmt3: 'Montant', thLiq: 'Liquidité', thInc: 'Produits sur 3 mois', fund: 'Fonds',
+  polTitle: 'Contrôles de la politique', pc1: 'Part par banque inférieure ou égale à {x} %', pc2: 'Au moins {x} % disponibles sous une semaine', pc3: 'Échéance maximale {x} mois', pc4: 'Coussin maintenu à {x} M EUR',
+  bankExp: 'Exposition par banque après placement',
+  ocTitle: 'Autres devises, hors centralisation', ocSub: 'Soldes au-delà du solde de fonctionnement de chaque compte, et que faire de ces montants',
+  usdT: 'USD chez HSBC France', usdTxt: '{s} USD au-delà du solde de fonctionnement de {t} USD. Lumen Maroc achète environ {n} USD de composants dans les 8 prochaines semaines en convertissant des dirhams. Lumen SA pourrait régler ces factures pour Lumen Maroc depuis ce compte (centrale de paiements) et les refacturer en intragroupe. Cela évite deux conversions et économise environ {v} USD de marge de change. À valider d\'abord au regard de la réglementation des changes marocaine.',
+  gbpT: 'GBP chez HSBC UK', gbpTxt: '{s} GBP au-delà du solde de fonctionnement de {t} GBP. Options : un OPCVM monétaire en GBP à {r} % (environ {i} GBP sur 3 mois), ou un prêt intragroupe à Lumen SA. À terme, une centralisation notionnelle multidevise chez HSBC l\'intégrerait à la structure.',
+  madT: 'MAD chez Société Générale Maroc', madTxt: '{s} MAD au-delà du solde de fonctionnement de {t} MAD. La réglementation des changes les maintient au Maroc : placement en compte à terme 1 mois à {r} %, et rapatriement par dividende une fois les comptes annuels approuvés.',
+  m3learn: 'Notions de ce module',
+  cl1h: 'Équilibrage à zéro', cl1f: 'zero balancing', cl1: 'Chaque soir, la banque ramène chaque compte participant à zéro. Les excédents remontent vers le compte centralisateur, les besoins sont couverts par une descente.',
+  cl2h: 'Convention de trésorerie', cl2f: 'cash pooling agreement', cl2: 'Le fondement juridique de la centralisation. En France, les sociétés d\'un groupe peuvent se prêter de la trésorerie grâce à l\'exception de l\'article L511-7 du Code monétaire et financier.',
+  cl3h: 'Taux de pleine concurrence', cl3f: 'arm\'s length interest', cl3: 'Les intérêts intragroupe doivent être au prix du marché, sinon l\'administration fiscale peut les réintégrer. Ici : €STR plus une marge, différente pour les prêteurs et les emprunteurs.',
+  cl4h: 'Segmentation de la trésorerie', cl4f: 'cash segmentation', cl4: 'On distingue la trésorerie opérationnelle, une réserve pour les creux prévus, et un véritable excédent. Seul l\'excédent est placé, jamais au détriment de la liquidité ou du capital.'
+});
+
+/* ---------------- engine */
+function poolCalc() {
+  const P = D.pool, ir = P.interest;
+  const res = {};
+  for (const p of P.pool.participants) {
+    const sw = {};
+    for (const l of LINES) if (l.account === p.account && l.btc === 'CAMT-ACCB-ZABA') sw[l.booking] = (sw[l.booking] || 0) + l.amount;
+    let pos = p.opening_position_eur, up = 0, down = 0;
+    const series = D.days.map(d => { const a = sw[d] || 0; if (a < 0) up -= a; else down += a; pos -= a; return { d, sweep: a, pos }; });
+    // interest per calendar day on the last end-of-day position
+    const months = {};
+    let i = 0, total = 0;
+    for (let d = D.days[0]; d <= D.days[D.days.length - 1]; d = addDays(d, 1)) {
+      while (i + 1 < series.length && series[i + 1].d <= d) i++;
+      const ps = series[i].pos, rate = ir.reference_rate_pct + (ps >= 0 ? ir.credit_margin_pct : ir.debit_margin_pct);
+      const int = ps * rate / 100 / ir.basis_days;
+      const m = d.slice(0, 7);
+      (months[m] ||= { days: 0, sumPos: 0, int: 0 });
+      months[m].days++; months[m].sumPos += ps; months[m].int += int; total += int;
+    }
+    res[p.account] = { ...p, series, up, down, months, total, pos: series[series.length - 1].pos };
+  }
+  return res;
+}
+
+function surplusCalc() {
+  const P = D.pool, pol = P.policy, fc = forecast13(F), cash = groupCash(D.fs.as_of);
+  const low = Math.min(...fc.close), buffer = pol.min_group_cash_eur;
+  const invest = Math.max(0, Math.min(low, cash) - buffer);
+  const reserve = Math.max(0, cash - buffer - invest);
+  const alloc = P.instruments.map(x => ({ ...x, amount: Math.round(invest * x.share / 1000) * 1000 }));
+  alloc.forEach(a => { a.income = a.amount * a.rate_pct / 100 * a.days / 360; });
+  // bank exposure after placement: the surplus leaves the header account
+  const byBank = {};
+  for (const a of D.accounts) { const b = balanceOn(a.id, D.fs.as_of) / rate(D.fs.as_of, a.ccy); byBank[a.bank] = (byBank[a.bank] || 0) + b; }
+  byBank[D.bankById[D.accounts.find(a => a.id === P.pool.header).bank].id] -= invest;
+  let fund = 0;
+  for (const a of alloc) { if (a.bank) byBank[a.bank] += a.amount; else fund += a.amount; }
+  const total = Object.values(byBank).reduce((s, v) => s + v, 0) + fund;
+  const liquid = alloc.filter(a => a.liquid_week).reduce((s, a) => s + a.amount, 0);
+  return { cash, low, buffer, invest, reserve, alloc, byBank, fund, total, liquidShare: invest ? liquid / invest : 1, income: alloc.reduce((s, a) => s + a.income, 0) };
+}
+
+/* ---------------- views */
+function viewM3() {
+  const pc = poolCalc(), sc = surplusCalc(), de = pc['DE-BNPP-EUR'], so = pc['FR-SOGE-EUR'];
+  const hdrBal = balanceOn(D.pool.pool.header, D.fs.as_of);
+  const icInt = Object.values(pc).filter(p => p.intercompany).reduce((s, p) => s + p.total, 0);
+  const c = n => `<div><h3>${t('cl' + n + 'h')} <i>· ${t('cl' + n + 'f')}</i></h3><p>${t('cl' + n)}</p></div>`;
+  return `<div class="head"><div><h1>${t('m3h1')}</h1><p>${t('m3intro')}</p></div>
+      <div class="mirror"><b>${t('mirrors')}:</b> ${t('m3mirrors')}</div></div>
+    <section class="kpis">
+      <div class="kpi"><div class="l">${t('pk1')} · ${fdate(D.fs.as_of)}</div><div class="v">EUR ${fmt(hdrBal)}</div><div class="s muted">FR-BNPP-EUR</div></div>
+      <div class="kpi"><div class="l">${de.pos >= 0 ? t('pk2') : t('pk2b')}</div><div class="v">${fM(Math.abs(de.pos))}</div><div class="s muted">€STR + ${fmt(de.pos >= 0 ? D.pool.interest.credit_margin_pct : D.pool.interest.debit_margin_pct, 2)}%</div></div>
+      <div class="kpi"><div class="l">${t('pk3')}</div><div class="v">EUR ${fmt(icInt)}</div><div class="s muted">Lumen SA → Lumen Deutschland</div></div>
+      <div class="kpi"><div class="l">${t('pk4')}</div><div class="v">${fM(sc.invest)}</div><div class="s muted">${t('pk4s')}</div></div>
+      <div class="kpi"><div class="l">${t('pk5')}</div><div class="v">EUR ${fmt(sc.income)}</div><div class="s muted">${t('pk5s')}</div></div>
+    </section>
+    ${viewPoolStructure(pc, hdrBal)}
+    <div class="grid" style="margin-top:18px">
+      <div class="stack">${viewIcChart(de)}${viewSweeps(pc)}</div>
+      <div class="stack">${viewInterest(de)}
+        <section class="panel"><div class="pb muted" style="font-size:13px">${t('sogeLine', { d: fmt(so.down - so.up) })}</div></section></div>
+    </div>
+    <div style="margin-top:18px">${viewBuffer(sc)}</div>
+    <div class="grid" style="margin-top:18px"><div class="stack">${viewInvest(sc)}</div><div class="stack">${viewOtherCcy()}</div></div>
+    <div style="margin-top:18px"><section class="panel"><div class="ph"><h2>${t('m3learn')}</h2></div><div class="learn">${c(1)}${c(2)}${c(3)}${c(4)}</div></section></div>
+    <p class="foot">${t('foot')}</p>`;
+}
+
+function viewPoolStructure(pc, hdrBal) {
+  const P = D.pool.pool, last = D.days[D.days.length - 1];
+  const acc = id => D.accounts.find(a => a.id === id);
+  const partCard = p => {
+    const a = acc(p.account), ls = pc[p.account].series.filter(x => x.sweep).slice(-1)[0] || {}, sw = ls.sweep;
+    return `<div class="pcard"><div class="pt">${t('part')}</div><div class="acct">${a.id}</div><div class="muted" style="font-size:12.5px">${esc(D.entById[a.entity].name)} · ${esc(D.bankById[a.bank].name)}</div>
+      <div class="num" style="margin-top:6px">EUR ${fmt(balanceOn(a.id, last))}</div>
+      <div style="font-size:12px;margin-top:4px">${sw ? `${sw < 0 ? t('up') : t('down')} ${fdShort(ls.d)}: <span class="num">${fmt(Math.abs(sw))}</span>` : '<span class="muted">–</span>'}</div>
+      <div class="chip ${p.intercompany ? '' : 'unc'}" style="margin-top:8px;white-space:normal;font-family:inherit">${p.intercompany ? t('icYes') : t('sameEnt')}</div></div>`;
+  };
+  const outCard = o => { const a = acc(o.account); return `<div class="pcard out"><div class="acct">${a.id}</div><div class="num">${a.ccy} ${fmt(balanceOn(a.id, last))}</div><div class="muted" style="font-size:12.5px;margin-top:4px">${esc(o[S.lang])}</div></div>`; };
+  return `<section class="panel"><div class="ph"><div><h2>${t('stTitle3')}</h2><div class="sub">${t('stSub3')}</div></div><div class="sub">${esc(S.lang === 'fr' ? P.agreement_fr : P.agreement)}</div></div>
+    <div class="pb pool">
+      <div class="pcol">${P.participants.map(partCard).join('')}</div>
+      <div class="parrow" aria-hidden="true"><span>${t('up')} →</span><span>← ${t('down')}</span></div>
+      <div class="pcol"><div class="pcard hdr"><div class="pt">${t('hdr')}</div><div class="acct">${P.header}</div><div class="muted" style="font-size:12.5px">Lumen SA · BNP Paribas</div>
+        <div class="num" style="font-size:20px;margin-top:6px">EUR ${fmt(hdrBal)}</div></div></div>
+      <div class="pcol"><div class="pt" style="margin-bottom:6px">${t('outsideT')}</div>${P.outside.map(outCard).join('')}</div>
+    </div></section>`;
+}
+
+function viewIcChart(p) {
+  const pts = p.series.map(s => s.pos / 1e6), W = 640, H = 220, L = 44, R = 60, Tp = 14, B = 26;
+  const lo = Math.floor(Math.min(0, ...pts)), hi = Math.ceil(Math.max(...pts) + 0.5);
+  const x = i => L + (W - L - R) * i / (pts.length - 1), y = v => Tp + (H - Tp - B) * (1 - (v - lo) / (hi - lo));
+  let g = '';
+  for (let v = lo; v <= hi; v++) g += `<line class="gl" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text class="ax" x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  p.series.forEach((s, i) => { if (i % 15 === 0) g += `<text class="ax" x="${x(i)}" y="${H - 8}" text-anchor="middle">${fdShort(s.d)}</text>`; });
+  const path = pts.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join('');
+  const n = pts.length - 1;
+  return `<section class="panel chart"><div class="ph"><div><h2>${t('icTitle')}</h2><div class="sub">${t('icSub')}</div></div></div>
+    <div class="pb"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${t('icTitle')}">${g}<path class="ar" d="${path}L${x(n)},${y(lo)}L${x(0)},${y(lo)}Z"/><path class="ln" d="${path}"/>
+    <circle class="dt" cx="${x(n)}" cy="${y(pts[n])}" r="5"/><text class="lbl" x="${x(n) + 8}" y="${y(pts[n]) + 4}">${fmt(pts[n], 2)}${mU()}</text></svg></div></section>`;
+}
+
+function viewSweeps(pc) {
+  const rows = [];
+  for (const k in pc) pc[k].series.forEach(s => { if (s.sweep) rows.push({ acc: k, ...s }); });
+  rows.sort((a, b) => b.d.localeCompare(a.d) || a.acc.localeCompare(b.acc));
+  return `<section class="panel"><div class="ph"><h2>${t('lastSw')}</h2></div><div class="scroll"><table>
+    <thead><tr><th>${t('thDate')}</th><th>${t('thAccount')}</th><th>${t('sweep')}</th><th class="r">${t('thAmt')}</th><th class="r">${t('thCum')}</th></tr></thead>
+    <tbody>${rows.slice(0, 10).map(r => `<tr><td class="num">${fdShort(r.d)}</td><td class="acct">${r.acc}</td><td><span class="chip ${r.sweep < 0 ? '' : 'unc'}">${r.sweep < 0 ? t('up') : t('down')}</span></td>
+      <td class="r num">${fmt(Math.abs(r.sweep), 2)}</td><td class="r num muted">${pc[r.acc].intercompany ? fmt(r.pos) : '–'}</td></tr>`).join('')}</tbody></table></div></section>`;
+}
+
+function viewInterest(p) {
+  const ir = D.pool.interest, last = D.days[D.days.length - 1].slice(0, 7);
+  const rows = Object.entries(p.months).map(([m, x]) => {
+    const avg = x.sumPos / x.days, lend = avg >= 0, rate = ir.reference_rate_pct + (lend ? ir.credit_margin_pct : ir.debit_margin_pct);
+    return `<tr><td>${fmMonth(m)}${m === last ? ` <span class="muted">(${t('mtd')})</span>` : ''}</td><td class="r num">${fmt(avg)}</td><td>${lend ? t('dirLend') : t('dirBorrow')}</td>
+      <td class="r num">${fmt(rate, 2)}%</td><td class="r num">${x.days}</td><td class="r num">${fmt(x.int, 2)}</td><td class="muted" style="font-size:12.5px">${lend ? 'Lumen SA → Lumen DE' : 'Lumen DE → Lumen SA'}</td></tr>`;
+  }).join('');
+  return `<section class="panel"><div class="ph"><div><h2>${t('stmtTitle')}</h2><div class="sub">${t('stmtSub')}</div></div></div>
+    <div class="scroll"><table><thead><tr><th>${t('thMonth')}</th><th class="r">${t('thAvg')}</th><th>${t('thDir')}</th><th class="r">${t('thRateC')}</th><th class="r">${t('thDays')}</th><th class="r">${t('thInt')}</th><th>${t('thPays')}</th></tr></thead>
+    <tbody>${rows}<tr class="tot"><td>${t('fTotal')}</td><td></td><td></td><td></td><td></td><td class="r num">${fmt(p.total, 2)}</td><td></td></tr></tbody></table></div>
+    <div class="pb muted" style="font-size:12.5px;border-top:1px solid var(--line)">${esc(D.pool.interest[S.lang])}</div></section>`;
+}
+
+function viewBuffer(sc) {
+  const segs = [[sc.buffer, 'seg1', 'seg1d', 'b1'], [sc.reserve, 'seg2', 'seg2d', 'b2'], [sc.invest, 'seg3', 'seg3d', 'b3']];
+  const tot = segs.reduce((s, x) => s + x[0], 0);
+  return `<section class="panel"><div class="ph"><div><h2>${t('bufTitle')}</h2><div class="sub">${t('bufSub')}</div></div><div class="num">EUR ${fmt(sc.cash)}</div></div>
+    <div class="pb"><div class="segbar">${segs.map(s => `<div class="${s[3]}" style="flex:${Math.max(s[0], 1)}" title="${t(s[1])}"></div>`).join('')}</div>
+      <div class="seglg">${segs.map(s => `<div><span class="sw ${s[3]}"></span> <b>${t(s[1])}</b> <span class="num">${fM(s[0])}</span><div class="muted" style="font-size:12.5px">${t(s[2])}</div></div>`).join('')}</div>
+      <p class="muted" style="font-size:12.5px;margin:12px 0 0">${t('bufNote')}</p></div></section>`;
+}
+
+function viewInvest(sc) {
+  const pol = D.pool.policy;
+  const rows = sc.alloc.map(a => `<tr><td>${esc(a[S.lang])}</td><td>${a.bank ? esc(D.bankById[a.bank].name) : `<span class="muted">${t('fund')}</span>`}</td>
+    <td class="r num">${fmt(a.amount)}</td><td class="r num">${fmt(a.rate_pct, 2)}%</td><td>${esc(a['liquidity_' + S.lang])}</td><td class="r num">${fmt(a.income)}</td></tr>`).join('');
+  const shares = Object.entries(sc.byBank).map(([b, v]) => [b, v / sc.total]);
+  const maxShare = Math.max(...shares.map(s => s[1]));
+  const chk = (ok, txt) => `<li class="${ok ? 'ok' : 'bad'}">${ok ? '✓' : '✕'} <span style="color:var(--ink);font-weight:400">${txt}</span></li>`;
+  return `<section class="panel"><div class="ph"><div><h2>${t('invTitle')}</h2><div class="sub">${t('invSub')}</div></div></div>
+    <div class="scroll"><table><thead><tr><th>${t('thInstr')}</th><th>${t('thCpty')}</th><th class="r">${t('thAmt3')}</th><th class="r">${t('thRateC')}</th><th>${t('thLiq')}</th><th class="r">${t('thInc')}</th></tr></thead>
+    <tbody>${rows}<tr class="tot"><td>${t('fTotal')}</td><td></td><td class="r num">${fmt(sc.alloc.reduce((x, y) => x + y.amount, 0))}</td><td></td><td></td><td class="r num">${fmt(sc.income)}</td></tr></tbody></table></div>
+    <div class="pb" style="border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div><h3 style="font-size:13px;margin:0 0 6px">${t('polTitle')}</h3><ul class="checks">
+        ${chk(maxShare <= pol.max_share_per_bank_pct / 100, t('pc1', { x: pol.max_share_per_bank_pct }))}
+        ${chk(sc.liquidShare >= pol.min_liquid_within_week_pct / 100, t('pc2', { x: pol.min_liquid_within_week_pct }))}
+        ${chk(true, t('pc3', { x: pol.max_tenor_months }))}
+        ${chk(Math.min(sc.low, sc.cash) - sc.invest >= sc.buffer - 1, t('pc4', { x: fmt(sc.buffer / 1e6, 0) }))}</ul></div>
+      <div><h3 style="font-size:13px;margin:0 0 6px">${t('bankExp')}</h3>${shares.concat([[t('fund'), sc.fund / sc.total]]).map(([b, s]) => `<div class="expo"><span>${esc(D.bankById[b] ? D.bankById[b].name : b)}</span><span class="track"><i style="width:${(100 * s).toFixed(1)}%"></i><b style="left:${pol.max_share_per_bank_pct}%"></b></span><span class="num">${fmt(100 * s, 0)}%</span></div>`).join('')}</div>
+    </div></section>`;
+}
+
+function viewOtherCcy() {
+  const P = D.pool, tb = P.policy.target_balances, r = P.other_ccy_rates, last = D.days[D.days.length - 1];
+  const usd = balanceOn('FR-HSBC-USD', last) - tb['FR-HSBC-USD'];
+  const maUsd = D.ap.filter(a => a.entity === 'LUM-MA' && a.currency === 'USD').reduce((s, a) => s + a.amount, 0);
+  const cover = Math.min(usd, maUsd), saving = cover * 2 * r.fx_spread_pct / 100;
+  const gbp = balanceOn('UK-HSBC-GBP', last) - tb['UK-HSBC-GBP'], gbpInc = gbp * r.GBP_MMF_pct / 100 * 92 / 365;
+  const mad = balanceOn('MA-SOGE-MAD', last) - tb['MA-SOGE-MAD'];
+  const card = (title, txt) => `<div class="occ"><h3>${title}</h3><p>${txt}</p></div>`;
+  return `<section class="panel"><div class="ph"><div><h2>${t('ocTitle')}</h2><div class="sub">${t('ocSub')}</div></div></div>
+    ${card(t('usdT'), t('usdTxt', { s: fmt(usd), t: fmt(tb['FR-HSBC-USD']), n: fmt(maUsd), v: fmt(saving) }))}
+    ${card(t('gbpT'), t('gbpTxt', { s: fmt(gbp), t: fmt(tb['UK-HSBC-GBP']), r: fmt(r.GBP_MMF_pct, 2), i: fmt(gbpInc) }))}
+    ${card(t('madT'), t('madTxt', { s: fmt(mad), t: fmt(tb['MA-SOGE-MAD']), r: fmt(r.MAD_TD1M_pct, 2) }))}
+  </section>`;
+}
+
+/* ===================================================================
+   TreasuryOS · Module 4: relations bancaires (bank relationships)
+   Account register, fee audit and benchmark, share of wallet,
+   RCF usage and covenants, annual bank review.
+   =================================================================== */
+Object.assign(T.en, {
+  thCur: 'Currency', m4h1: 'Bank relationships', m4intro: 'Groupe Lumen works with three banks. This tab keeps the account and signatory register, checks every monthly fee invoice, compares pricing with the market, shows what each bank earns from the group against the credit it provides, tracks the RCF and its covenants, and prepares the annual bank review.',
+  m4mirrors: 'Kyriba bank account management (BAM) and bank fee analysis · SAP Bank Account Management · Agicap bank overview',
+  bk1: 'Bank fees, annualised', bk1s: 'from the last 3 monthly invoices', bk2: 'Saving at market pricing', bk2s: 'same volumes, benchmark tariff', bk3: 'RCF drawn', bk3s: 'of EUR {c}m', bk4: 'Lowest covenant headroom', bk5: 'Actions before 31 Dec',
+  regTitle: 'Bank account register', regSub: 'Every account, who can sign and under which rule. Click a row for details.',
+  thBank: 'Bank', thEnt: 'Company', thCh: 'Channel', thSig: 'Signatories', thRule: 'Signing rule', thSt: 'Status', thKyc: 'Last KYC review', thPurp: 'Purpose',
+  stActive: 'Active', mandate: 'Mandate change',
+  feeTitle: 'Fee audit', feeSub: 'Each invoice from the statements (FEES lines) checked against the tariff applied to the volumes in the bank\'s analysis statement (camt.086)',
+  thMonthF: 'Invoice', thBilled: 'Billed, EUR', thTariff: 'Tariff, EUR', thGap: 'Gap', okF: 'OK', query: 'Query',
+  benchTitle: 'Pricing against the market', benchSub: 'Unit prices in EUR. Red: above benchmark. Annual saving at the same volumes.',
+  feeItem: 'Service', bench: 'Benchmark', save: 'Saving a year',
+  f_account_maintenance_month: 'Account maintenance, per month', f_sepa_ct_out: 'SEPA transfer sent', f_sepa_ct_in: 'SEPA transfer received', f_swift_out: 'International (SWIFT) transfer', f_ebics_month: 'EBICS subscription, per month', f_cash_pool_month: 'Cash pool, per month',
+  walTitle: 'Share of wallet', walSub: 'What each bank earns from the group in a year, against its share of the RCF',
+  thFees: 'Fees', thRcf: 'RCF', thFx: 'FX', thDep: 'Deposits', thTot: 'Total', thWal: 'Wallet share', thCred: 'Credit share', thBal: 'Balance',
+  wOver: 'Earns more than its credit share', wUnder: 'Earns less than its credit share', wFair: 'In line',
+  walNote: 'Banks lend at thin margins and expect "ancillary business" (fees, FX, deposits) in return. A bank that earns much less than its share of the credit may not renew it.',
+  rcfTitle: 'Revolving credit facility, RCF-2025', rcfSub: 'Syndicated, EUR {c}m, signed {s}, matures {m}',
+  rcfDrawn: 'Drawn', rcfUndrawn: 'Undrawn', rcfCost: 'Annual cost at today\'s drawing', rcfInt: 'Interest on drawn', rcfCom: 'Commitment fee on undrawn', rcfAllIn: 'All-in rate, drawn',
+  thLender: 'Lender', thRole: 'Role', thShare: 'Share', thCommit: 'Commitment', thDrawnS: 'Drawn share',
+  covTitle: 'Covenant tracking', covSub: 'Tested every quarter on last-twelve-month figures (EUR m). Liquidity is tested today and on the forecast low.',
+  thTest: 'Covenant', thLimit: 'Limit', thHead: 'Headroom', covLiqF: 'Forecast low (13 weeks)', met: 'Met', breach: 'Breach',
+  revTitle: 'Annual bank review 2026', revSub: 'Weighted scorecard. Pricing and credit are computed; service, digital and responsiveness are the treasury team\'s ratings.',
+  c_credit: 'Credit commitment', c_pricing: 'Pricing', c_service: 'Service quality', c_digital: 'Digital and connectivity', c_responsiveness: 'Responsiveness', score: 'Score', weight: 'Weight',
+  rmT: 'Relationship manager', ratingT: 'Rating', sinceT: 'Client since',
+  agTitle: 'Review meeting agenda', calTitle: 'Compliance calendar', calSub: 'Deadlines that block payments if missed',
+  kycDue: 'KYC documents due', ebicsExp: 'EBICS certificate expires', allBanks: 'All banks',
+  m4learn: 'Concepts in this module',
+  bl1h: 'Bank account management', bl1f: 'gestion des comptes bancaires (BAM)', bl1: 'A single register of every account, its signatories and its rules. Auditors check it, and it stops former employees from still being able to sign.',
+  bl2h: 'Bank fee analysis', bl2f: 'analyse des commissions bancaires', bl2: 'Banks send a monthly analysis statement (camt.086, Bank Services Billing) listing volumes and unit prices. Treasury checks each invoice against the agreed tariff (conditions tarifaires).',
+  bl3h: 'Share of wallet', bl3f: 'part du portefeuille bancaire, juste retour', bl3: 'Each bank should earn ancillary business roughly in line with the credit it provides. This balance is the core of the annual bank review.',
+  bl4h: 'Covenants', bl4f: 'covenants financiers, ratios bancaires', bl4: 'Financial ratios the group promises to respect. A breach lets the lenders cancel the RCF, so treasury tracks the headroom (marge de manoeuvre) every quarter.'
+});
+Object.assign(T.fr, {
+  thCur: 'Devise', m4h1: 'Relations bancaires', m4intro: 'Le Groupe Lumen travaille avec trois banques. Cet onglet tient le registre des comptes et des signataires, contrôle chaque facture mensuelle de commissions, compare les tarifs au marché, montre ce que chaque banque gagne avec le groupe au regard du crédit qu\'elle accorde, suit le RCF et ses covenants, et prépare la revue bancaire annuelle.',
+  m4mirrors: 'Kyriba gestion des comptes bancaires (BAM) et analyse des frais · SAP Bank Account Management · Agicap vue banques',
+  bk1: 'Frais bancaires annualisés', bk1s: 'à partir des 3 dernières factures', bk2: 'Économie au prix du marché', bk2s: 'mêmes volumes, tarif de référence', bk3: 'RCF tiré', bk3s: 'sur {c} M EUR', bk4: 'Marge la plus faible sur covenant', bk5: 'Actions avant le 31 déc.',
+  regTitle: 'Registre des comptes bancaires', regSub: 'Chaque compte, qui peut signer et selon quelle règle. Cliquez sur une ligne pour le détail.',
+  thBank: 'Banque', thEnt: 'Société', thCh: 'Canal', thSig: 'Signataires', thRule: 'Règle de signature', thSt: 'Statut', thKyc: 'Dernière revue KYC', thPurp: 'Usage',
+  stActive: 'Actif', mandate: 'Changement de pouvoirs',
+  feeTitle: 'Contrôle des commissions', feeSub: 'Chaque facture lue dans les relevés (lignes FRAIS) comparée au tarif appliqué aux volumes du relevé d\'analyse de la banque (camt.086)',
+  thMonthF: 'Facture', thBilled: 'Facturé, EUR', thTariff: 'Tarif, EUR', thGap: 'Écart', okF: 'OK', query: 'À contester',
+  benchTitle: 'Tarifs comparés au marché', benchSub: 'Prix unitaires en EUR. En rouge : au-dessus du marché. Économie annuelle à volumes constants.',
+  feeItem: 'Prestation', bench: 'Marché', save: 'Économie par an',
+  f_account_maintenance_month: 'Tenue de compte, par mois', f_sepa_ct_out: 'Virement SEPA émis', f_sepa_ct_in: 'Virement SEPA reçu', f_swift_out: 'Virement international (SWIFT)', f_ebics_month: 'Abonnement EBICS, par mois', f_cash_pool_month: 'Centralisation, par mois',
+  walTitle: 'Part du portefeuille bancaire', walSub: 'Ce que chaque banque gagne avec le groupe sur un an, comparé à sa part du RCF',
+  thFees: 'Commissions', thRcf: 'RCF', thFx: 'Change', thDep: 'Dépôts', thTot: 'Total', thWal: 'Part des revenus', thCred: 'Part du crédit', thBal: 'Équilibre',
+  wOver: 'Gagne plus que sa part de crédit', wUnder: 'Gagne moins que sa part de crédit', wFair: 'Équilibré',
+  walNote: 'Les banques prêtent avec des marges faibles et attendent en retour des « flux annexes » (commissions, change, dépôts). Une banque qui gagne bien moins que sa part du crédit risque de ne pas le renouveler.',
+  rcfTitle: 'Crédit renouvelable, RCF-2025', rcfSub: 'Syndiqué, {c} M EUR, signé le {s}, échéance {m}',
+  rcfDrawn: 'Tiré', rcfUndrawn: 'Non tiré', rcfCost: 'Coût annuel au tirage actuel', rcfInt: 'Intérêts sur le tiré', rcfCom: 'Commission de non-utilisation', rcfAllIn: 'Taux tout compris, tiré',
+  thLender: 'Prêteur', thRole: 'Rôle', thShare: 'Part', thCommit: 'Engagement', thDrawnS: 'Part tirée',
+  covTitle: 'Suivi des covenants', covSub: 'Testés chaque trimestre sur les douze derniers mois (M EUR). La liquidité est testée aujourd\'hui et au point bas du prévisionnel.',
+  thTest: 'Covenant', thLimit: 'Seuil', thHead: 'Marge', covLiqF: 'Point bas prévisionnel (13 semaines)', met: 'Respecté', breach: 'Bris',
+  revTitle: 'Revue bancaire annuelle 2026', revSub: 'Grille pondérée. Les tarifs et le crédit sont calculés ; service, digital et réactivité sont notés par l\'équipe trésorerie.',
+  c_credit: 'Engagement de crédit', c_pricing: 'Tarifs', c_service: 'Qualité de service', c_digital: 'Digital et connectivité', c_responsiveness: 'Réactivité', score: 'Note', weight: 'Poids',
+  rmT: 'Chargé d\'affaires', ratingT: 'Notation', sinceT: 'Client depuis',
+  agTitle: 'Ordre du jour de la revue', calTitle: 'Calendrier de conformité', calSub: 'Échéances qui bloquent les paiements si elles sont manquées',
+  kycDue: 'Pièces KYC à fournir', ebicsExp: 'Expiration du certificat EBICS', allBanks: 'Toutes les banques',
+  m4learn: 'Notions de ce module',
+  bl1h: 'Gestion des comptes bancaires', bl1f: 'bank account management (BAM)', bl1: 'Un registre unique de tous les comptes, de leurs signataires et de leurs règles. Les auditeurs le contrôlent, et il évite qu\'un ancien salarié puisse encore signer.',
+  bl2h: 'Analyse des commissions bancaires', bl2f: 'bank fee analysis', bl2: 'Les banques envoient chaque mois un relevé d\'analyse (camt.086, Bank Services Billing) avec volumes et prix unitaires. La trésorerie contrôle chaque facture par rapport aux conditions tarifaires négociées.',
+  bl3h: 'Part du portefeuille bancaire', bl3f: 'share of wallet', bl3: 'Chaque banque doit recevoir des flux annexes à peu près en proportion du crédit qu\'elle accorde : c\'est le « juste retour », au coeur de la revue bancaire annuelle.',
+  bl4h: 'Covenants financiers', bl4f: 'covenants, ratios bancaires', bl4: 'Des ratios que le groupe s\'engage à respecter. Un bris permet aux prêteurs d\'annuler le RCF : la trésorerie suit donc la marge de manoeuvre chaque trimestre.'
+});
+
+/* ---------------- engine */
+const FEE_KEYS = ['account_maintenance_month', 'sepa_ct_out', 'sepa_ct_in', 'swift_out', 'ebics_month', 'cash_pool_month'];
+function tariffEur(acc, tariff) {
+  const v = D.rel.monthly_volumes[acc.id] || {};
+  return tariff.account_maintenance_month + tariff.ebics_month + (acc.pool_role === 'header' ? tariff.cash_pool_month : 0)
+    + (v.sepa_ct_in || 0) * tariff.sepa_ct_in + (v.sepa_ct_out || 0) * tariff.sepa_ct_out + (v.swift_out || 0) * tariff.swift_out + (v.other_eur || 0);
+}
+function relCalc() {
+  const R = D.rel, bench = D.banks.fee_benchmark, fac = D.fac, asof = D.fs.as_of;
+  // fee audit from FEES lines (excluding RCF charges)
+  const inv = LINES.filter(l => l.cat === 'FEES' && !/RCF/.test(l.info || ''))
+    .map(l => { const acc = D.accounts.find(a => a.id === l.account), billed = -l.amount / rate(l.booking, l.ccy), tariff = tariffEur(acc, D.bankById[acc.bank].fees);
+      return { acc, d: l.booking, billed, tariff, gap: billed / tariff - 1, period: (l.info.match(/(\d{2}\/\d{4})/) || [])[1] || '' }; })
+    .sort((a, b) => b.d.localeCompare(a.d) || a.acc.id.localeCompare(b.acc.id));
+  const months = new Set(inv.map(i => i.period)).size || 1;
+  const banks = {};
+  for (const b of D.banks.banks) banks[b.id] = { b, billed: 0, tariffY: 0, benchY: 0, rel: R.banks[b.id], lender: fac.lenders.find(x => x.bank === b.id) };
+  for (const i of inv) banks[i.acc.bank].billed += i.billed;
+  for (const a of D.accounts) { banks[a.bank].tariffY += 12 * tariffEur(a, D.bankById[a.bank].fees); banks[a.bank].benchY += 12 * tariffEur(a, bench); }
+  // RCF
+  const drawn = fac.drawn_history.filter(h => h.date <= asof).slice(-1)[0]?.drawn_eur || 0, undrawn = fac.commitment_eur - drawn;
+  const comPct = fac.margin_pct * fac.commitment_fee_pct_of_margin / 100;
+  const rcfInt = drawn * (fac.reference_rate_pct + fac.margin_pct) / 100, rcfCom = undrawn * comPct / 100;
+  const rcfBankY = drawn * fac.margin_pct / 100 + rcfCom; // bank income = margin + commitment fee
+  let tot = 0;
+  for (const k in banks) {
+    const x = banks[k], r = x.rel;
+    x.feesY = x.billed * 12 / months;
+    x.rcfY = rcfBankY * (x.lender?.share_pct || 0) / 100;
+    x.fxY = r.fx_volume_eur_year * r.fx_spread_pct / 100;
+    x.depY = r.avg_deposits_eur * r.deposit_margin_pct / 100;
+    x.totY = x.feesY + x.rcfY + x.fxY + x.depY; tot += x.totY;
+    x.premium = x.tariffY / x.benchY - 1;
+  }
+  const maxShare = Math.max(...fac.lenders.map(l => l.share_pct));
+  for (const k in banks) {
+    const x = banks[k]; x.wallet = x.totY / tot; x.credit = (x.lender?.share_pct || 0) / 100;
+    const sc = { credit: 5 * x.credit * 100 / maxShare, pricing: Math.max(1, Math.min(5, 5 - x.premium * 10)), ...x.rel.scores };
+    x.scores = sc; x.score = Object.entries(R.weights).reduce((s, [c, w]) => s + sc[c] * w / 100, 0);
+  }
+  // covenants
+  const L = fac.financials_ltm, last = L[L.length - 1], cash = groupCash(asof), low = Math.min(...forecast13(F).close);
+  const cov = fac.covenants.map((c, i) => {
+    const hist = L.map(q => i === 0 ? q.net_debt / q.ebitda : i === 1 ? q.ebitda / q.net_interest : null);
+    const now = i === 2 ? (cash + undrawn) / 1e6 : hist[hist.length - 1];
+    const fc = i === 2 ? (low + undrawn) / 1e6 : null;
+    const head = c.test === 'max' ? 1 - now / c.limit : now / c.limit - 1;
+    return { ...c, hist, now, fc, head, ok: c.test === 'max' ? now <= c.limit : now >= c.limit, okF: fc == null || fc >= c.limit };
+  });
+  return { inv, months, banks, tot, drawn, undrawn, comPct, rcfInt, rcfCom, cov, last };
+}
+
+/* ---------------- views */
+function viewM4() {
+  const r = relCalc(), fac = D.fac;
+  const feesY = Object.values(r.banks).reduce((s, x) => s + x.feesY, 0);
+  const save = Object.values(r.banks).reduce((s, x) => s + x.tariffY - x.benchY, 0);
+  const minHead = r.cov.reduce((m, c) => c.head < m.head ? c : m, r.cov[0]);
+  const actions = calItems().filter(i => i.d <= '2026-12-31').length;
+  const c = n => `<div><h3>${t('bl' + n + 'h')} <i>· ${t('bl' + n + 'f')}</i></h3><p>${t('bl' + n)}</p></div>`;
+  return `<div class="head"><div><h1>${t('m4h1')}</h1><p>${t('m4intro')}</p></div>
+      <div class="mirror"><b>${t('mirrors')}:</b> ${t('m4mirrors')}</div></div>
+    <section class="kpis">
+      <div class="kpi"><div class="l">${t('bk1')}</div><div class="v">EUR ${fmt(feesY)}</div><div class="s muted">${t('bk1s')}</div></div>
+      <div class="kpi"><div class="l">${t('bk2')}</div><div class="v">EUR ${fmt(save)}</div><div class="s muted">${t('bk2s')}</div></div>
+      <div class="kpi"><div class="l">${t('bk3')}</div><div class="v">${fM(r.drawn)}</div><div class="s muted">${t('bk3s', { c: fmt(fac.commitment_eur / 1e6, 0) })} · ${fmt(100 * r.drawn / fac.commitment_eur, 0)}%</div></div>
+      <div class="kpi"><div class="l">${t('bk4')}</div><div class="v">${fmt(100 * minHead.head, 0)}%</div><div class="s muted">${esc(S.lang === 'fr' ? minHead.fr : minHead.name)}</div></div>
+      <div class="kpi"><div class="l">${t('bk5')}</div><div class="v">${actions}</div><div class="s muted">${t('calTitle')}</div></div>
+    </section>
+    <div style="margin-top:18px">${viewRegister()}</div>
+    <div class="grid" style="margin-top:18px"><div class="stack">${viewFeeAudit(r)}</div><div class="stack">${viewBench(r)}</div></div>
+    <div style="margin-top:18px">${viewWallet(r)}</div>
+    <div class="grid" style="margin-top:18px"><div class="stack">${viewRcf(r)}</div><div class="stack">${viewCov(r)}</div></div>
+    <div style="margin-top:18px">${viewBankReview(r)}</div>
+    <div style="margin-top:18px"><section class="panel"><div class="ph"><h2>${t('m4learn')}</h2></div><div class="learn">${c(1)}${c(2)}${c(3)}${c(4)}</div></section></div>
+    <p class="foot">${t('foot')}</p>`;
+}
+
+const maskIban = s => s.slice(0, 4) + ' •••• ' + s.slice(-4);
+function viewRegister() {
+  const R = D.rel, mc = Object.fromEntries(R.mandate_changes.map(m => [m.account, m]));
+  const rows = D.accounts.map(a => `<tr class="click" data-acc="${a.id}"><td class="acct" style="white-space:nowrap">${a.id}</td><td>${esc(D.entById[a.entity].name)}</td><td>${esc(D.bankById[a.bank].name)}<div class="muted num" style="font-size:11.5px">${a.bic}</div></td>
+      <td class="num" style="white-space:nowrap">${maskIban(a.iban)}</td><td>${a.ccy}</td><td>${esc(a.channel)}</td>
+      <td style="font-size:12.5px">${a.signatories.map(esc).join('<br>')}${mc[a.id] ? `<div><span class="chip unc" style="font-family:inherit">${t('mandate')}</span></div>` : ''}</td>
+      <td style="font-size:12.5px">${esc(a.signing_rule)}</td><td><span class="chip">${t('stActive')}</span></td><td class="num">${fdate(R.last_kyc[a.id])}</td></tr>
+      ${S.regOpen === a.id ? `<tr class="detail"><td colspan="10"><b>${t('thPurp')}:</b> ${esc(a.purpose)}<br><span class="num">${a.iban.replace(/(.{4})/g, '$1 ')}</span>${mc[a.id] ? `<br><b>${t('mandate')}:</b> ${esc(mc[a.id][S.lang])}` : ''}</td></tr>` : ''}`).join('');
+  return `<section class="panel"><div class="ph"><div><h2>${t('regTitle')}</h2><div class="sub">${t('regSub')}</div></div></div>
+    <div class="scroll"><table><thead><tr><th>${t('thAccount')}</th><th>${t('thEnt')}</th><th>${t('thBank')}</th><th>IBAN</th><th>${t('thCur')}</th><th>${t('thCh')}</th><th>${t('thSig')}</th><th>${t('thRule')}</th><th>${t('thSt')}</th><th>${t('thKyc')}</th></tr></thead>
+    <tbody>${rows}</tbody></table></div></section>`;
+}
+
+function viewFeeAudit(r) {
+  const tol = D.rel.audit_tolerance_pct / 100;
+  const rows = r.inv.map(i => `<tr><td class="num">${i.period}</td><td class="acct">${i.acc.id}</td><td class="r num">${fmt(i.billed, 2)}</td><td class="r num">${fmt(i.tariff, 2)}</td>
+    <td class="r num ${i.gap > tol ? 'neg' : ''}">${i.gap >= 0 ? '+' : ''}${fmt(100 * i.gap, 1)}%</td><td>${i.gap > tol ? `<span class="chip unc">${t('query')}</span>` : `<span class="chip">${t('okF')}</span>`}</td></tr>`).join('');
+  const nq = r.inv.filter(i => i.gap > tol).length;
+  return `<section class="panel"><div class="ph"><div><h2>${t('feeTitle')}</h2><div class="sub">${t('feeSub')}</div></div><div class="sub">${nq} × ${t('query')}</div></div>
+    <div class="scroll" style="max-height:430px"><table><thead><tr><th>${t('thMonthF')}</th><th>${t('thAccount')}</th><th class="r">${t('thBilled')}</th><th class="r">${t('thTariff')}</th><th class="r">${t('thGap')}</th><th></th></tr></thead>
+    <tbody>${rows}</tbody></table></div></section>`;
+}
+
+function viewBench(r) {
+  const bench = D.banks.fee_benchmark, B = D.banks.banks;
+  const rows = FEE_KEYS.map(k => `<tr><td>${t('f_' + k)}</td>${B.map(b => `<td class="r num ${b.fees[k] > bench[k] ? 'neg' : ''}">${b.fees[k] ? fmt(b.fees[k], 2) : '–'}</td>`).join('')}<td class="r num muted">${fmt(bench[k], 2)}</td></tr>`).join('');
+  const saveRow = `<tr class="tot"><td>${t('save')}</td>${B.map(b => `<td class="r num">${fmt(r.banks[b.id].tariffY - r.banks[b.id].benchY)}</td>`).join('')}<td></td></tr>`;
+  const prem = `<tr><td class="muted">%</td>${B.map(b => `<td class="r num muted">+${fmt(100 * r.banks[b.id].premium, 0)}%</td>`).join('')}<td></td></tr>`;
+  return `<section class="panel"><div class="ph"><div><h2>${t('benchTitle')}</h2><div class="sub">${t('benchSub')}</div></div></div>
+    <div class="scroll"><table><thead><tr><th>${t('feeItem')}</th>${B.map(b => `<th class="r">${esc(b.name)}</th>`).join('')}<th class="r">${t('bench')}</th></tr></thead>
+    <tbody>${rows}${saveRow}${prem}</tbody></table></div></section>`;
+}
+
+function viewWallet(r) {
+  const B = D.banks.banks;
+  const rows = B.map(b => { const x = r.banks[b.id], d = x.wallet - x.credit, st = d > 0.05 ? 'wOver' : d < -0.05 ? 'wUnder' : 'wFair';
+    return `<tr><td><b>${esc(b.name)}</b><div class="muted" style="font-size:12px">${esc(b.role)}</div></td><td class="r num">${fmt(x.feesY)}</td><td class="r num">${fmt(x.rcfY)}</td><td class="r num">${fmt(x.fxY)}</td><td class="r num">${fmt(x.depY)}</td><td class="r num"><b>${fmt(x.totY)}</b></td>
+      <td style="min-width:180px"><div class="wbar"><i style="width:${(100 * x.wallet).toFixed(1)}%"></i></div><div class="wbar c"><i style="width:${(100 * x.credit).toFixed(1)}%"></i></div></td>
+      <td class="r num">${fmt(100 * x.wallet, 0)}% / ${fmt(100 * x.credit, 0)}%</td><td><span class="chip ${st === 'wUnder' ? 'unc' : st === 'wOver' ? 'fmt' : ''}" style="font-family:inherit;white-space:normal">${t(st)}</span></td></tr>`; }).join('');
+  return `<section class="panel"><div class="ph"><div><h2>${t('walTitle')}</h2><div class="sub">${t('walSub')}</div></div>
+      <div class="legend"><span><i class="sw" style="background:var(--accent)"></i>${t('thWal')}</span> <span><i class="sw" style="background:var(--muted)"></i>${t('thCred')}</span></div></div>
+    <div class="scroll"><table><thead><tr><th>${t('thBank')}</th><th class="r">${t('thFees')}</th><th class="r">${t('thRcf')}</th><th class="r">${t('thFx')}</th><th class="r">${t('thDep')}</th><th class="r">${t('thTot')}, EUR</th><th></th><th class="r">${t('thWal')} / ${t('thCred')}</th><th>${t('thBal')}</th></tr></thead>
+    <tbody>${rows}</tbody></table></div><div class="pb muted" style="font-size:12.5px;border-top:1px solid var(--line)">${t('walNote')}</div></section>`;
+}
+
+function viewRcf(r) {
+  const f = D.fac, pc = x => fmt(x, 2) + '%';
+  const lenders = f.lenders.map(l => `<tr><td>${esc(D.bankById[l.bank].name)}</td><td>${esc(l.role)}</td><td class="r num">${l.share_pct}%</td><td class="r num">${fmt(f.commitment_eur * l.share_pct / 100)}</td><td class="r num">${fmt(r.drawn * l.share_pct / 100)}</td></tr>`).join('');
+  const dp = 100 * r.drawn / f.commitment_eur;
+  return `<section class="panel"><div class="ph"><div><h2>${t('rcfTitle')}</h2><div class="sub">${t('rcfSub', { c: fmt(f.commitment_eur / 1e6, 0), s: fdate(f.signed), m: fdate(f.maturity) })}</div></div></div>
+    <div class="pb"><div class="segbar"><div class="b3" style="flex:${dp}"></div><div class="b1" style="flex:${100 - dp};opacity:.35"></div></div>
+      <div class="seglg"><div><span class="sw b3"></span> <b>${t('rcfDrawn')}</b> <span class="num">${fM(r.drawn)}</span></div><div><span class="sw b1"></span> <b>${t('rcfUndrawn')}</b> <span class="num">${fM(r.undrawn)}</span></div><div></div></div>
+      <table style="margin-top:12px"><tbody>
+        <tr><td>${t('rcfInt')} (${esc(f.reference_rate)} + ${pc(f.margin_pct)})</td><td class="r num">EUR ${fmt(r.rcfInt)}</td></tr>
+        <tr><td>${t('rcfCom')} (${pc(r.comPct)} = ${f.commitment_fee_pct_of_margin}% × ${pc(f.margin_pct)})</td><td class="r num">EUR ${fmt(r.rcfCom)}</td></tr>
+        <tr class="tot"><td>${t('rcfCost')}</td><td class="r num">EUR ${fmt(r.rcfInt + r.rcfCom)}</td></tr>
+        <tr><td class="muted">${t('rcfAllIn')}</td><td class="r num muted">${pc(100 * (r.rcfInt + r.rcfCom) / r.drawn)}</td></tr></tbody></table></div>
+    <div class="scroll" style="border-top:1px solid var(--line)"><table><thead><tr><th>${t('thLender')}</th><th>${t('thRole')}</th><th class="r">${t('thShare')}</th><th class="r">${t('thCommit')}</th><th class="r">${t('thDrawnS')}</th></tr></thead><tbody>${lenders}</tbody></table></div></section>`;
+}
+
+function viewCov(r) {
+  const L = D.fac.financials_ltm;
+  const rows = r.cov.map((c, i) => {
+    const spark = c.hist[0] == null ? '' : c.hist.map((v, j) => `<td class="r num muted">${fmt(v, 2)}x</td>`).join('');
+    const unit = i === 2 ? '' : 'x';
+    return `<tr><td style="min-width:190px">${esc(S.lang === 'fr' ? c.fr : c.name)}</td><td class="r num">${c.test === 'max' ? '≤' : '≥'} ${fmt(c.limit, 1)}${unit}</td>
+      ${i === 2 ? `<td class="muted" colspan="${L.length}" style="font-size:12.5px">${t('covLiqF')}: <span class="num">${fmt(c.fc, 1)}</span></td>` : spark}
+      <td class="r num"><b>${fmt(c.now, i === 2 ? 1 : 2)}${unit}</b></td><td class="r num">${fmt(100 * c.head, 0)}%</td><td><span class="chip ${c.ok && c.okF ? '' : 'unc'}">${c.ok && c.okF ? t('met') : t('breach')}</span></td></tr>`;
+  }).join('');
+  return `<section class="panel"><div class="ph"><div><h2>${t('covTitle')}</h2><div class="sub">${t('covSub')}</div></div></div>
+    <div class="scroll"><table><thead><tr><th>${t('thTest')}</th><th class="r">${t('thLimit')}</th>${L.map(q => `<th class="r">${fmMonth(q.period.slice(0, 7))}</th>`).join('')}<th class="r">${t('today')}</th><th class="r">${t('thHead')}</th><th></th></tr></thead>
+    <tbody>${rows}</tbody></table></div></section>`;
+}
+
+function calItems() {
+  const R = D.rel, out = [];
+  for (const id in R.banks) { const b = R.banks[id], n = D.bankById[id].name;
+    out.push({ d: b.kyc_due, txt: `${t('kycDue')} · ${n}` });
+    if (b.ebics_cert_expiry) out.push({ d: b.ebics_cert_expiry, txt: `${t('ebicsExp')} · ${n}` }); }
+  for (const m of R.mandate_changes) out.push({ d: m.due, txt: `${t('mandate')} · ${m.account}` });
+  return out.sort((a, b) => a.d.localeCompare(b.d));
+}
+
+function viewBankReview(r) {
+  const R = D.rel, B = D.banks.banks, crit = Object.keys(R.weights);
+  const rows = crit.map(c => `<tr><td>${t('c_' + c)}</td><td class="r num muted">${R.weights[c]}%</td>${B.map(b => `<td class="r num">${fmt(r.banks[b.id].scores[c], 1)}</td>`).join('')}</tr>`).join('');
+  const best = Math.max(...B.map(b => r.banks[b.id].score));
+  const head = B.map(b => { const x = r.banks[b.id], rel = x.rel;
+    return `<th class="r">${esc(b.name)}<div class="muted" style="font-weight:400;font-size:11.5px">${rel.rating} · ${t('sinceT')} ${rel.since}</div></th>`; }).join('');
+  const rm = `<tr><td class="muted">${t('rmT')}</td><td></td>${B.map(b => `<td class="r" style="font-size:12.5px">${esc(r.banks[b.id].rel.rm)}</td>`).join('')}</tr>`;
+  const ag = R.agenda.map(a => `<li><span class="chip" style="font-family:inherit">${a.bank === 'ALL' ? t('allBanks') : esc(D.bankById[a.bank].name)}</span> ${esc(a[S.lang])}</li>`).join('');
+  const today = D.fs.as_of;
+  const cal = calItems().map(i => { const days = Math.round((new Date(i.d) - new Date(today)) / 864e5);
+    return `<li><span class="num ${days < 45 ? 'neg' : ''}" style="min-width:92px;display:inline-block">${fdate(i.d)}</span> ${esc(i.txt)} <span class="muted num">(${days} ${S.lang === 'fr' ? 'j' : 'd'})</span></li>`; }).join('');
+  return `<section class="panel"><div class="ph"><div><h2>${t('revTitle')}</h2><div class="sub">${t('revSub')}</div></div></div>
+    <div class="grid" style="gap:0">
+      <div class="stack"><div class="scroll"><table><thead><tr><th></th><th class="r">${t('weight')}</th>${head}</tr></thead>
+        <tbody>${rows}<tr class="tot"><td>${t('score')} / 5</td><td></td>${B.map(b => `<td class="r num">${r.banks[b.id].score === best ? '★ ' : ''}${fmt(r.banks[b.id].score, 2)}</td>`).join('')}</tr>${rm}</tbody></table></div></div>
+      <div class="stack" style="border-left:1px solid var(--line)"><div class="pb"><h3 style="font-size:13.5px;margin:0 0 8px">${t('agTitle')}</h3><ul class="agenda">${ag}</ul>
+        <h3 style="font-size:13.5px;margin:16px 0 2px">${t('calTitle')}</h3><div class="muted" style="font-size:12.5px;margin-bottom:8px">${t('calSub')}</div><ul class="agenda">${cal}</ul></div></div>
+    </div></section>`;
+}
+
+function bindM4() {
+  document.querySelectorAll('tr.click[data-acc]').forEach(tr => tr.addEventListener('click', () => { S.regOpen = S.regOpen === tr.dataset.acc ? null : tr.dataset.acc; render(); }));
+}
+
+/* ------------------------------------------------------------ boot */
+async function boot() {
+  const get = p => fetch(p).then(r => { if (!r.ok) throw new Error(p); return r; });
+  const [accounts, entities, banks, categories, rules, fxcsv, manifest, glossary, cal, fs, snapcsv, arcsv, apcsv, pool, rel, fac] = await Promise.all([
+    get('accounts.json').then(r => r.json()), get('entities.json').then(r => r.json()),
+    get('banks.json').then(r => r.json()), get('categories.json').then(r => r.json()),
+    get('rules.json').then(r => r.json()), get('fx_rates.csv').then(r => r.text()),
+    get('manifest.json').then(r => r.json()), get('glossary.json').then(r => r.json()),
+    get('forecast_calendar.json').then(r => r.json()), get('forecast_settings.json').then(r => r.json()),
+    get('forecast_snapshot.csv').then(r => r.text()), get('open_receivables.csv').then(r => r.text()), get('open_payables.csv').then(r => r.text()), get('cash_pool.json').then(r => r.json()),
+    get('bank_relations.json').then(r => r.json()), get('facility.json').then(r => r.json())
+  ]);
+  const fx = {}; const [hdr, ...rows] = fxcsv.trim().split(/\r?\n/); const cols = hdr.split(',');
+  rows.forEach(r => { const v = r.split(','); fx[v[0]] = Object.fromEntries(cols.slice(1).map((c, i) => [c, +v[i + 1]])); });
+  D = { banks, rel, fac, pool, cal, fs, snap: parseCSV(snapcsv), ar: parseCSV(arcsv), ap: parseCSV(apcsv), glossary, accounts, entities, categories, rules: rules.slice().sort((a, b) => a.priority - b.priority), fx, fxDates: Object.keys(fx).sort(),
+        byIban: Object.fromEntries(accounts.map(a => [a.iban, a])), entById: Object.fromEntries(entities.map(e => [e.id, e])),
+        bankById: Object.fromEntries(banks.banks.map(b => [b.id, b])), catById: Object.fromEntries(categories.map(c => [c.id, c])) };
+  FILES = await Promise.all(manifest.map(async m => {
+    const url = m.file, text = await get(url).then(r => r.text());
+    const p = parseStatement(text);
+    return { name: m.file, format: p.format, statements: p.statements, text, url };
+  }));
+  HOL = new Set(D.fs.holidays);
+  rebuild(); render();
+}
+document.getElementById('lang-en').onclick = () => { S.lang = 'en'; try { localStorage.setItem('tos-lang', 'en'); } catch (e) {} render(); };
+document.getElementById('lang-fr').onclick = () => { S.lang = 'fr'; try { localStorage.setItem('tos-lang', 'fr'); } catch (e) {} render(); };
+document.querySelectorAll('[data-tab]').forEach(b => b.onclick = () => { S.view = b.dataset.tab; try { history.replaceState(null, '', '#' + S.view); } catch (e) {} render(); window.scrollTo(0, 0); });
+if (['#glossary', '#m4', '#m3', '#m2', '#m1'].includes(location.hash)) S.view = location.hash.slice(1);
+document.getElementById('asof').onchange = e => { S.asof = e.target.value; render(); };
+boot().catch(err => { document.getElementById('app').innerHTML = `<div class="loading">Could not load the data files (${esc(err.message)}). Serve the folder over http, for example with Netlify.</div>`; });
+</script>
+</body>
+</html>
